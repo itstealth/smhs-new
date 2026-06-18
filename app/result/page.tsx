@@ -45,7 +45,7 @@ export default function ResultPage() {
   return (
     <main className="bg-off-white text-text-base overflow-x-hidden font-dm">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Results"
         badge="Academic Excellence"
         // breadcrumbs={[{ label: "Academics" }, { label: "Results" }]}
@@ -123,13 +123,13 @@ export default function ResultPage() {
                   { src: "/assets/FELICITATING TOPPERS IN BOARDS/3.webp", name: "Top Performer" },
                   { src: "/assets/FELICITATING TOPPERS IN BOARDS/4.webp", name: "Top Performer" },
                   { src: "/assets/FELICITATING TOPPERS IN BOARDS/5.webp", name: "Top Performer" },
-                  { src: "/assets/result/ayush.jpg", name: "Ayush" },
-                  { src: "/assets/result/geetika.jpg", name: "Geetika" },
-                  { src: "/assets/result/neelvi.jpg", name: "Neelvi" },
-                  { src: "/assets/result/pranjal.jpg", name: "Pranjal" },
-                  { src: "/assets/result/saatvik.jpg", name: "Saatvik" },
-                  { src: "/assets/result/vidhi.jpg", name: "Vidhi" },
-                  { src: "/assets/result/yug.jpg", name: "Yug" },
+                  { src: "/assets/result/ayush.webp", name: "Ayush" },
+                  { src: "/assets/result/geetika.webp", name: "Geetika" },
+                  { src: "/assets/result/neelvi.webp", name: "Neelvi" },
+                  { src: "/assets/result/pranjal.webp", name: "Pranjal" },
+                  { src: "/assets/result/saatvik.webp", name: "Saatvik" },
+                  { src: "/assets/result/vidhi.webp", name: "Vidhi" },
+                  { src: "/assets/result/yug.webp", name: "Yug" },
                 ].map((student, idx) => (
                   <div key={student.src} className="group relative w-full sm:w-[calc(50%-12px)] lg:w-[calc(20%-19.2px)] aspect-[3/4] lg:aspect-[4/5] rounded-3xl overflow-hidden border-4 border-white shadow-editorial transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_24px_60px_rgba(10,31,58,0.18)] hover:border-navy-light">
                     <img

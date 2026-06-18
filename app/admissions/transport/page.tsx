@@ -17,7 +17,7 @@ export default function TransportFacilityPage() {
   return (
     <main className="bg-neutral-bg min-h-screen">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Transport Facility"
         badge="Safe & Reliable"
         breadcrumbs={[{ label: "Transport" }]}

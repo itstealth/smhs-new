@@ -75,9 +75,9 @@ const IconBrain = () => (
 // ─── SEEDLING IMAGE URLS ───────────────────────────────────────────────────────
 const IMGS = {
   hero: "/assets/INTERNATIONAL GUIDANCE (CAMBRIDGE)/1.webp",
-  intro: "/smhs_images/seedling_images/learning_suuport.jpg",
-  achievers: "/smhs_images/seedling_images/winner_at_cbse.jpg",
-  digital: "/smhs_images/seedling_images/chemistry_lab.jpg",
+  intro: "/smhs_images/seedling_images/learning_suuport.webp",
+  achievers: "/smhs_images/seedling_images/winner_at_cbse.webp",
+  digital: "/smhs_images/seedling_images/chemistry_lab.webp",
   wellbeing: "/smhs_images/seedling_images/emotional.webp",
   school: "/assets/Home/MainCampus.webp",
 };
@@ -512,7 +512,7 @@ export default function LearningSupport() {
       <FontLoader />
       <main style={{ background: "#f8f7f6" }} className="overflow-x-hidden">
         <HeroWrapper
-          backgroundImage="/smhs_images/seedling_images/learning_wrapper.jpg"
+          backgroundImage="/smhs_images/seedling_images/learning_wrapper.webp"
           objectPosition="center 20%"
           title="Learning Support"
           badge="Student Care"

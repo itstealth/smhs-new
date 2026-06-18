@@ -12,21 +12,21 @@ const alumniList = [
   {
     name: "Shashank Jain",
     role: "Head of Architecture & Design",
-    image: "/smhs_images/seedling_images/alumni_shashank.png",
+    image: "/smhs_images/seedling_images/alumni_shashank.webp",
     tags: ["Architecture", "Design", "Innovation"],
     quote: "Seedling didn't just teach me subjects — it taught me how to see the world as a designer. The discipline, creativity, and problem-solving skills I developed here became the foundation of everything I've built professionally.",
   },
   {
     name: "Harshil Mathur",
     role: "CEO, Razorpay",
-    image: "/smhs_images/seedling_images/alumni_harshil.png",
+    image: "/smhs_images/seedling_images/alumni_harshil.webp",
     tags: ["Entrepreneurship", "Fintech", "Leadership"],
     quote: "The values instilled at Seedling — curiosity, resilience, and thinking beyond boundaries — shaped the entrepreneur in me. Razorpay's journey began with the same fearless spirit Seedling encouraged in every student.",
   },
   {
     name: "Abhishek Tripathi",
     role: "Wing Commander, Indian Air Force",
-    image: "/smhs_images/seedling_images/alumni_abhishek.png",
+    image: "/smhs_images/seedling_images/alumni_abhishek.webp",
     tags: ["Defence", "Leadership", "Service"],
     quote: "Seedling taught me that excellence is not an act but a habit. The rigour, teamwork, and sense of purpose I developed here prepared me for the highest levels of service to the nation.",
   },
@@ -88,19 +88,19 @@ const achievements = [
 
 const networkCards = [
   {
-    icon: "/smhs_images/seedling_images/alumni_news.png",
+    icon: "/smhs_images/seedling_images/alumni_news.webp",
     title: "Share News",
     body: "Share your latest achievements, milestones, and updates with your alma mater and fellow alumni to inspire and stay connected.",
     cta: "Spread the word",
   },
   {
-    icon: "/smhs_images/seedling_images/alumni_classmate.png",
+    icon: "/smhs_images/seedling_images/alumni_classmate.webp",
     title: "Find Your Classmate",
     body: "Find and reconnect with classmates through alumni associations, social media, or class reunion events to strengthen old bonds.",
     cta: "Reconnect now",
   },
   {
-    icon: "/smhs_images/seedling_images/alumni_involved.png",
+    icon: "/smhs_images/seedling_images/alumni_involved.webp",
     title: "Get Involved",
     body: "Stay engaged with your alma mater by attending alumni events, reunions, networking opportunities, and cultural activities.",
     cta: "Connect & learn",
@@ -108,12 +108,12 @@ const networkCards = [
 ];
 
 const studentsList = [
-  { image: "/alumni/alumni_four.jpg" },
-  { image: "/alumni/alumni_five.jpg" },
-  { image: "/alumni/alumni_six.jpg" },
-  { image: "/alumni/alumni_seven.jpg" },
-  { image: "/alumni/alumni_eight.jpg" },
-  { image: "/alumni/alumni_nine.jpg" },
+  { image: "/alumni/alumni_four.webp" },
+  { image: "/alumni/alumni_five.webp" },
+  { image: "/alumni/alumni_six.webp" },
+  { image: "/alumni/alumni_seven.webp" },
+  { image: "/alumni/alumni_eight.webp" },
+  { image: "/alumni/alumni_nine.webp" },
 ];
 
 
@@ -389,12 +389,12 @@ function FeaturedAlumniSection() {
 }
 
 const alumniGallery = [
-  "/alumni/alumni_two.jpg",
-  "/alumni/alumni_three.jpg",
-  "/alumni/alumni_ten.jpg",
-  "/alumni/alumni_eleven.jpg",
-  "/alumni/alumni_tweleve.jpg",
-  "/alumni/alumni_thirteen.jpg",
+  "/alumni/alumni_two.webp",
+  "/alumni/alumni_three.webp",
+  "/alumni/alumni_ten.webp",
+  "/alumni/alumni_eleven.webp",
+  "/alumni/alumni_tweleve.webp",
+  "/alumni/alumni_thirteen.webp",
 ];
 
 function AlumniGrid() {
@@ -494,7 +494,7 @@ function AchievementsSection() {
         <div className="grid md:grid-cols-2 gap-6 mb-10">
           <div className="relative rounded-2xl overflow-hidden h-56 shadow-md">
             <Image
-              src="/alumni/alumni_group.jpg"
+              src="/alumni/alumni_group.webp"
               alt="Alumni Accomplishments"
               fill
               className="object-cover"
@@ -505,7 +505,7 @@ function AchievementsSection() {
           </div>
           <div className="relative rounded-2xl overflow-hidden h-56 shadow-md">
             <Image
-              src="/alumni/alumni_performance.jpg"
+              src="/alumni/alumni_performance.webp"
               alt="Alumni Community"
               fill
               className="object-cover"
@@ -780,7 +780,7 @@ export default function AlumniPage() {
   return (
     <main className="min-h-screen">
       <HeroWrapper
-        backgroundImage="/alumni/alumni_group.jpg"
+        backgroundImage="/alumni/alumni_group.webp"
         title="Our Alumni"
         badge="Global Network"
         breadcrumbs={[{ label: "Alumni" }]}

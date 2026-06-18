@@ -73,7 +73,7 @@ const highlights = [
     title: "The Knowledge Hub (Library)",
     excerpt:
       "A well-stocked library encouraging reading habits and independent learning, serving as a hub for academic resources and literature.",
-    image: "/smhs_images/seedling_images/root_lib.jpg",
+    image: "/smhs_images/seedling_images/root_lib.webp",
     icon: "📚",
   },
   {
@@ -89,7 +89,7 @@ const highlights = [
     title: "Safety & Well-being First",
     excerpt:
       "A secure environment with proper supervision, first-aid facilities, and transport services, ensuring a balanced space for personal growth.",
-    image: "/smhs_images/seedling_images/safety.jpg",
+    image: "/smhs_images/seedling_images/safety.webp",
     icon: "🛡️",
   },
 ];
@@ -141,7 +141,7 @@ const learningApproaches = [
   {
     title: "Effective Feedback & Parent Partnership",
     body: "We believe in the power of feedback. Our teachers provide timely and constructive feedback to students and maintain open communication with parents — both online and offline — ensuring the continuous growth and development of each child. Education at Seedling is truly a community endeavour.",
-    img: "/smhs_images/seedling_images/ptm.jpg",
+    img: "/smhs_images/seedling_images/ptm.webp",
     tag: "Community",
   },
 ];
@@ -158,7 +158,7 @@ const programs = [
     level: "Primary",
     range: "Class I – Class V",
     desc: "Building strong foundations in literacy, numeracy, and curiosity. At SMHS primary wing, play-based and inquiry-led learning nurture a genuine love for discovery from the very beginning.",
-    img: "/smhs_images/seedling_images/primary.jpeg",
+    img: "/smhs_images/seedling_images/primary.webp",
     color: "from-amber-500/90",
   },
   {
@@ -172,7 +172,7 @@ const programs = [
     level: "Senior Secondary",
     range: "Classes IX – XII",
     desc: "Rigorous CBSE programmes with personalised career counselling, university guidance, and focused preparation for competitive exams. Our consistent 100% board results speak to the academic rigour and dedication of our students and faculty.",
-    img: "/smhs_images/seedling_images/leaders.jpeg",
+    img: "/smhs_images/seedling_images/leaders.webp",
     color: "from-emerald-700/90",
   },
 ];
@@ -187,11 +187,11 @@ const achievements = [
 ];
 
 const learnerProfile = [
-  { trait: "Confident", desc: "Students embark on a journey of self-discovery, fearlessly exploring new ideas and embracing challenges with a can-do attitude.", emoji: "💪", img: "/smhs_images/seedling_images/confidence.jpg" },
-  { trait: "Reflective", desc: "We encourage students to be reflective thinkers — pondering their experiences, analysing outcomes, and adapting with informed decisions.", emoji: "🪞", img: "/smhs_images/seedling_images/reflective.jpg" },
-  { trait: "Responsible", desc: "Students are accountable for their actions. We foster integrity and prepare them to make wise decisions and shape a bright future.", emoji: "🤝", img: "/smhs_images/seedling_images/responsible.jpg" },
+  { trait: "Confident", desc: "Students embark on a journey of self-discovery, fearlessly exploring new ideas and embracing challenges with a can-do attitude.", emoji: "💪", img: "/smhs_images/seedling_images/confidence.webp" },
+  { trait: "Reflective", desc: "We encourage students to be reflective thinkers — pondering their experiences, analysing outcomes, and adapting with informed decisions.", emoji: "🪞", img: "/smhs_images/seedling_images/reflective.webp" },
+  { trait: "Responsible", desc: "Students are accountable for their actions. We foster integrity and prepare them to make wise decisions and shape a bright future.", emoji: "🤝", img: "/smhs_images/seedling_images/responsible.webp" },
   { trait: "Innovative", desc: "We ignite the spark of innovation through exciting projects, cutting-edge technologies, and out-of-the-box problem-solving.", emoji: "💡", img: "/events/ATL LAB/1P3A4237.JPG" },
-  { trait: "Engaged", desc: "Learning comes alive as students participate in hands-on activities, collaborative projects, and interactive discussions.", emoji: "🔥", img: "/smhs_images/seedling_images/performance.jpg" },
+  { trait: "Engaged", desc: "Learning comes alive as students participate in hands-on activities, collaborative projects, and interactive discussions.", emoji: "🔥", img: "/smhs_images/seedling_images/performance.webp" },
 ];
 
 const faculty = [
@@ -226,7 +226,7 @@ export default function AcademicsPage() {
           1. HERO
       ══════════════════════════════════════════════════════ */}
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/community.jpg"
+        backgroundImage="/smhs_images/seedling_images/community.webp"
         title="Academic Excellence"
         subtitle="& Future-Ready Learning."
         badge="CBSE Curriculum"
@@ -251,7 +251,7 @@ export default function AcademicsPage() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="overflow-hidden rounded-3xl shadow-editorial">
               <img
-                src="/smhs_images/seedling_images/student_looking_telescope.jpg"
+                src="/smhs_images/seedling_images/student_looking_telescope.webp"
                 alt="CBSE Curriculum at Seedling Schools"
                 className="w-full h-full aspect-square object-cover"
               />

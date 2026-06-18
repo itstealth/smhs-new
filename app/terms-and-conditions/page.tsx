@@ -46,7 +46,7 @@ export default function TermsAndConditions() {
     <div className="min-h-screen bg-off-white font-dm selection:bg-navy/10 scroll-smooth">
 
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Terms & Conditions"
         badge="Legal"
         breadcrumbs={[{ label: "Terms & Conditions" }]}

@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-10">
             <div className="flex items-center">
               <img
-                src="/SPS_Logo.png"
+                src="/SPS_Logo.webp"
                 alt="Seedling Schools Logo"
                 className="h-24 w-auto object-contain"
               />

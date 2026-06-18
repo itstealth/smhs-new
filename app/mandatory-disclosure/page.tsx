@@ -13,7 +13,7 @@ const MandatoryDisclosure = () => {
     <div className="min-h-screen bg-off-white font-dm selection:bg-navy/10">
 
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Mandatory Public Disclosure"
         badge="CBSE Compliance"
         breadcrumbs={[{ label: "Mandatory Disclosure" }]}

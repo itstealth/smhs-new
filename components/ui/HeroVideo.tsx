@@ -9,7 +9,7 @@ export default function HeroVideo(): React.JSX.Element {
       loop
       playsInline
       preload="auto"
-      poster="/banner-poster.jpg"
+      poster="/banner-poster.webp"
     >
       <source src="/SMHS-website_banner.mp4" type="video/mp4" />
     </video>

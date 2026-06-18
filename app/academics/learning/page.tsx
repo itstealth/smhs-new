@@ -76,12 +76,12 @@ const IconBrain = () => (
 
 // ─── SEEDLING IMAGE URLS ───────────────────────────────────────────────────────
 const IMGS = {
-  hero: "/smhs_images/seedling_images/student_looking_telescope_two.jpg",
-  intro: "/assets/img/techintegrate.jpg",
-  achievers: "/smhs_images/seedling_images/student_looking_telescope_three.jpg",
-  digital: "/assets/img/feature-2.jpg",
-  wellbeing: "/assets/img/feature-6.jpg",
-  school: "/smhs_images/seedling_images/primary.jpg",
+  hero: "/smhs_images/seedling_images/student_looking_telescope_two.webp",
+  intro: "/assets/img/techintegrate.webp",
+  achievers: "/smhs_images/seedling_images/student_looking_telescope_three.webp",
+  digital: "/assets/img/feature-2.webp",
+  wellbeing: "/assets/img/feature-6.webp",
+  school: "/smhs_images/seedling_images/primary.webp",
 };
 
 // ─── FEATURE CARDS DATA ───────────────────────────────────────────────────────
@@ -477,7 +477,7 @@ export default function LearningSupport() {
       <FontLoader />
       <main style={{ background: "#f8f7f6" }}>
         <HeroWrapper
-          backgroundImage="/assets/img/sps-banner.jpg"
+          backgroundImage="/assets/img/sps-banner.webp"
           title="Learning Support"
           badge="Student Care"
           breadcrumbs={[{ label: "Learning Support" }]}

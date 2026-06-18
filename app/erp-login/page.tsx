@@ -48,7 +48,7 @@ export default function ERPLoginPage() {
         <div className="relative z-10">
           <Link href="/" className="block">
             <Image
-              src="/SPS_Logo.png"
+              src="/SPS_Logo.webp"
               alt="Seedling Modern High School"
               width={200}
               height={200}
@@ -95,7 +95,7 @@ export default function ERPLoginPage() {
 
           {/* Mobile logo */}
           <Link href="/" className="lg:hidden flex items-center gap-3 mb-8">
-            <Image src="/SPS_Logo.png" alt="Seedling Modern High School" width={50} height={50} className="rounded-full object-cover" />
+            <Image src="/SPS_Logo.webp" alt="Seedling Modern High School" width={50} height={50} className="rounded-full object-cover" />
           </Link>
 
           {/* Heading */}

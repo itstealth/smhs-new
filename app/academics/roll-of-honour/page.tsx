@@ -45,7 +45,7 @@ export default function RollOfHonourPage() {
   return (
     <div className="bg-neutral-bg min-h-screen pt-32 overflow-x-hidden">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Roll of Honour"
         badge="Achievements"
         breadcrumbs={[{ label: "Honour" }]}
@@ -89,7 +89,7 @@ export default function RollOfHonourPage() {
             className="relative h-80 rounded-[3rem] overflow-hidden shadow-editorial group"
           >
             <Image
-              src="/smhs_images/seedling_images/merit_image.jpg"
+              src="/smhs_images/seedling_images/merit_image.webp"
               alt="Merit Award Ceremony"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -108,7 +108,7 @@ export default function RollOfHonourPage() {
             className="relative h-80 rounded-[3rem] overflow-hidden shadow-editorial group"
           >
             <Image
-              src="/smhs_images/seedling_images/winner_at_cbse.jpg"
+              src="/smhs_images/seedling_images/winner_at_cbse.webp"
               alt="CBSE Winners"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"

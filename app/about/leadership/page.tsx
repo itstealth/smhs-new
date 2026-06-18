@@ -51,7 +51,7 @@ const leaders = [
     role: "Founder Director",
     sub: "Seedling Group of Institutions",
     quote: "The life of one we love is never lost. Its influence goes on through all the lives it ever touched.",
-    img: "/smhs_images/seedling_images/Mohini_bakshi.jpg",
+    img: "/smhs_images/seedling_images/Mohini_bakshi.webp",
     tag: "Legacy",
   },
   {
@@ -59,7 +59,7 @@ const leaders = [
     role: "CEO & Director",
     sub: "Seedling Group of Institutions",
     quote: "To make education monumentally effective, we must teach young people to grow their own plants rather than giving them cut flowers.",
-    img: "/assets/img/Sandeep-Bakshi.jpeg",
+    img: "/assets/img/Sandeep-Bakshi.webp",
     tag: "Forever New Frontiers",
   },
   {
@@ -67,7 +67,7 @@ const leaders = [
     role: "Executive Director",
     sub: "Seedling Group of Institutions",
     quote: "Give pupils something to do, not something to learn — and the doing demands thinking; learning naturally results.",
-    img: "/assets/img/preeti-bakshi.jpeg",
+    img: "/assets/img/preeti-bakshi.webp",
     tag: "Creating Fresh Pathways",
   },
   {
@@ -75,7 +75,7 @@ const leaders = [
     role: "Joint Director",
     sub: "Seedling Group of Institutions",
     quote: "Adaptability to change is itself a hallmark of successful education.",
-    img: "/assets/img/akansha.jpeg",
+    img: "/assets/img/akansha.webp",
     tag: "Engagement that Empowers",
   },
   {
@@ -83,7 +83,7 @@ const leaders = [
     role: "Joint Director",
     sub: "Seedling Group of Institutions",
     quote: "The only person who is educated is the one who has learned how to learn and change.",
-    img: "/smhs_images/seedling_images/aishwariya.jpeg",
+    img: "/smhs_images/seedling_images/aishwariya.webp",
     tag: "Promoting Global Citizenship",
   },
 ];
@@ -92,7 +92,7 @@ export default function LeadershipPage() {
   return (
     <main className="bg-off-white text-text-base overflow-x-clip font-dm">
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/leaders.jpeg"
+        backgroundImage="/smhs_images/seedling_images/leaders.webp"
         objectPosition="center 20%"
         title="Leadership"
         badge="Anchored In Purpose. Driven By A Vision"
@@ -145,7 +145,7 @@ export default function LeadershipPage() {
           <Reveal>
             <div className="relative">
               <img
-                src="/smhs_images/seedling_images/director.jpeg"
+                src="/smhs_images/seedling_images/director.webp"
                 alt="Director, Seedling Group"
                 className="w-full h-auto aspect-[4/3] object-cover rounded-2xl shadow-2xl object-top"
               />
@@ -191,7 +191,7 @@ export default function LeadershipPage() {
             <Reveal>
               <div className="relative">
                 <img
-                  src="/leadership/SMHS_Principal_Nidhi.png"
+                  src="/leadership/SMHS_Principal_Nidhi.webp"
                   alt="Ms. Nidhi Adha, Principal Seedling Modern High School"
                   className="w-full h-auto aspect-[4/3] object-cover rounded-2xl shadow-2xl object-[center_15%]"
                 />

@@ -22,35 +22,35 @@ const leaders = [
     name: "Late Ms. Mohini Bakshi",
     role: "Founder",
     quote: "Education at Seedling is about nurturing the unique spark within every child, preparing them to lead with wisdom and empathy in an ever-evolving world.",
-    image: "/smhs_images/seedling_images/Mohini_bakshi.jpg",
+    image: "/smhs_images/seedling_images/Mohini_bakshi.webp",
     initials: "MB"
   },
   {
     name: "Dr. Sandeep Bakshi",
     role: "Director",
     quote: "To make education monumentally effective, we must teach young people to grow their own plants rather than giving them cut flowers.",
-    image: "/smhs_images/seedling_images/director.jpeg",
+    image: "/smhs_images/seedling_images/director.webp",
     initials: "SB"
   },
   {
     name: "Dr. Preeti Bakshi",
     role: "Executive Director",
     quote: "We believe in providing an environment that facilitates intellectual curiosity, character development, and academic excellence.",
-    image: "/smhs_images/seedling_images/excutive _director.jpeg",
+    image: "/smhs_images/seedling_images/excutive _director.webp",
     initials: "PB"
   },
   {
     name: "Ms. Akansha Bakshi",
     role: "Director",
     quote: "Adaptability to change is itself a hallmark of successful education.",
-    image: "/assets/img/akansha.jpeg",
+    image: "/assets/img/akansha.webp",
     initials: "AB"
   },
   {
     name: "Ms. Aishwarya Bakshi",
     role: "Director",
     quote: "The only person who is educated is the one who has learned how to learn and change.",
-    image: "/smhs_images/seedling_images/aishwariya.jpeg",
+    image: "/smhs_images/seedling_images/aishwariya.webp",
     initials: "AB"
   }
 ];
@@ -59,7 +59,7 @@ export default function AboutPage() {
   return (
     <div className="bg-neutral-bg min-h-screen pt-32 overflow-x-hidden">
       <HeroWrapper
-        backgroundImage="/assets/about/about-banner.jpg"
+        backgroundImage="/assets/about/about-banner.webp"
         title="About"
         subtitle="Us"
         badge="CBSE Affiliated · Jaipur"

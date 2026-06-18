@@ -27,7 +27,7 @@ export default function AffiliationPage() {
   return (
     <div className="min-h-screen bg-white pt-24 pb-40 relative overflow-hidden">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Affiliations & Certifications"
         badge="Globally Recognized"
         breadcrumbs={[{ label: "Affiliations" }]}

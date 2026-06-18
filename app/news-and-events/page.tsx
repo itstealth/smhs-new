@@ -55,8 +55,8 @@ const christmasGallery = [
 
 // ─── Sports Day Gallery ────────────────────────────────────────────────────────
 const sportsDayGallery = [
-  "/assets/Home/pgt.jpeg",
-  "/assets/Home/prt.jpeg",
+  "/assets/Home/pgt.webp",
+  "/assets/Home/prt.webp",
 ];
 
 // ─── Foundation Items ──────────────────────────────────────────────────────────
@@ -66,7 +66,7 @@ const foundationItems = [
     category: "Foundation",
     title: "Foundation Day Celebrations at Seedling Modern High School",
     date: "2024",
-    image: "/assets/Media/foundation/media-coverage-1.jpeg",
+    image: "/assets/Media/foundation/media-coverage-1.webp",
     color: "bg-navy",
   },
   {
@@ -74,7 +74,7 @@ const foundationItems = [
     category: "Foundation",
     title: "Annual Foundation Day Ceremony — Honoring Legacy and Excellence",
     date: "2024",
-    image: "/assets/Media/foundation/media-coverage-2.jpeg",
+    image: "/assets/Media/foundation/media-coverage-2.webp",
     color: "bg-crimson",
   },
 ];
@@ -92,7 +92,7 @@ export default function CampusHighlightsPage() {
           1. HERO BANNER
       ══════════════════════════════════════════════════════ */}
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/newsAndEvents.jpg"
+        backgroundImage="/smhs_images/seedling_images/newsAndEvents.webp"
         title="News & Events"
         badge="Campus Highlights"
         breadcrumbs={[{ label: "News & Events" }]}
@@ -122,7 +122,7 @@ export default function CampusHighlightsPage() {
               <Reveal delay={100}>
                 <a href="#" onClick={(e) => { e.preventDefault(); setSelectedGallery(sportsDayGallery); setGalleryIndex(0); }} className="group block relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                   <div className="relative aspect-[16/10] overflow-hidden bg-stone-200">
-                    <img src="/assets/Home/pgt.jpeg" alt="SMHS Sports Day" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                    <img src="/assets/Home/pgt.webp" alt="SMHS Sports Day" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-7 md:p-10">
                       <span className="inline-block bg-navy text-white text-[10px] font-black px-4 py-1.5 rounded-full tracking-[0.2em] uppercase mb-4 font-dm">Sports Day</span>
@@ -407,7 +407,7 @@ const newsItems = [
     category: "Media Coverage",
     title: "Investiture Ceremony 2026-27 — 200+ Student Leaders Inducted at SMHS",
     date: "04 May 2026",
-    image: "/assets/Media/media-coverage-1.jpeg",
+    image: "/assets/Media/media-coverage-1.webp",
     color: "bg-navy",
   },
   {
@@ -415,7 +415,7 @@ const newsItems = [
     category: "In the News",
     title: "Challengers Trophy 2026 Winners Honoured by Seedling Group of Schools",
     date: "26 Apr 2026",
-    image: "/assets/Media/media-coverage-2.jpeg",
+    image: "/assets/Media/media-coverage-2.webp",
     color: "bg-crimson",
   },
   {
@@ -423,7 +423,7 @@ const newsItems = [
     category: "Press Release",
     title: "Dr. Sandeep Bakshi Appointed UN Goodwill Ambassador — First from an Indian University",
     date: "18 Apr 2026",
-    image: "/assets/Media/media-coverage-3.jpeg",
+    image: "/assets/Media/media-coverage-3.webp",
     color: "bg-navy-dark",
   },
   {
@@ -431,7 +431,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Mother Successfully Donates Kidney to Daughter at JNU Hospital Under Ayushman Bharat",
     date: "05 Mar 2026",
-    image: "/assets/Media/media-coverage-4.jpeg",
+    image: "/assets/Media/media-coverage-4.webp",
     color: "bg-crimson-dark",
   },
   {
@@ -439,7 +439,7 @@ const newsItems = [
     category: "In the News",
     title: "Indian Army Honours Dr. Sandeep Bakshi; JNU Announces Scholarships for Soldiers' Children",
     date: "20 Jan 2026",
-    image: "/assets/Media/media-coverage-5.jpeg",
+    image: "/assets/Media/media-coverage-5.webp",
     color: "bg-sand",
   },
   {
@@ -447,7 +447,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Sacred Guruji Satsang Held at Seedling Modern High School",
     date: "13 Jan 2026",
-    image: "/assets/Media/media-coverage-6.jpeg",
+    image: "/assets/Media/media-coverage-6.webp",
     color: "bg-navy",
   },
   {
@@ -455,7 +455,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Class of 2000 Alumni Reunite at Seedling to Celebrate 25th Anniversary",
     date: "11 Jan 2026",
-    image: "/assets/Media/media-coverage-7.jpeg",
+    image: "/assets/Media/media-coverage-7.webp",
     color: "bg-crimson",
   },
   {
@@ -463,7 +463,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Dr. Sandeep Bakshi Donates ₹10 Lakh to Army Wives Welfare Association (AWWA)",
     date: "07 Jan 2026",
-    image: "/assets/Media/media-coverage-8.jpeg",
+    image: "/assets/Media/media-coverage-8.webp",
     color: "bg-navy-dark",
   },
   {
@@ -471,7 +471,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Dr. Sandeep Bakshi Honoured in University Chancellors-2025 Category by CEO Insights",
     date: "22 Dec 2025",
-    image: "/assets/Media/media-coverage-9.jpeg",
+    image: "/assets/Media/media-coverage-9.webp",
     color: "bg-crimson-dark",
   },
   {
@@ -479,7 +479,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Dr. Sandeep Bakshi Named Among India's Most Influential University Chancellors 2025",
     date: "22 Dec 2025",
-    image: "/assets/Media/media-coverage-10.jpeg",
+    image: "/assets/Media/media-coverage-10.webp",
     color: "bg-sand",
   },
   {
@@ -487,7 +487,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "SMHS 31st Annual Function Frozen Staged at Birla Auditorium — 1,500 Students Perform",
     date: "20 Dec 2025",
-    image: "/assets/Media/media-coverage-11.jpeg",
+    image: "/assets/Media/media-coverage-11.webp",
     color: "bg-navy",
   },
   {
@@ -495,7 +495,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Historic First Patient Airlift from Mumbai to Jaipur for Treatment at JNU Hospital",
     date: "26 Nov 2025",
-    image: "/assets/Media/media-coverage-12.jpeg",
+    image: "/assets/Media/media-coverage-12.webp",
     color: "bg-crimson",
   },
   {
@@ -503,7 +503,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Rajasthan Medical Milestone — Patient Airlifted to JNU Hospital in Record Time",
     date: "26 Nov 2025",
-    image: "/assets/Media/media-coverage-13.jpeg",
+    image: "/assets/Media/media-coverage-13.webp",
     color: "bg-navy-dark",
   },
   // {
@@ -512,7 +512,7 @@ const newsItems = [
   //   title: "Seedling Excellence Featured in News",
   //   excerpt: "Catch the latest coverage of Seedling Group of Schools as we continue our journey of educational excellence.",
   //   date: "23 Nov 2025",
-  //   image: "/assets/Media/media-coverage-14.jpeg",
+  //   image: "/assets/Media/media-coverage-14.webp",
   //   color: "bg-crimson-dark",
   // },
   {
@@ -520,7 +520,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "SMHS Sports Day at JNU Ground — 1,200+ Students Compete in Track and Field Events",
     date: "05 Nov 2025",
-    image: "/assets/Media/media-coverage-15.jpeg",
+    image: "/assets/Media/media-coverage-15.webp",
     color: "bg-sand",
   },
   {
@@ -528,7 +528,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Patrika Plus: Seedling Students Excel in Annual Sports Day Athletics",
     date: "05 Nov 2025",
-    image: "/assets/Media/media-coverage-16.jpeg",
+    image: "/assets/Media/media-coverage-16.webp",
     color: "bg-navy",
   },
   {
@@ -536,7 +536,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "JNU and Seedling Group Donate Furniture and Books to Government School in Ramnagariya",
     date: "11 Jul 2025",
-    image: "/assets/Media/media-coverage-17.jpeg",
+    image: "/assets/Media/media-coverage-17.webp",
     color: "bg-crimson",
   },
   {
@@ -544,7 +544,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Dr. Bakshi: Committed to Empowering Every Section of Society Through Education",
     date: "11 Jul 2025",
-    image: "/assets/Media/media-coverage-18.jpeg",
+    image: "/assets/Media/media-coverage-18.webp",
     color: "bg-navy-dark",
   },
   {
@@ -552,7 +552,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "JNU Ranks 2nd in Rajasthan and Top 50 Nationally in India Today-MDRA Survey 2025",
     date: "06 Jul 2025",
-    image: "/assets/Media/media-coverage-19.jpeg",
+    image: "/assets/Media/media-coverage-19.webp",
     color: "bg-crimson-dark",
   },
   {
@@ -560,7 +560,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "JNU NAAC A+ Accreditation and Dubai Campus Highlighted in India Today Survey",
     date: "06 Jul 2025",
-    image: "/assets/Media/media-coverage-20.jpeg",
+    image: "/assets/Media/media-coverage-20.webp",
     color: "bg-sand",
   },
   {
@@ -568,7 +568,7 @@ const newsItems = [
     category: "Media Spotlight",
     title: "Seedling Students Shine in CBSE Boards — Sanyam Agrawal Scores 99.2% in Commerce",
     date: "15 May 2025",
-    image: "/assets/Media/media-coverage-21.jpeg",
+    image: "/assets/Media/media-coverage-21.webp",
     color: "bg-navy",
   },
 ];
@@ -652,26 +652,26 @@ const events = [
     year: "2026",
     description:
       "A special felicitation ceremony celebrating students who brought laurels to Seedling through academics, sports, and co-curricular achievements.",
-    image: "/events/honoring-achievers/IMG20260420100231.jpg",
+    image: "/events/honoring-achievers/IMG20260420100231.webp",
     tag: "Achievement",
     tagColor: "bg-crimson",
     gallery: [
-      "/events/honoring-achievers/IMG20260420100231.jpg",
-      "/events/honoring-achievers/IMG20260420100238.jpg",
-      "/events/honoring-achievers/IMG20260420100259.jpg",
-      "/events/honoring-achievers/IMG20260420100328.jpg",
-      "/events/honoring-achievers/IMG20260420100329.jpg",
-      "/events/honoring-achievers/IMG20260420100335.jpg",
-      "/events/honoring-achievers/IMG20260420100347.jpg",
-      "/events/honoring-achievers/IMG20260420100356.jpg",
-      "/events/honoring-achievers/IMG20260420100406.jpg",
-      "/events/honoring-achievers/IMG20260420100414.jpg",
-      "/events/honoring-achievers/IMG20260420100423.jpg",
-      "/events/honoring-achievers/IMG20260420100427.jpg",
-      "/events/honoring-achievers/IMG20260420100618.jpg",
-      "/events/honoring-achievers/IMG20260420100723.jpg",
-      "/events/honoring-achievers/IMG20260420100736.jpg",
-      "/events/honoring-achievers/IMG20260420100756.jpg",
+      "/events/honoring-achievers/IMG20260420100231.webp",
+      "/events/honoring-achievers/IMG20260420100238.webp",
+      "/events/honoring-achievers/IMG20260420100259.webp",
+      "/events/honoring-achievers/IMG20260420100328.webp",
+      "/events/honoring-achievers/IMG20260420100329.webp",
+      "/events/honoring-achievers/IMG20260420100335.webp",
+      "/events/honoring-achievers/IMG20260420100347.webp",
+      "/events/honoring-achievers/IMG20260420100356.webp",
+      "/events/honoring-achievers/IMG20260420100406.webp",
+      "/events/honoring-achievers/IMG20260420100414.webp",
+      "/events/honoring-achievers/IMG20260420100423.webp",
+      "/events/honoring-achievers/IMG20260420100427.webp",
+      "/events/honoring-achievers/IMG20260420100618.webp",
+      "/events/honoring-achievers/IMG20260420100723.webp",
+      "/events/honoring-achievers/IMG20260420100736.webp",
+      "/events/honoring-achievers/IMG20260420100756.webp",
     ],
   },
   {
@@ -681,21 +681,21 @@ const events = [
     year: "2026",
     description:
       "A vibrant celebration of student growth, creativity, and personal milestones that lit up the campus with colour and energy.",
-    image: "/events/grow-glow/IMG_20260421_153953.jpg",
+    image: "/events/grow-glow/IMG_20260421_153953.webp",
     tag: "Celebration",
     tagColor: "bg-navy-dark",
     gallery: [
-      "/events/grow-glow/IMG_20260421_153953.jpg",
-      "/events/grow-glow/IMG-20260421-WA0040.jpg",
-      "/events/grow-glow/IMG-20260421-WA0043.jpg",
-      "/events/grow-glow/IMG-20260421-WA0054.jpg",
-      "/events/grow-glow/IMG-20260421-WA0055.jpg",
-      "/events/grow-glow/IMG-20260421-WA0056.jpg",
-      "/events/grow-glow/IMG-20260421-WA0057.jpg",
-      "/events/grow-glow/IMG-20260421-WA0058.jpg",
-      "/events/grow-glow/IMG-20260421-WA0060.jpg",
-      "/events/grow-glow/IMG-20260421-WA0061.jpg",
-      "/events/grow-glow/IMG-20260421-WA0062.jpg",
+      "/events/grow-glow/IMG_20260421_153953.webp",
+      "/events/grow-glow/IMG-20260421-WA0040.webp",
+      "/events/grow-glow/IMG-20260421-WA0043.webp",
+      "/events/grow-glow/IMG-20260421-WA0054.webp",
+      "/events/grow-glow/IMG-20260421-WA0055.webp",
+      "/events/grow-glow/IMG-20260421-WA0056.webp",
+      "/events/grow-glow/IMG-20260421-WA0057.webp",
+      "/events/grow-glow/IMG-20260421-WA0058.webp",
+      "/events/grow-glow/IMG-20260421-WA0060.webp",
+      "/events/grow-glow/IMG-20260421-WA0061.webp",
+      "/events/grow-glow/IMG-20260421-WA0062.webp",
     ],
   },
   {

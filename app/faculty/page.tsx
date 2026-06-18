@@ -46,18 +46,18 @@ function Tag({ children, color = "navy" }: { children: React.ReactNode, color?: 
 }
 
 const faculty = [
-  { name: "CBSE Faculty", subject: "Seedling Modern High School", img: "/assets/img/feature-3.jpg" },
-  { name: "Sports & Co-Curricular", subject: "SMHS Campus", img: "/assets/img/smhs-sports.jpg" },
+  { name: "CBSE Faculty", subject: "Seedling Modern High School", img: "/assets/img/feature-3.webp" },
+  { name: "Sports & Co-Curricular", subject: "SMHS Campus", img: "/assets/img/smhs-sports.webp" },
   { name: "Early Years Educators", subject: "Nursery – UKG Wing", img: "/assets/Home/classroom1.webp" },
-  { name: "Science & Labs", subject: "Practical Learning Wing", img: "/assets/img/feature-6.jpg" },
-  { name: "Admissions & Counselling", subject: "Seedling Modern High School", img: "/assets/img/counselling-1.jpg" },
+  { name: "Science & Labs", subject: "Practical Learning Wing", img: "/assets/img/feature-6.webp" },
+  { name: "Admissions & Counselling", subject: "Seedling Modern High School", img: "/assets/img/counselling-1.webp" },
 ];
 
 export default function FacultyPage() {
   return (
     <main className="bg-off-white text-text-base overflow-x-hidden font-dm">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Faculty"
         badge="Our Educators"
         breadcrumbs={[{ label: "Faculty" }]}
@@ -122,7 +122,7 @@ export default function FacultyPage() {
       {/* CTA */}
       <section className="relative py-48 overflow-hidden">
         <img
-          src="/assets/img/life-at-sps.jpg"
+          src="/assets/img/life-at-sps.webp"
           alt="Join Seedling Schools"
           className="absolute inset-0 w-full h-full object-cover"
         />

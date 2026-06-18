@@ -37,32 +37,32 @@ const pageStyles = `
 
 const galleryItems = [
   { id: 1, src: "/events/ANNUAL DAY/P1230711.JPG", title: "Annual Day", category: "Events", size: "large" },
-  { id: 2, src: "/smhs_images/seedling_images/community.jpg", title: "School Community", category: "Celebrations", size: "small" },
-  { id: 3, src: "/smhs_images/seedling_images/primary.jpg", title: "Primary Activities", category: "Wellness", size: "small" },
+  { id: 2, src: "/smhs_images/seedling_images/community.webp", title: "School Community", category: "Celebrations", size: "small" },
+  { id: 3, src: "/smhs_images/seedling_images/primary.webp", title: "Primary Activities", category: "Wellness", size: "small" },
   { id: 4, src: "/events/INVESTITURE CEREMONY/P1510050.JPG", title: "Investiture Ceremony", category: "Events", size: "wide" },
   { id: 5, src: "/events/ANNUAL DAY/P1230462.JPG", title: "Cultural Fest", category: "Events", size: "small" },
   { id: 6, src: "/events/ANNUAL DAY/P1230473.JPG", title: "Annual Day Performance", category: "Events", size: "large" },
   { id: 7, src: "/events/ATL LAB/1P3A4229.JPG", title: "ATL Lab Innovation", category: "Activities", size: "small" },
-  { id: 8, src: "/smhs_images/seedling_images/students_dancing.jpg", title: "Students Dancing", category: "Festivals", size: "small" },
+  { id: 8, src: "/smhs_images/seedling_images/students_dancing.webp", title: "Students Dancing", category: "Festivals", size: "small" },
   { id: 9, src: "/events/INVESTITURE CEREMONY/P1510071.JPG", title: "Investiture March", category: "Events", size: "wide" },
-  { id: 10, src: "/smhs_images/seedling_images/performance.jpg", title: "Stage Performance", category: "Events", size: "small" },
-  { id: 11, src: "/smhs_images/seedling_images/dance_new.jpg", title: "Dance Performance", category: "Events", size: "small" },
-  { id: 12, src: "/smhs_images/seedling_images/farewell_image.jpg", title: "Farewell Celebration", category: "Celebrations", size: "small" },
+  { id: 10, src: "/smhs_images/seedling_images/performance.webp", title: "Stage Performance", category: "Events", size: "small" },
+  { id: 11, src: "/smhs_images/seedling_images/dance_new.webp", title: "Dance Performance", category: "Events", size: "small" },
+  { id: 12, src: "/smhs_images/seedling_images/farewell_image.webp", title: "Farewell Celebration", category: "Celebrations", size: "small" },
   { id: 13, src: "/events/INVESTITURE CEREMONY/P1510083.JPG", title: "Leadership Ceremony", category: "Events", size: "large" },
   { id: 14, src: "/events/ATL LAB/P1517259.JPG", title: "STEM Exploration", category: "Activities", size: "small" },
   { id: 15, src: "/events/ANNUAL DAY/P1230841.JPG", title: "Annual Day Grand Finale", category: "Events", size: "wide" },
   { id: 16, src: "/events/INVESTITURE CEREMONY/P1510001.JPG", title: "Student Leaders", category: "Events", size: "small" },
   { id: 17, src: "/events/ATL LAB/1P3A4237.JPG", title: "Tinkering & Innovation", category: "Activities", size: "small" },
-  { id: 18, src: "/smhs_images/seedling_images/leaders.jpeg", title: "School Leaders", category: "Events", size: "small" },
-  { id: 19, src: "/smhs_images/seedling_images/merit_image.jpg", title: "Merit Recognition", category: "Wellness", size: "large" },
-  { id: 20, src: "/smhs_images/seedling_images/director_speech.jpg", title: "Director's Address", category: "Events", size: "small" },
-  { id: 21, src: "/smhs_images/seedling_images/performance_medium.jpg", title: "Cultural Performance", category: "Festivals", size: "small" },
-  { id: 22, src: "/smhs_images/seedling_images/performance_new.jpg", title: "Annual Show", category: "Events", size: "wide" },
+  { id: 18, src: "/smhs_images/seedling_images/leaders.webp", title: "School Leaders", category: "Events", size: "small" },
+  { id: 19, src: "/smhs_images/seedling_images/merit_image.webp", title: "Merit Recognition", category: "Wellness", size: "large" },
+  { id: 20, src: "/smhs_images/seedling_images/director_speech.webp", title: "Director's Address", category: "Events", size: "small" },
+  { id: 21, src: "/smhs_images/seedling_images/performance_medium.webp", title: "Cultural Performance", category: "Festivals", size: "small" },
+  { id: 22, src: "/smhs_images/seedling_images/performance_new.webp", title: "Annual Show", category: "Events", size: "wide" },
 ];
 
 const sportBlocks = [
   {
-    image: "/smhs_images/seedling_images/karate.jpeg",
+    image: "/smhs_images/seedling_images/karate.webp",
     tag: "Martial Arts",
     title: "Sports at Par with Academics",
     body: "At Seedling Schools, sports remain at par with academics, instilling qualities of confidence, teamwork, responsibility, discipline, and leadership. Our organized sports events span from intra-school to national levels, showcasing tremendous growth in students' techniques and performance.",
@@ -99,14 +99,14 @@ const activities = [
     icon: "🧘",
     title: "Yoga & Wellness",
     desc: "Integrated wellness programmes that nurture mental clarity, physical balance, and emotional resilience.",
-    image: "/smhs_images/seedling_images/yoga.jpg",
+    image: "/smhs_images/seedling_images/yoga.webp",
     color: "from-mauve/80 to-navy-deeper/80",
   },
   {
     icon: "🎄",
     title: "Festivals & Celebrations",
     desc: "From Christmas to Founders Day, our calendar is rich with cultural celebrations that build community.",
-    image: "/smhs_images/seedling_images/christmas_celebrations.jpg",
+    image: "/smhs_images/seedling_images/christmas_celebrations.webp",
     color: "from-crimson/80 to-crimson-dark/80",
   },
   {
@@ -120,14 +120,14 @@ const activities = [
     icon: "🌺",
     title: "Community & Care",
     desc: "Heartfelt events that celebrate togetherness, honour families, and build a strong school community.",
-    image: "/smhs_images/seedling_images/community.jpg",
+    image: "/smhs_images/seedling_images/community.webp",
     color: "from-crimson-dark/80 to-crimson-deeper/80",
   },
   {
     icon: "🏆",
     title: "Celebrating Talent",
     desc: "We celebrate academic excellence with our toppers, honouring their hard work and dedication.",
-    image: "/smhs_images/seedling_images/winner_at_cbse.jpg",
+    image: "/smhs_images/seedling_images/winner_at_cbse.webp",
     color: "from-black/60 to-navy-deeper/80",
   },
 ];
@@ -136,7 +136,7 @@ const experiences = [
   {
     name: "Vatan Parnami and Anku Sapra",
     role: "Parents",
-    image: "/smhs_images/seedling_images/community.jpg",
+    image: "/smhs_images/seedling_images/community.webp",
     quote: "Seedling Modern High School has been a second home for our child. The warmth, care, and attention given to every student is remarkable. We are grateful for the strong foundation SMHS provides.",
     school: "Seedling Modern High School",
     highlight: "Nurturing Environment",
@@ -144,7 +144,7 @@ const experiences = [
   {
     name: "Jasvinder Singh Wadhawan & Paramjeet Kaur",
     role: "Parents",
-    image: "/smhs_images/seedling_images/leaders.jpeg",
+    image: "/smhs_images/seedling_images/leaders.webp",
     quote: "The academic excellence at Seedling Modern High School is outstanding. The teachers are dedicated, the curriculum is engaging, and the school ensures every child receives individual attention and guidance.",
     school: "Seedling Modern High School",
     highlight: "Academic Excellence",
@@ -152,7 +152,7 @@ const experiences = [
   {
     name: "Meghna Manglani",
     role: "Parent",
-    image: "/smhs_images/seedling_images/primary.jpg",
+    image: "/smhs_images/seedling_images/primary.webp",
     quote: "At Seedling Modern High School, teachers go beyond academics to build character and confidence. Our child has grown not just in knowledge but as a compassionate and curious individual.",
     school: "Seedling Modern High School",
     highlight: "Complete Development",
@@ -160,7 +160,7 @@ const experiences = [
   {
     name: "Deepak Adwani & Varsha Adwani",
     role: "Parents",
-    image: "/smhs_images/seedling_images/teaching_kids.jpg",
+    image: "/smhs_images/seedling_images/teaching_kids.webp",
     quote: "We chose Seedling Modern High School for its clean campus, safe environment, and excellent faculty. The school's focus on both studies and extracurricular activities makes it truly special.",
     school: "Seedling Modern High School",
     highlight: "Safe & Supportive",
@@ -168,7 +168,7 @@ const experiences = [
   {
     name: "Divya Soni",
     role: "Parent",
-    image: "/smhs_images/seedling_images/performance.jpg",
+    image: "/smhs_images/seedling_images/performance.webp",
     quote: "Seedling Modern High School prepares students for the future with its modern approach to education. The blend of tradition and innovation in teaching methods gives our children an edge in today's world.",
     school: "Seedling Modern High School",
     highlight: "Future-Ready",
@@ -194,12 +194,12 @@ const stripImages = [
   { src: "/events/INVESTITURE CEREMONY/P1510071.JPG", label: "Investiture March" },
   { src: "/events/INVESTITURE CEREMONY/P1510083.JPG", label: "Prefects & Captains" },
   { src: "/events/INVESTITURE CEREMONY/P1510131.JPG", label: "Oath Taking" },
-  { src: "/events/honoring-achievers/IMG20260420100328.jpg", label: "Honouring Achievers" },
-  { src: "/events/honoring-achievers/IMG20260420100238.jpg", label: "Career Growth" },
-  { src: "/events/grow-glow/IMG-20260421-WA0040.jpg", label: "Grow & Glow" },
-  { src: "/events/grow-glow/IMG-20260421-WA0054.jpg", label: "Healthy Habits" },
-  { src: "/smhs_images/seedling_images/christmas_celebrations.jpg", label: "Festive Celebrations" },
-  { src: "/smhs_images/seedling_images/community.jpg", label: "School Community" },
+  { src: "/events/honoring-achievers/IMG20260420100328.webp", label: "Honouring Achievers" },
+  { src: "/events/honoring-achievers/IMG20260420100238.webp", label: "Career Growth" },
+  { src: "/events/grow-glow/IMG-20260421-WA0040.webp", label: "Grow & Glow" },
+  { src: "/events/grow-glow/IMG-20260421-WA0054.webp", label: "Healthy Habits" },
+  { src: "/smhs_images/seedling_images/christmas_celebrations.webp", label: "Festive Celebrations" },
+  { src: "/smhs_images/seedling_images/community.webp", label: "School Community" },
 ];
 
 const features = [
@@ -207,13 +207,13 @@ const features = [
     icon: "📚",
     title: "Well-Rounded Education",
     desc: "Our curriculum is thoughtfully designed to align with the National Education Policy, ensuring students receive future-ready education.",
-    image: "/smhs_images/seedling_images/teaching_kids.jpg",
+    image: "/smhs_images/seedling_images/teaching_kids.webp",
   },
   {
     icon: "🔬",
     title: "State-of-the-Art Facilities",
     desc: "Modern classrooms, well-equipped science labs, and engaging outdoor spaces create an environment that enhances learning.",
-    image: "/smhs_images/seedling_images/learning_support.jpeg",
+    image: "/smhs_images/seedling_images/learning_support.webp",
   },
   {
     icon: "💻",
@@ -231,13 +231,13 @@ const features = [
     icon: "💬",
     title: "Effective Feedback",
     desc: "Timely and constructive feedback from teachers maintains open communication with parents for continuous growth.",
-    image: "/smhs_images/seedling_images/community.jpg",
+    image: "/smhs_images/seedling_images/community.webp",
   },
   {
     icon: "🌱",
     title: "Holistic Well-being",
     desc: "We prioritize emotional, social, and physical well-being — nurturing every student, parent, and staff member.",
-    image: "/smhs_images/seedling_images/primary.jpg",
+    image: "/smhs_images/seedling_images/primary.webp",
   },
 ];
 
@@ -460,14 +460,14 @@ function ActivitiesGrid() {
       "/events/ANNUAL DAY/P1230778.JPG",
     ],
     "Yoga & Wellness": [
-      "/smhs_images/seedling_images/yoga.jpg",
+      "/smhs_images/seedling_images/yoga.webp",
     ],
     "Festivals & Celebrations": [
-      "/smhs_images/seedling_images/christmas_celebrations.jpg",
-      "/smhs_images/seedling_images/christmas_dance.jpg",
-      "/smhs_images/seedling_images/dandiya_fest.jpg",
+      "/smhs_images/seedling_images/christmas_celebrations.webp",
+      "/smhs_images/seedling_images/christmas_dance.webp",
+      "/smhs_images/seedling_images/dandiya_fest.webp",
       "/smhs_images/seedling_images/dandiya_fest_two.JPG",
-      "/smhs_images/seedling_images/dragon_dance.jpg",
+      "/smhs_images/seedling_images/dragon_dance.webp",
     ],
     "ATL Lab & Innovation": [
       "/events/ATL LAB/1P3A4229.JPG",
@@ -479,14 +479,14 @@ function ActivitiesGrid() {
       "/events/ATL LAB/P1517259.JPG",
     ],
     "Community & Care": [
-      "/smhs_images/seedling_images/community.jpg",
-      "/smhs_images/seedling_images/primary.jpg",
-      "/smhs_images/seedling_images/teaching_kids.jpg",
+      "/smhs_images/seedling_images/community.webp",
+      "/smhs_images/seedling_images/primary.webp",
+      "/smhs_images/seedling_images/teaching_kids.webp",
     ],
     "Celebrating Talent": [
-      "/smhs_images/seedling_images/winner_at_cbse.jpg",
-      "/smhs_images/seedling_images/merit_image.jpg",
-      "/smhs_images/seedling_images/certifcaiton_ceremoney.jpg",
+      "/smhs_images/seedling_images/winner_at_cbse.webp",
+      "/smhs_images/seedling_images/merit_image.webp",
+      "/smhs_images/seedling_images/certifcaiton_ceremoney.webp",
     ],
   };
 
@@ -948,7 +948,7 @@ export default function SchoolLifePage() {
       <style dangerouslySetInnerHTML={{ __html: pageStyles }} />
 
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/school_guard.png"
+        backgroundImage="/smhs_images/seedling_images/school_guard.webp"
         title="Life at Seedling"
         subtitle="Where every child discovers, learns, and grows into their brightest self."
         badge="School Life"

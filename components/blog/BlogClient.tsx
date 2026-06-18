@@ -153,7 +153,7 @@ export default function BlogClient({ posts, categories }: Props) {
                         src={getMediaUrl(post)}
                         alt={stripHtml(post.title.rendered)}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                        onError={(e) => { (e.target as HTMLImageElement).src = '/assets/Home/classroom.jpg'; }}
+                        onError={(e) => { (e.target as HTMLImageElement).src = '/assets/Home/classroom.webp'; }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       {getPostCategories(post)[0] && (

@@ -86,7 +86,7 @@ export default function Footer() {
           <div className="pr-0 lg:pr-16 pb-12 lg:pb-0">
             <div className="flex items-center gap-3 mb-10">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Seedling Modern High School"
                 width={44}
                 height={44}

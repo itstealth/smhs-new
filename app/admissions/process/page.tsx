@@ -36,7 +36,7 @@ export default function AdmissionProcessPage() {
   return (
     <main className="bg-neutral-bg min-h-screen">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Admission Process"
         badge="How to Apply"
         breadcrumbs={[{ label: "Admission Process" }]}

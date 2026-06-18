@@ -39,28 +39,28 @@ const safetyFeatures = [
     description:
       "Our transport fleet is maintained through regular inspections so every commute remains dependable, clean, and comfortable for students.",
     icon: Bus,
-    image: "/smhs_images/seedling_images/smhs_bus.jpg",
+    image: "/smhs_images/seedling_images/smhs_bus.webp",
   },
   {
     title: "CCTV Supported Monitoring",
     description:
       "Campus and transport movement are supported by surveillance systems that help the school team maintain a secure daily routine.",
     icon: Camera,
-    image: "/smhs_images/seedling_images/camera.jpg",
+    image: "/smhs_images/seedling_images/camera.webp",
   },
   {
     title: "Supervised Campus Entry",
     description:
       "Arrival and dispersal are managed carefully at school gates to keep movement orderly and reassuring for children and parents.",
     icon: ShieldCheck,
-    image: "/assets/transport-facility/entry-gate.jpeg",
+    image: "/assets/transport-facility/entry-gate.webp",
   },
   {
     title: "Trained Security Support",
     description:
       "Security staff and attendants coordinate with the school office to guide students safely from bus stops to campus spaces.",
     icon: UsersRound,
-    image: "/assets/transport-facility/security-guard.jpeg",
+    image: "/assets/transport-facility/security-guard.webp",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function TransportFacilityPage() {
   return (
     <main className="bg-off-white text-text-base overflow-x-hidden font-dm">
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/smhs_tran.jpg"
+        backgroundImage="/smhs_images/seedling_images/smhs_tran.webp"
         title="Transport Facility"
         badge="Safe Transportation"
         breadcrumbs={[{ label: "Transport" }]}
@@ -144,7 +144,7 @@ export default function TransportFacilityPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-editorial mt-12">
                 <Image
-                  src="/assets/transport-facility/camera.jpeg"
+                  src="/assets/transport-facility/camera.webp"
                   alt="Seedling Schools campus entry gate"
                   fill
                   sizes="(min-width: 1024px) 25vw, 50vw"
@@ -155,7 +155,7 @@ export default function TransportFacilityPage() {
               <div className="space-y-4">
                 <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-editorial">
                   <Image
-                    src="/smhs_images/seedling_images/smhs_guard.jpg"
+                    src="/smhs_images/seedling_images/smhs_guard.webp"
                     alt="Security guard supervising school entry"
                     fill
                     sizes="(min-width: 1024px) 25vw, 50vw"
@@ -308,7 +308,7 @@ export default function TransportFacilityPage() {
         <div className="max-w-7xl mx-auto relative overflow-hidden rounded-[2rem] md:rounded-[3rem] bg-white border border-sand/30 shadow-editorial">
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deeper via-navy-deeper/95 to-crimson-deeper/90" />
           <Image
-            src="/assets/transport-facility/camera.jpeg"
+            src="/assets/transport-facility/camera.webp"
             alt="Seedling transport safety support"
             fill
             sizes="100vw"

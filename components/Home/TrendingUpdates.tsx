@@ -44,7 +44,7 @@ const events: Event[] = [
     description:
       "A vibrant celebration of student creativity featuring art exhibitions, literary events, and cultural performances that brought the school community together in a spirit of joy.",
     href: "/news-and-events",
-    image: "/events/grow-glow/IMG_20260421_153953.jpg",
+    image: "/events/grow-glow/IMG_20260421_153953.webp",
     accent: "#a3123f",
   },
   {
@@ -54,7 +54,7 @@ const events: Event[] = [
     description:
       "Academic and co-curricular toppers were felicitated in a ceremony recognising excellence, hard work, and the relentless pursuit of success across all streams.",
     href: "/news-and-events",
-    image: "/events/honoring-achievers/IMG20260420102847.jpg",
+    image: "/events/honoring-achievers/IMG20260420102847.webp",
     accent: "#034ea2",
   },
   {

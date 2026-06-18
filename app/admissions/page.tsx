@@ -188,7 +188,7 @@ const faqs = [
 
 const galleryImages = [
   { src: "/smhs_images/seedling_images/img387.webp", alt: "Teacher with students in classroom", caption: "Modern Classrooms", tag: "Academics" },
-  { src: "/smhs_images/seedling_images/computer_lab.jpeg", alt: "Computer lab workstations", caption: "Computer Labs", tag: "Discovery" },
+  { src: "/smhs_images/seedling_images/computer_lab.webp", alt: "Computer lab workstations", caption: "Computer Labs", tag: "Discovery" },
   { src: "/smhs_images/seedling_images/img448.webp", alt: "Students in aquatics centre", caption: "Aquatics Centre", tag: "Athletics" },
   { src: "/smhs_images/seedling_images/img449.webp", alt: "Basketball team on court", caption: "Sports Courts", tag: "Athletics" },
   { src: "/smhs_images/seedling_images/img450.webp", alt: "Early years classroom with teacher", caption: "Early Learning", tag: "Creativity" },
@@ -209,7 +209,7 @@ const experiences = [
   {
     name: "Vatan Parnami and Anku Sapra",
     role: "Parents",
-    image: "/smhs_images/seedling_images/community.jpg",
+    image: "/smhs_images/seedling_images/community.webp",
     quote: "Seedling Modern High School has been a second home for our child. The warmth, care, and attention given to every student is remarkable. We are grateful for the strong foundation SMHS provides.",
     school: "Seedling Modern High School",
     highlight: "Nurturing Environment",
@@ -217,7 +217,7 @@ const experiences = [
   {
     name: "Jasvinder Singh Wadhawan & Paramjeet Kaur",
     role: "Parents",
-    image: "/smhs_images/seedling_images/leaders.jpeg",
+    image: "/smhs_images/seedling_images/leaders.webp",
     quote: "The academic excellence at Seedling Modern High School is outstanding. The teachers are dedicated, the curriculum is engaging, and the school ensures every child receives individual attention and guidance.",
     school: "Seedling Modern High School",
     highlight: "Academic Excellence",
@@ -225,7 +225,7 @@ const experiences = [
   {
     name: "Meghna Manglani",
     role: "Parent",
-    image: "/smhs_images/seedling_images/primary.jpg",
+    image: "/smhs_images/seedling_images/primary.webp",
     quote: "At Seedling Modern High School, teachers go beyond academics to build character and confidence. Our child has grown not just in knowledge but as a compassionate and curious individual.",
     school: "Seedling Modern High School",
     highlight: "Balanced Growth",
@@ -233,7 +233,7 @@ const experiences = [
   {
     name: "Deepak Adwani & Varsha Adwani",
     role: "Parents",
-    image: "/smhs_images/seedling_images/teaching_kids.jpg",
+    image: "/smhs_images/seedling_images/teaching_kids.webp",
     quote: "We chose Seedling Modern High School for its clean campus, safe environment, and excellent faculty. The school's focus on both studies and extracurricular activities makes it truly special.",
     school: "Seedling Modern High School",
     highlight: "Safe & Supportive",
@@ -241,7 +241,7 @@ const experiences = [
   {
     name: "Divya Soni",
     role: "Parent",
-    image: "/smhs_images/seedling_images/performance.jpg",
+    image: "/smhs_images/seedling_images/performance.webp",
     quote: "Seedling Modern High School prepares students for the future with its modern approach to education. The blend of tradition and innovation in teaching methods gives our children an edge in today's world.",
     school: "Seedling Modern High School",
     highlight: "Future-Ready",
@@ -434,7 +434,7 @@ export default function AdmissionsPage() {
       </div> */}
 
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/teaching_kids.jpg"
+        backgroundImage="/smhs_images/seedling_images/teaching_kids.webp"
         title="Admissions"
         subtitle="Begin your child's journey with Seedling — where excellence meets warmth."
         badge="Admissions Open · 2026-27"
@@ -448,7 +448,7 @@ export default function AdmissionsPage() {
       ══════════════════════════════════════════════════ */}
       {/* <section className="relative min-h-screen flex items-center overflow-hidden">
         <img
-          src="/smhs_images/seedling_images/computer_lab.jpeg"
+          src="/smhs_images/seedling_images/computer_lab.webp"
           alt="Admissions at Seedling"
           className="absolute inset-0 w-full h-full object-cover object-top scale-105 transition-transform duration-[10s] hover:scale-100"
         />
@@ -1254,7 +1254,7 @@ export default function AdmissionsPage() {
       ══════════════════════════════════════════════════ */}
       <section className="py-20 bg-navy-deeper relative overflow-hidden">
         <img
-          src="/smhs_images/seedling_images/learning_support.jpeg"
+          src="/smhs_images/seedling_images/learning_support.webp"
           alt="Join Seedling"
           className="absolute inset-0 w-full h-full object-cover opacity-15"
         />

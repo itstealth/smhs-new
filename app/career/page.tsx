@@ -189,7 +189,7 @@ const perks = [
   {
     title: "Small Class Sizes",
     desc: "A 20:1 student-teacher ratio means you truly know every child — their strengths, their struggles, their dreams.",
-    image: "/smhs_images/seedling_images/small.jpg",
+    image: "/smhs_images/seedling_images/small.webp",
   },
   {
     title: "Fee Concession for Children",
@@ -199,20 +199,20 @@ const perks = [
   {
     title: "Health & Wellbeing",
     desc: "Comprehensive health insurance for employee and family, plus wellness leave to rest, recharge, and return refreshed.",
-    image: "/smhs_images/seedling_images/yoga.jpg",
+    image: "/smhs_images/seedling_images/yoga.webp",
   },
 ];
 
 const testimonials = [
   {
     name: "Ms. Ishita Mendiratta",
-    img: "/assets/testimonial/aditi-sharma.jpg",
+    img: "/assets/testimonial/aditi-sharma.webp",
     quote:
       "Working at Seedling School has been a truly enriching experience. The learning environment here is contemporary, hands-on, and deeply connected to real-life experiences, making teaching both meaningful and inspiring. What stands out most is the beautiful teacher-student relationship built on trust, respect, and genuine connection. Every day at Seedling feels like an opportunity to grow, innovate, and make a difference.",
   },
   {
       name: "Ms. Topcee Ahuja",
-    img: "/assets/testimonial/Bhanupriya-Singh.jpg",
+    img: "/assets/testimonial/Bhanupriya-Singh.webp",
     quote:
       "Being a part of Seedling School for nearly 20 years has been an incredibly joyful and fulfilling journey. The energy, innocence, and love that children bring into the classrooms make every day vibrant and meaningful. What I value most is the freedom and autonomy the school gives teachers to innovate, connect, and create engaging learning experiences for young minds. Even after all these years, each day at Seedling still feels fresh, inspiring, and full of new possibilities.",
   },
@@ -559,7 +559,7 @@ export default function CareersPage() {
   return (
     <main className="bg-off-white text-text-base overflow-x-hidden font-dm">
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/NCC.jpg"
+        backgroundImage="/smhs_images/seedling_images/NCC.webp"
         objectPosition="center 75%"
         title="Careers"
         badge="Join Our Team"
@@ -888,7 +888,7 @@ export default function CareersPage() {
       ══════════════════════════════════════════════════ */}
       <section className="py-16 bg-[#1C1C1E] relative overflow-hidden">
         <img
-          src="/smhs_images/seedling_images/career.jpeg"
+          src="/smhs_images/seedling_images/career.webp"
           alt="Join the Seedling team"
           className="absolute inset-0 w-full h-full object-cover opacity-10"
         />

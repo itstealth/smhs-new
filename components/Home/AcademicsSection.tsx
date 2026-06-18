@@ -3,10 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const curriculum = [
-  { stage: "Pre-Primary", years: "Ages 3–5", desc: "Play-based early childhood programme", image: "/smhs_images/seedling_images/pre-primary.jpg" },
-  { stage: "Primary", years: "Grades 1–5", desc: "Foundation in literacy, numeracy & values", image: "/smhs_images/seedling_images/primary_home.jpg" },
-  { stage: "Middle School", years: "Grades 6–8", desc: "Enquiry-led interdisciplinary learning", image: "/smhs_images/seedling_images/middle_home.jpg" },
-  { stage: "Senior School", years: "Grades 9–12", desc: "CBSE curriculum with deep specialisation", image: "/smhs_images/seedling_images/senior_home.jpg" },
+  { stage: "Pre-Primary", years: "Ages 3–5", desc: "Play-based early childhood programme", image: "/smhs_images/seedling_images/pre-primary.webp" },
+  { stage: "Primary", years: "Grades 1–5", desc: "Foundation in literacy, numeracy & values", image: "/smhs_images/seedling_images/primary_home.webp" },
+  { stage: "Middle School", years: "Grades 6–8", desc: "Enquiry-led interdisciplinary learning", image: "/smhs_images/seedling_images/middle_home.webp" },
+  { stage: "Senior School", years: "Grades 9–12", desc: "CBSE curriculum with deep specialisation", image: "/smhs_images/seedling_images/senior_home.webp" },
 ];
 
 export default function AcademicsSection() {

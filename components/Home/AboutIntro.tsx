@@ -85,7 +85,7 @@ export default function AboutIntro() {
                       className="relative group overflow-hidden rounded-lg"
                     >
                       <Image
-                        src="/smhs_images/seedling_images/swimming_home.jpg"
+                        src="/smhs_images/seedling_images/swimming_home.webp"
                         alt="Sports activities"
                         fill
                         sizes="25vw"

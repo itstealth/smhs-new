@@ -47,7 +47,7 @@ export async function getPostsByCategory(categoryId: number, perPage = 20): Prom
 }
 
 export function getMediaUrl(post: WPPost): string {
-  return post._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? '/placeholder.jpg';
+  return post._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? '/placeholder.webp';
 }
 
 export function getPostCategories(post: WPPost): string[] {

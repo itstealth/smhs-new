@@ -23,7 +23,7 @@ const supportSystems = [
     desc: "We prioritize emotional resilience through integrated mindfulness sessions and regular support from dedicated counselors. A child's mental state is the foundation of their academic success.",
     icon: Heart,
     points: ["Mindfulness Workshops", "Individual Counseling", "Stress Management", "Emotional Intelligence"],
-    image: "/smhs_images/seedling_images/learning_support.jpeg",
+    image: "/smhs_images/seedling_images/learning_support.webp",
     color: "secondary"
   },
   {
@@ -31,7 +31,7 @@ const supportSystems = [
     desc: "Home to the Atal Tinkering Lab (ATL), we encourage students to explore STEAM concepts through hands-on experimentation. Traditional values meet modern technology.",
     icon: Zap,
     points: ["STEAM Integration", "Atal Tinkering Lab", "Experiential Learning", "Interactive Smart Classrooms"],
-    image: "/smhs_images/seedling_images/student_looking_telescope.jpg",
+    image: "/smhs_images/seedling_images/student_looking_telescope.webp",
     color: "primary"
   },
   {
@@ -39,7 +39,7 @@ const supportSystems = [
     desc: "Education is a shared journey. We maintain extensive collaboration through regular progress updates, workshops, and open communication channels to ensure student success at home and school.",
     icon: Users,
     points: ["Regular Progress Reviews", "Parent Workshops", "Open Door Policy", "Collaborative Goal Setting"],
-    image: "/smhs_images/seedling_images/teaching_kids.jpg",
+    image: "/smhs_images/seedling_images/teaching_kids.webp",
     color: "accent"
   }
 ];
@@ -48,7 +48,7 @@ export default function LearningSupportPage() {
   return (
     <div className="bg-neutral-bg min-h-screen pt-32 overflow-x-hidden">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Learning Support"
         badge="Student Care"
         breadcrumbs={[{ label: "Learning Support" }]}

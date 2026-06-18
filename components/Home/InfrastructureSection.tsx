@@ -5,10 +5,10 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 const infrastructure = [
-  { icon: "🏛️", title: "State-of-the-Art Campus", desc: "Thoughtfully designed spaces — bright classrooms, smart boards, and collaborative areas — built to spark curiosity and a love for learning.", image: "/smhs_images/seedling_images/SMHS.png", href: "/school-life" },
-  { icon: "🏀", title: "Sports Facilities", desc: "Olympic-standard ground, basketball courts, and a dedicated fitness centre.", image: "/smhs_images/seedling_images/sports_home.jpg", href: "/school-life" },
-  { icon: "💻", title: "Modern Computing Lab", desc: "Advanced computer labs equipped with the latest hardware for digital literacy and coding.", image: "/smhs_images/seedling_images/computer_lab.jpeg", href: "/academics" },
-  { icon: "📚", title: "Library & Resource Centre", desc: "Over 20,000 titles, digital subscriptions, and dedicated research reading rooms.", image: "/smhs_images/seedling_images/library_image.jpg", href: "/academics" },
+  { icon: "🏛️", title: "State-of-the-Art Campus", desc: "Thoughtfully designed spaces — bright classrooms, smart boards, and collaborative areas — built to spark curiosity and a love for learning.", image: "/smhs_images/seedling_images/SMHS.webp", href: "/school-life" },
+  { icon: "🏀", title: "Sports Facilities", desc: "Olympic-standard ground, basketball courts, and a dedicated fitness centre.", image: "/smhs_images/seedling_images/sports_home.webp", href: "/school-life" },
+  { icon: "💻", title: "Modern Computing Lab", desc: "Advanced computer labs equipped with the latest hardware for digital literacy and coding.", image: "/smhs_images/seedling_images/computer_lab.webp", href: "/academics" },
+  { icon: "📚", title: "Library & Resource Centre", desc: "Over 20,000 titles, digital subscriptions, and dedicated research reading rooms.", image: "/smhs_images/seedling_images/library_image.webp", href: "/academics" },
   { icon: "🔬", title: "STEM Laboratories", desc: "Cutting-edge physics, chemistry, biology, and robotics labs for hands-on learning.", image: "/smhs_images/seedling_images/lab-stem.webp", href: "/academics" },
 ];
 

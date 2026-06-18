@@ -40,7 +40,7 @@ export default function AboutModernSection() {
                   className="col-span-5 relative group overflow-hidden rounded-lg h-full"
                 >
                   <Image
-                    src="/smhs_images/seedling_images/library_home.jpg"
+                    src="/smhs_images/seedling_images/library_home.webp"
                     alt="Library"
                     fill
                     sizes="(max-width: 1024px) 50vw, 33vw"
@@ -63,7 +63,7 @@ export default function AboutModernSection() {
                     className="relative flex-1 min-h-[100px] group overflow-hidden rounded-lg"
                   >
                     <Image
-                      src="/smhs_images/seedling_images/swimming_home.jpg"
+                      src="/smhs_images/seedling_images/swimming_home.webp"
                       alt="Swimming Pool"
                       fill
                       sizes="(max-width: 1024px) 50vw, 33vw"
@@ -85,7 +85,7 @@ export default function AboutModernSection() {
                       className="relative group overflow-hidden rounded-lg"
                     >
                       <Image
-                        src="/smhs_images/seedling_images/student_life.jpg"
+                        src="/smhs_images/seedling_images/student_life.webp"
                         alt="Student Life"
                         fill
                         sizes="25vw"
@@ -106,7 +106,7 @@ export default function AboutModernSection() {
                       className="relative group overflow-hidden rounded-lg"
                     >
                       <Image
-                        src="/smhs_images/seedling_images/arts.png"
+                        src="/smhs_images/seedling_images/arts.webp"
                         alt="Creative arts"
                         fill
                         sizes="25vw"

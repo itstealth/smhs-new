@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     relation: "Parent",
     content: "We are truly grateful for the support and leadership shown during our children's sports day. Your dedication made the event special and created memories that will last a lifetime.",
     rating: 5,
-    avatar: "/smhs_images/testimonials/deepak-gupta.jpg",
+    avatar: "/smhs_images/testimonials/deepak-gupta.webp",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     relation: "Parent",
     content: "The school provides holistic education, nurturing academic growth, creativity, and confidence. Teachers go beyond teaching and create a motivating environment for children.",
     rating: 5,
-    avatar: "/smhs_images/testimonials/Soniya-Yadav.jpg",
+    avatar: "/smhs_images/testimonials/Soniya-Yadav.webp",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const testimonials: Testimonial[] = [
     relation: "Parent",
     content: "The academic programme is well planned and balanced with co-curricular activities. Teachers and management are doing a great job in grooming children for a bright future.",
     rating: 5,
-    avatar: "/smhs_images/testimonials/Bhanupriya-Singh.jpg",
+    avatar: "/smhs_images/testimonials/Bhanupriya-Singh.webp",
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const testimonials: Testimonial[] = [
     relation: "Parent",
     content: "The curriculum and teaching methods are impressive. Worksheets and activities help children think beyond textbooks and develop a genuine love for learning.",
     rating: 5,
-    avatar: "/smhs_images/testimonials/Anita-Gupta.jpg",
+    avatar: "/smhs_images/testimonials/Anita-Gupta.webp",
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ const testimonials: Testimonial[] = [
     relation: "Parent",
     content: "We are grateful for the care, dedication, and guidance provided by the teachers and school management. The environment here truly brings out the best in every child.",
     rating: 5,
-    avatar: "/smhs_images/testimonials/ibha-chadra.jpg",
+    avatar: "/smhs_images/testimonials/ibha-chadra.webp",
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const testimonials: Testimonial[] = [
     relation: "Parent",
     content: "The school provides modern, relevant education — giving us real confidence in our child's future. The focus on both academics and life skills is commendable.",
     rating: 5,
-    avatar: "/smhs_images/testimonials/aditi-sharma.jpg",
+    avatar: "/smhs_images/testimonials/aditi-sharma.webp",
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ const testimonials: Testimonial[] = [
     relation: "Parent",
     content: "Technology integration makes learning interactive and helps children build essential digital skills for the future. The teachers are always available and supportive.",
     rating: 5,
-    avatar: "/smhs_images/testimonials/Sweta-Shrivastava.jpg",
+    avatar: "/smhs_images/testimonials/Sweta-Shrivastava.webp",
   },
   {
     id: 8,
@@ -88,7 +88,7 @@ const testimonials: Testimonial[] = [
     relation: "Parent",
     content: "The school sets high standards in education with skilled teachers ensuring overall personality development. We are proud to be part of the Seedling family.",
     rating: 5,
-    avatar: "/smhs_images/testimonials/Muskan-Rupani.jpg",
+    avatar: "/smhs_images/testimonials/Muskan-Rupani.webp",
   },
 ];
 

@@ -13,7 +13,7 @@ const events = [
     location: "SMHS Campus",
     category: "Academic",
     icon: Trophy,
-    image: "/events/honoring-achievers/IMG20260420100328.jpg",
+    image: "/events/honoring-achievers/IMG20260420100328.webp",
     desc: "A special ceremony recognising students who have demonstrated outstanding academic performance, leadership, and contribution to the school community. Inspiring the next generation of leaders."
   },
   {
@@ -23,7 +23,7 @@ const events = [
     location: "SMHS Campus",
     category: "Awareness",
     icon: Star,
-    image: "/events/grow-glow/IMG-20260421-WA0040.jpg",
+    image: "/events/grow-glow/IMG-20260421-WA0040.webp",
     desc: "Students learned about the nutritional value of vegetables through hands-on activities, demonstrations, and vibrant displays. An initiative to build healthy habits from an early age."
   },
   {
@@ -33,7 +33,7 @@ const events = [
     location: "SMHS Campus",
     category: "Events",
     icon: Star,
-    image: "/smhs_images/seedling_images/excexutice_director_mam_cutting_cake.jpg",
+    image: "/smhs_images/seedling_images/excexutice_director_mam_cutting_cake.webp",
     desc: "Commemorating the founding vision of Seedling Group of Institutions with speeches, cake cutting, and a celebration of 30+ years of educational excellence."
   },
   {
@@ -43,7 +43,7 @@ const events = [
     location: "SMHS Open Grounds",
     category: "Cultural",
     icon: Music,
-    image: "/smhs_images/seedling_images/dandiya_fest.jpg",
+    image: "/smhs_images/seedling_images/dandiya_fest.webp",
     desc: "A vibrant celebration of Navratri with traditional dandiya raas, folk music, and colourful attire bringing the whole school community together."
   },
   {
@@ -63,7 +63,7 @@ const events = [
     location: "SMHS Auditorium",
     category: "Cultural",
     icon: Music,
-    image: "/smhs_images/seedling_images/christmas_dance.jpg",
+    image: "/smhs_images/seedling_images/christmas_dance.webp",
     desc: "Students light up the stage with Christmas carols, dance performances, and a festive choir in our annual Christmas celebration."
   },
   {
@@ -73,7 +73,7 @@ const events = [
     location: "SMHS Amphitheatre",
     category: "Cultural",
     icon: Star,
-    image: "/smhs_images/seedling_images/dragon_dance.jpg",
+    image: "/smhs_images/seedling_images/dragon_dance.webp",
     desc: "A spectacular display of cultural diversity featuring a traditional dragon dance alongside performances from students across all grades."
   },
   {
@@ -83,7 +83,7 @@ const events = [
     location: "SMHS Main Auditorium",
     category: "Events",
     icon: Users,
-    image: "/smhs_images/seedling_images/farewell_cermony.jpg",
+    image: "/smhs_images/seedling_images/farewell_cermony.webp",
     desc: "A heartfelt send-off for our graduating Class XII students, filled with memories, messages, and celebrations of their journey at Seedling."
   },
   {
@@ -93,7 +93,7 @@ const events = [
     location: "SMHS Main Hall",
     category: "Academic",
     icon: Trophy,
-    image: "/smhs_images/seedling_images/certifcaiton_ceremoney.jpg",
+    image: "/smhs_images/seedling_images/certifcaiton_ceremoney.webp",
     desc: "Recognising the hard work and dedication of our board achievers in a formal CBSE certification and merit award ceremony."
   },
   {

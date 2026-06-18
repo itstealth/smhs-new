@@ -18,7 +18,7 @@ export default function VisionPage() {
   return (
     <main className="bg-neutral-bg min-h-screen">
       <HeroWrapper
-        backgroundImage="/assets/about/about-banner.jpg"
+        backgroundImage="/assets/about/about-banner.webp"
         title="Vision & Mission"
         badge="Our Purpose"
         breadcrumbs={[{ label: "Vision & Mission" }]}
@@ -66,7 +66,7 @@ export default function VisionPage() {
           </p>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary mb-6">
-              <img src="/smhs_images/seedling_images/Mohini_bakshi.jpg" alt="Founder" className="w-full h-full object-cover" />
+              <img src="/smhs_images/seedling_images/Mohini_bakshi.webp" alt="Founder" className="w-full h-full object-cover" />
             </div>
             <p className="text-xl font-black tracking-tight">Late Ms. Mohini Bakshi</p>
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-secondary mt-2">Founder Director</p>

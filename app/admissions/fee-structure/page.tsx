@@ -18,7 +18,7 @@ export default function FeeStructurePage() {
   return (
     <main className="bg-neutral-bg min-h-screen">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Fee Structure"
         badge="Transparent Fees"
         breadcrumbs={[{ label: "Fee Structure" }]}

@@ -113,7 +113,7 @@ export default function ModernHero() {
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-[105%] lg:w-[115%] aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl z-10 border-[4px] sm:border-[6px] border-white/50"
           >
             <Image
-              src="/smhs_images/seedling_images/group_students.jpg"
+              src="/smhs_images/seedling_images/group_students.webp"
               alt="School Campus"
               fill
               priority

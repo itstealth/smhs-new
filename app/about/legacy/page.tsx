@@ -54,7 +54,7 @@ export default function LegacyPage() {
   return (
     <div ref={containerRef} className="min-h-screen bg-white text-neutral-950 overflow-hidden pb-40">
       <HeroWrapper
-        backgroundImage="/assets/about/about-banner.jpg"
+        backgroundImage="/assets/about/about-banner.webp"
         title="Our Legacy"
         badge="Since 1993"
         breadcrumbs={[{ label: "Legacy" }]}
@@ -62,7 +62,7 @@ export default function LegacyPage() {
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 opacity-40">
           <Image
-            src="/smhs_images/seedling_images/leaders.jpeg"
+            src="/smhs_images/seedling_images/leaders.webp"
             alt="Heritage Background"
             fill
             className="object-cover"

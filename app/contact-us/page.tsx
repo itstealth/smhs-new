@@ -207,7 +207,7 @@ export default function ContactPage() {
       <div className="h-1 bg-gradient-to-r from-navy via-crimson to-sand" />
 
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/contact_us.jpg"
+        backgroundImage="/smhs_images/seedling_images/contact_us.webp"
         objectPosition="center 80%"
         title="Contact Us"
         subtitle="We'd love to hear from you."

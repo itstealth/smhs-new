@@ -51,7 +51,7 @@ const timeline = [
     year: "1993",
     title: "The Seed is Planted",
     desc: "Late Ms. Mohini Bakshi founded Seedling Group of Institutions in Jaipur with a vision to nurture every child as a unique individual — prioritising student well-being and community values above all else.",
-    img: "/smhs_images/seedling_images/nursery.jpg",
+    img: "/smhs_images/seedling_images/nursery.webp",
     side: "right",
   },
   {
@@ -65,28 +65,28 @@ const timeline = [
     year: "2005",
     title: "Opening New Horizons — Durgapura",
     desc: "Our Journey (CBSE) opened its doors in Durgapura, expanding the group's reach and bringing the same ethos of joyful, reflective learning to a new community.",
-    img: "/smhs_images/seedling_images/smhs_about.jpg",
+    img: "/smhs_images/seedling_images/smhs_about.webp",
     side: "right",
   },
   {
     year: "2010",
     title: "Going Global — Cambridge Curriculum",
     desc: "Seedling International Academy launched with the Cambridge Board, giving students access to a world-class, internationally recognised curriculum while remaining rooted in Indian values.",
-    img: "/smhs_images/seedling_images/sia-student.jpg",
+    img: "/smhs_images/seedling_images/sia-student.webp",
     side: "left",
   },
   {
     year: "2015",
     title: "Seedling Modern International Academy",
     desc: "A second Cambridge-affiliated institution — Seedling Modern International Academy — was established in Durgapura, completing a full dual-campus, dual-curriculum ecosystem.",
-    img: "/smhs_images/seedling_images/smia.jpg",
+    img: "/smhs_images/seedling_images/smia.webp",
     side: "right",
   },
   {
     year: "2018",
     title: "Gateway to Higher Education",
     desc: "Graduating from Seedling opens doors to seamless higher education opportunities. With our strong academic foundation, passing out from Seedling significantly enhances your prospects of securing admission and pursuing advanced degrees at Jaipur National University.",
-    img: "/smhs_images/seedling_images/jnu.jpg",
+    img: "/smhs_images/seedling_images/jnu.webp",
     side: "left",
   },
 ];
@@ -97,7 +97,7 @@ const leaders = [
     role: "Founder Director",
     sub: "Seedling Group of Institutions",
     quote: "The life of one we love is never lost. Its influence goes on through all the lives it ever touched.",
-    img: "/assets/img/mohini.png",
+    img: "/assets/img/mohini.webp",
     tag: "Legacy",
   },
   {
@@ -105,7 +105,7 @@ const leaders = [
     role: "CEO & Director",
     sub: "Seedling Group of Institutions",
     quote: "To make education monumentally effective, we must teach young people to grow their own plants rather than giving them cut flowers.",
-    img: "/assets/img/sandeep.png",
+    img: "/assets/img/sandeep.webp",
     tag: "Forever New Frontiers",
   },
   {
@@ -113,7 +113,7 @@ const leaders = [
     role: "Executive Director",
     sub: "Seedling Group of Institutions",
     quote: "Give pupils something to do, not something to learn — and the doing demands thinking; learning naturally results.",
-    img: "/assets/img/preeti.png",
+    img: "/assets/img/preeti.webp",
     tag: "Creating Fresh Pathways",
   },
   {
@@ -121,7 +121,7 @@ const leaders = [
     role: "Joint Director",
     sub: "Seedling Group of Institutions",
     quote: "Adaptability to change is itself a hallmark of successful education.",
-    img: "/assets/img/akansha.png",
+    img: "/assets/img/akansha.webp",
     tag: "Engagement that Empowers",
   },
   {
@@ -129,7 +129,7 @@ const leaders = [
     role: "Joint Director",
     sub: "Seedling Group of Institutions",
     quote: "The only person who is educated is the one who has learned how to learn and change.",
-    img: "/assets/img/aishwarya.png",
+    img: "/assets/img/aishwarya.webp",
     tag: "Promoting Global Citizenship",
   },
 ];
@@ -188,7 +188,7 @@ export default function AboutPage() {
       ══════════════════════════════════════════════════════════════ */}
 
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/karate.jpeg"
+        backgroundImage="/smhs_images/seedling_images/karate.webp"
         title="About us"
         badge="CBSE Affiliated · Jaipur"
         breadcrumbs={[{ label: "About" }]}
@@ -259,7 +259,7 @@ export default function AboutPage() {
           <Reveal delay={150} className="relative">
             <div className="relative">
               <img
-                src="/smhs_images/seedling_images/school_guard.png"
+                src="/smhs_images/seedling_images/school_guard.webp"
                 alt="Seedling School Guard"
                 className="w-full h-[220px] md:h-[320px] lg:h-[380px] object-cover object-center rounded-2xl shadow-2xl transition-all duration-700"
               />
@@ -434,7 +434,7 @@ export default function AboutPage() {
       ══════════════════════════════════════════════════════════════ */}
       <section className="relative py-10 sm:py-16 px-5 sm:px-6 overflow-hidden bg-crimson">
         {/* <img
-          src="/assets/about/feature-education.png"
+          src="/assets/about/feature-education.webp"
           alt="Seedling Philosophy"
           className="absolute inset-0 w-full h-full object-cover object-center"
         /> */}

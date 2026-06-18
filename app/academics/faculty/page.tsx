@@ -24,28 +24,28 @@ const leadership = [
     name: "Late Ms. Mohini Bakshi",
     role: "Founder",
     quote: "The life of one we love is never lost. Its influence goes on through all the lives it ever touched.",
-    image: "/smhs_images/seedling_images/Mohini_bakshi.jpg",
+    image: "/smhs_images/seedling_images/Mohini_bakshi.webp",
     initials: "MB"
   },
   {
     name: "Dr. Sandeep Bakshi",
     role: "CEO & Director",
     quote: "To make education monumentally effective, we must teach young people to grow their own plants rather than giving them cut flowers.",
-    image: "/smhs_images/seedling_images/director.jpeg",
+    image: "/smhs_images/seedling_images/director.webp",
     initials: "SB"
   },
   {
     name: "Dr. Preeti Bakshi",
     role: "Executive Director",
     quote: "Give pupils something to do, not something to learn — and the doing demands thinking; learning naturally results.",
-    image: "/smhs_images/seedling_images/excutive _director.jpeg",
+    image: "/smhs_images/seedling_images/excutive _director.webp",
     initials: "PB"
   },
   {
     name: "Ms. Nidhi Adha",
     role: "Principal, SMHS",
     quote: "Education goes beyond textbooks — it is about shaping character, building confidence, and preparing students for a successful future.",
-    image: "/smhs_images/seedling_images/SMHS_Principal_Nidhi.png",
+    image: "/smhs_images/seedling_images/SMHS_Principal_Nidhi.webp",
     initials: "NA"
   }
 ];

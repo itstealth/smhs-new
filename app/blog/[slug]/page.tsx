@@ -106,7 +106,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
   return (
     <div className="min-h-screen bg-off-white font-dm">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Blog"
         badge="Stories & Updates"
         breadcrumbs={[{ label: "Blog" }]}

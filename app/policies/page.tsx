@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="bg-off-white">
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/privacy.jpg"
+        backgroundImage="/smhs_images/seedling_images/privacy.webp"
         objectPosition="center 60%"
         title="Policies"
         badge="Privacy & Safety"

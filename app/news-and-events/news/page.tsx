@@ -41,7 +41,7 @@ export default function NewsCoveragePage() {
   return (
     <main className="bg-neutral-bg min-h-screen">
       <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.jpg"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="News & Updates"
         badge="Latest News"
         breadcrumbs={[{ label: "News" }]}
