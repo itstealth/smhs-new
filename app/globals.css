@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* 🌈 THEME VARIABLES (Replaces tailwind.config.js) */
+@theme {
+  /* Colors — SPS palette */
+  --color-navy: #034ea2;
+  --color-crimson: #a3123f;
+  --color-mauve: #896B85;
+  --color-sand: #D6D1CF;
+  --color-off-white: #ffffff;
+  --color-dark: #0e0e0e;
+  --color-text-base: #2c2c2c;
+  --color-text-light: #5a5a5a;
+  --color-navy-dark: #013975;
+  --color-navy-deeper: #013975;
+  --color-crimson-dark: #8e1037;
+  --color-crimson-deeper: #7a0f35;
+  --color-navy-light: #eef4fc;
+  --color-cool-white: #f0f4ff;
+
+  /* Fonts */
+  --font-serif: var(--font-serif);
+  --font-playfair: var(--font-serif);
+  --font-dm: var(--font-dm);
+  --font-sans: var(--font-dm);
+
+  /* Standard radii and shadows for consistency */
+  --radius-premium: 3.5rem;
+  --radius-button: 1.25rem;
+  --radius-card: 2.5rem;
+  
+  --shadow-editorial: 0 20px 80px -10px rgba(0, 0, 0, 0.05), 0 10px 30px -5px rgba(0, 0, 0, 0.02);
+}
+
+/* 🌍 GLOBAL BASE STYLES */
+@layer base {
+  body {
+    font-family: var(--font-dm) !important;
+    color: var(--color-text-base);
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif) !important;
+    color: var(--color-navy);
+    font-weight: 400;
+  }
+
+  *, *::before, *::after {
+    font-family: inherit;
+  }
+}
+
+/* 🎯 CUSTOM UTILITIES */
+@layer utilities {
+  /* Marquee Animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+
+  /* Keep legacy utilities that might be used elsewhere */
+  .glass-white {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: var(--shadow-editorial);
+  }
+
+  .mesh-gradient {
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(23, 81, 144, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(164, 21, 70, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(137, 107, 133, 0.05) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(23, 81, 144, 0.05) 0px, transparent 50%);
+  }
+}
