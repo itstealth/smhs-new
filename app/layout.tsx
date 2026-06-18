@@ -9,8 +9,8 @@ const dmSerif = DM_Serif_Text({ variable: "--font-serif", subsets: ["latin"], we
 const dmSans = DM_Sans({ variable: "--font-dm", subsets: ["latin"], weight: ["300","400","500","600","700"] });
 
 export const metadata: Metadata = {
-  title: "Seedling Modern High School | Best CBSE School in Jaipur",
-  description: "Seedling Modern High School (SMHS) is a premier CBSE school in Jaipur offering world-class education from Nursery to Senior Secondary.",
+  title: "Best CBSE School in Durgapura Jaipur | Seedling Modern High School",
+  description: "Seedling Modern High School — top CBSE school in Durgapura, Mahaveer Nagar, Jaipur. 30+ years of excellence, 100% board results, English medium, Nursery to Class XII. Admissions open 2026.",
   verification: {
     google: "LzKlHJhPde7RhG9zSVx4gbkk7ZuWP0GnfhcHhcK1Qe0",
   },
