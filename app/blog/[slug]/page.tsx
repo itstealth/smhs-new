@@ -181,7 +181,6 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                       src={getMediaUrl(relatedPost)}
                       alt={stripHtml(relatedPost.title.rendered)}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      onError={(e) => { (e.target as HTMLImageElement).src = '/assets/Home/classroom.jpg'; }}
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
