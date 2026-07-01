@@ -1100,7 +1100,7 @@ export default function AdmissionsPage() {
               <div className="grid md:grid-cols-2">
                 {/* map iframe placeholder */}
                 <div className="h-80 md:h-[500px] bg-navy-deeper relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-[url('/events/INVESTITURE%20CEREMONY/P1500918.JPG')] bg-cover bg-center opacity-20 transition-transform duration-[10s] group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-[url('/events/INVESTITURE%20CEREMONY/P1500918.webp')] bg-cover bg-center opacity-20 transition-transform duration-[10s] group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-br from-navy-deeper via-navy-deeper/80 to-transparent" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-center p-8 z-10">
                     <div className="w-20 h-20 bg-sand/10 rounded-full flex items-center justify-center mb-2">

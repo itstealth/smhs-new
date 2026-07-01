@@ -26,31 +26,31 @@ const SPORTS = [
     desc:"Our multi-sport ground is where champions are forged. From morning practice to competitive matches, our expansive facility hosts a variety of sports for students of all skill levels.",
     highlights:["FIFA-standard turf field","200m athletic track","Cricket practice nets","Floodlit courts"] },
   { id:"basketball", name:"Basketball", tagline:"Rise. Dribble. Dominate.",      accent:T.crimson,     icon:"🏀",
-    img:"/sports_and_other_images/P1500703.JPG",
+    img:"/sports_and_other_images/P1500703.webp",
     desc:"Fast-paced and built on teamwork — our basketball program develops court vision, agility, and winning mindsets.",
     highlights:["State-of-art indoor courts","3v3 & 5v5 formats","Inter-school leagues","Elite point guard training"] },
   { id:"indoor",     name:"Volleyball", tagline:"Set. Spike. Soar.", accent:T.mauve,       icon:"🏐",
-    img:"/sports_and_other_images/P1500645.JPG",
+    img:"/sports_and_other_images/P1500645.webp",
     desc:"Volleyball teaches explosive power, spatial awareness, and relentless communication — every rally builds a better athlete.",
     highlights:["Beach & indoor courts","Spike & serve workshops","Regional tournaments","Certified FIVB coaches"] },
   { id:"badminton",  name:"Badminton",  tagline:"Smash. Rally. Triumph.",        accent:T.crimson,     icon:"🏸",
-    img:"/sports_and_other_images/P1500819.JPG",
+    img:"/sports_and_other_images/P1500819.webp",
     desc:"Fast reflexes, sharp footwork, and split-second decisions — our badminton program builds agility, endurance, and competitive finesse.",
     highlights:["Professional synthetic courts","Singles & doubles formats","Inter-school tournaments","BWF-aligned training curriculum"] },
   { id:"tabletennis",name:"Table Tennis",tagline:"Spin. Smash. Score.",          accent:T.navy,        icon:"🏓",
-    img:"/sports_and_other_images/P1500982.JPG",
+    img:"/sports_and_other_images/P1500982.webp",
     desc:"Precision, reflexes, and split-second thinking — table tennis sharpens hand-eye coordination and builds mental agility through fast-paced rallies.",
     highlights:["Professional TT tables","Singles & doubles training","Inter-house tournaments","Spin & smash technique drills"] },
   { id:"carrom",     name:"Carrom",     tagline:"Aim. Flick. Win.",              accent:T.navyDark,    icon:"🎯",
-    img:"/sports_and_other_images/0N9A0278.JPG",
+    img:"/sports_and_other_images/0N9A0278.webp",
     desc:"A classic game of precision and strategy, carrom sharpens focus, fine motor skills, and tactical thinking through every strike of the striker.",
     highlights:["Full-size carrom boards","Singles & doubles formats","Inter-house championships","Flicking technique workshops"] },
   { id:"chess",      name:"Chess",      tagline:"Think. Plan. Checkmate.",       accent:T.crimsonDark, icon:"♟️",
-    img:"/sports_and_other_images/0N9A0280.JPG",
+    img:"/sports_and_other_images/0N9A0280.webp",
     desc:"The ultimate game of intellect — chess at Seedling develops critical thinking, patience, and problem-solving skills that transcend the board.",
     highlights:["FIDE-standard sets & boards","Beginner to advanced levels","Inter-school chess tournaments","Grandmaster-inspired training"] },
   { id:"karate",     name:"Karate",     tagline:"Focus. Strike. Conquer.",       accent:T.crimsonDark, icon:"🥋",
-    img:"/smhs_images/seedling_images/karate.jpeg",
+    img:"/smhs_images/seedling_images/karate.webp",
     desc:"Karate at Seedling builds mental discipline, physical strength, and self-confidence. Our certified instructors guide students from basic kata to competitive sparring.",
     highlights:["Certified black-belt instructors","Kata & kumite training","State-level competitions","Belt grading ceremonies"] },
   { id:"swimming",   name:"Swimming",   tagline:"Dive Deep. Rise Faster.",       accent:T.navy,        icon:"🏊",
@@ -60,21 +60,21 @@ const SPORTS = [
 ];
 
 const GALLERY = [
-  { img:"/sports_and_other_images/P1500644.JPG", tall:true  },
-  { img:"/sports_and_other_images/P1500642.JPG", tall:false },
-  { img:"/sports_and_other_images/P1500648.JPG", tall:false },
-  { img:"/sports_and_other_images/P1500670.JPG", tall:true  },
-  { img:"/sports_and_other_images/P1500685.JPG", tall:false },
-  { img:"/sports_and_other_images/P1500695.JPG", tall:false },
-  { img:"/sports_and_other_images/P1500700.JPG", tall:true  },
-  { img:"/sports_and_other_images/P1500703.JPG", tall:false },
-  { img:"/sports_and_other_images/P1500675.JPG", tall:false },
-  { img:"/sports_and_other_images/P1500680.JPG", tall:true  },
-  { img:"/sports_and_other_images/P1500820.JPG", tall:false },
-  { img:"/sports_and_other_images/P1500643.JPG", tall:false },
-  { img:"/sports_and_other_images/0N9A0271.JPG", tall:true  },
-  { img:"/sports_and_other_images/0N9A0278.JPG", tall:false },
-  { img:"/sports_and_other_images/0N9A0280.JPG", tall:false },
+  { img:"/sports_and_other_images/P1500644.webp", tall:true  },
+  { img:"/sports_and_other_images/P1500642.webp", tall:false },
+  { img:"/sports_and_other_images/P1500648.webp", tall:false },
+  { img:"/sports_and_other_images/P1500670.webp", tall:true  },
+  { img:"/sports_and_other_images/P1500685.webp", tall:false },
+  { img:"/sports_and_other_images/P1500695.webp", tall:false },
+  { img:"/sports_and_other_images/P1500700.webp", tall:true  },
+  { img:"/sports_and_other_images/P1500703.webp", tall:false },
+  { img:"/sports_and_other_images/P1500675.webp", tall:false },
+  { img:"/sports_and_other_images/P1500680.webp", tall:true  },
+  { img:"/sports_and_other_images/P1500820.webp", tall:false },
+  { img:"/sports_and_other_images/P1500643.webp", tall:false },
+  { img:"/sports_and_other_images/0N9A0271.webp", tall:true  },
+  { img:"/sports_and_other_images/0N9A0278.webp", tall:false },
+  { img:"/sports_and_other_images/0N9A0280.webp", tall:false },
 ];
 
 const STATS = [
@@ -200,7 +200,7 @@ function Hero() {
       {/* BG */}
       <div style={{
         position:"absolute", inset:0,
-        backgroundImage:"url(/sports_and_other_images/P1500656.JPG)",
+        backgroundImage:"url(/sports_and_other_images/P1500656.webp)",
         backgroundSize:"cover", backgroundPosition:"center 30%",
         transform: w > 768 ? `translateY(${sy * 0.28}px)` : "none",
       }} />
@@ -350,7 +350,7 @@ function SportsOverview() {
           <FadeUp delay={180} style={{ position:"relative" }}>
             <div style={{
               borderRadius:24, overflow:"hidden", aspectRatio:"4/5",
-              backgroundImage:"url(/sports_and_other_images/P1500653.JPG)",
+              backgroundImage:"url(/sports_and_other_images/P1500653.webp)",
               backgroundSize:"cover", backgroundPosition:"center",
             }} />
             <div style={{
@@ -777,7 +777,7 @@ function Fitness() {
             </p>
             <div style={{
               borderRadius:18, overflow:"hidden",
-              backgroundImage:"url(/sports_and_other_images/P1500667.JPG)",
+              backgroundImage:"url(/sports_and_other_images/P1500667.webp)",
               backgroundSize:"cover", backgroundPosition:"center",
               height:"clamp(150px,18vw,210px)", position:"relative",
             }}>
@@ -819,7 +819,7 @@ function CTA() {
     <section id="join" style={{ position:"relative", padding:"clamp(80px,12vw,160px) 0", overflow:"hidden" }}>
       <div style={{
         position:"absolute", inset:0,
-        backgroundImage:"url(/sports_and_other_images/P1500656.JPG)",
+        backgroundImage:"url(/sports_and_other_images/P1500656.webp)",
         backgroundSize:"cover", backgroundPosition:"center",
       }} />
       <div style={{
@@ -892,7 +892,7 @@ export default function SportsPage() {
     <>
       <Styles />
       <main style={{ background:T.offWhite, overflowX:"hidden" }}>
-        <HeroWrapper backgroundImage="/sports_and_other_images/P1500656.JPG" title="Sports" badge="Athletics & Fitness" breadcrumbs={[{label:"Sports"}]} />
+        <HeroWrapper backgroundImage="/sports_and_other_images/P1500656.webp" title="Sports" badge="Athletics & Fitness" breadcrumbs={[{label:"Sports"}]} />
         <SportsOverview />
         <SportsGrid />
         {SPORTS.map((sport, i) => (

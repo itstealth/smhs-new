@@ -53,7 +53,7 @@ const events = [
     location: "SMHS Community Hall",
     category: "Cultural",
     icon: Music,
-    image: "/smhs_images/seedling_images/dandiya_fest_two.JPG",
+    image: "/smhs_images/seedling_images/dandiya_fest_two.webp",
     desc: "The second evening of our Navratri festivities, with more energy, more colour, and the whole school family joining the celebration."
   },
   {
@@ -103,7 +103,7 @@ const events = [
     location: "SMHS Auditorium",
     category: "Cultural",
     icon: Star,
-    image: "/events/ANNUAL DAY/P1230711.JPG",
+    image: "/events/ANNUAL DAY/P1230711.webp",
     desc: "A grand showcase of student talent featuring music, dance, drama, and spoken word performances. The Annual Day is a highlight of our school calendar, celebrating creativity and the arts."
   },
   {
@@ -113,7 +113,7 @@ const events = [
     location: "SMHS ATL Lab",
     category: "Innovation",
     icon: Trophy,
-    image: "/events/ATL LAB/1P3A4255.JPG",
+    image: "/events/ATL LAB/1P3A4255.webp",
     desc: "Students present their innovations, prototypes, and tech solutions built in our Atal Tinkering Lab. A day dedicated to future-ready skills, robotics, coding, and STEM exploration."
   },
   {
@@ -123,7 +123,7 @@ const events = [
     location: "SMHS Main Ground",
     category: "Events",
     icon: Users,
-    image: "/events/INVESTITURE CEREMONY/P1510050.JPG",
+    image: "/events/INVESTITURE CEREMONY/P1510050.webp",
     desc: "A formal ceremony inducting the new student council, house captains, and school prefects. The Investiture Ceremony instils responsibility, discipline, and pride in our student leaders."
   }
 ];

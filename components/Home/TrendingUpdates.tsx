@@ -24,7 +24,7 @@ const events: Event[] = [
     description:
       "A grand evening of performances, awards, and pride as students showcased their talents across music, dance, and drama before a packed audience of families and guests.",
     href: "/news-and-events",
-    image: "/events/ANNUAL DAY/P1230432.JPG",
+    image: "/events/ANNUAL DAY/P1230432.webp",
     accent: "#034ea2",
   },
   {
@@ -34,7 +34,7 @@ const events: Event[] = [
     description:
       "Students explored robotics, coding, and design thinking in our state-of-the-art Atal Tinkering Lab, fostering creativity and problem-solving skills for tomorrow's innovators.",
     href: "/news-and-events",
-    image: "/events/ATL LAB/1P3A4229.JPG",
+    image: "/events/ATL LAB/1P3A4229.webp",
     accent: "#013975",
   },
   {
@@ -64,7 +64,7 @@ const events: Event[] = [
     description:
       "Student council leaders were formally invested with their badges and responsibilities in a solemn and inspiring ceremony, marking the beginning of a year of student-led initiatives.",
     href: "/news-and-events",
-    image: "/events/INVESTITURE CEREMONY/P1500918.JPG",
+    image: "/events/INVESTITURE CEREMONY/P1500918.webp",
     accent: "#013975",
   },
 ];

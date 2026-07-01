@@ -129,13 +129,13 @@ const learningApproaches = [
   {
     title: "Technology Integrated Innovative Education",
     body: "We embrace the power of technology in education. Our classrooms are equipped with interactive whiteboards, and we integrate educational apps and online resources to create an engaging and dynamic learning experience. Students are introduced to modern skills including AI, ethics, and sustainability — preparing them for a digitally driven world.",
-    img: "/events/ATL LAB/1P3A4261.JPG",
+    img: "/events/ATL LAB/1P3A4261.webp",
     tag: "Innovation",
   },
   {
     title: "Thrust on Experiential Learning",
     body: "We believe that learning should be immersive and hands-on. Through experiential learning activities — practical experiments, outdoor excursions, and interactive projects — we foster critical thinking, problem-solving skills, and a genuine love for learning in every student.",
-    img: "/events/ATL LAB/1P3A4246.JPG",
+    img: "/events/ATL LAB/1P3A4246.webp",
     tag: "Student Wellbeing",
   },
   {
@@ -190,7 +190,7 @@ const learnerProfile = [
   { trait: "Confident", desc: "Students embark on a journey of self-discovery, fearlessly exploring new ideas and embracing challenges with a can-do attitude.", emoji: "💪", img: "/smhs_images/seedling_images/confidence.webp" },
   { trait: "Reflective", desc: "We encourage students to be reflective thinkers — pondering their experiences, analysing outcomes, and adapting with informed decisions.", emoji: "🪞", img: "/smhs_images/seedling_images/reflective.webp" },
   { trait: "Responsible", desc: "Students are accountable for their actions. We foster integrity and prepare them to make wise decisions and shape a bright future.", emoji: "🤝", img: "/smhs_images/seedling_images/responsible.webp" },
-  { trait: "Innovative", desc: "We ignite the spark of innovation through exciting projects, cutting-edge technologies, and out-of-the-box problem-solving.", emoji: "💡", img: "/events/ATL LAB/1P3A4237.JPG" },
+  { trait: "Innovative", desc: "We ignite the spark of innovation through exciting projects, cutting-edge technologies, and out-of-the-box problem-solving.", emoji: "💡", img: "/events/ATL LAB/1P3A4237.webp" },
   { trait: "Engaged", desc: "Learning comes alive as students participate in hands-on activities, collaborative projects, and interactive discussions.", emoji: "🔥", img: "/smhs_images/seedling_images/performance.webp" },
 ];
 
