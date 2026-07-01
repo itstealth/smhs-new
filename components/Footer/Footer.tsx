@@ -8,6 +8,7 @@ const quickLinks: { label: string; href: string; external?: boolean }[] = [
   { label: "Download Brochure", href: "/SMHS_Prospectus.pdf", external: true },
   { label: "Blog", href: "/blog" },
   { label: "ERP Login", href: "/erp-login" },
+  { label: "Career", href: "/career" },
 ];
 
 const institutions = [

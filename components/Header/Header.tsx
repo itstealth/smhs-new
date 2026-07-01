@@ -50,7 +50,6 @@ const navigation = [
       { name: "Transport Facility", href: "/transport-facility" },
     ],
   },
-  { name: "Career", href: "/career" },
   { name: "Alumni", href: "/alumni" },
   { name: "Contact", href: "/contact-us" },
 ];

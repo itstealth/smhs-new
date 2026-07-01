@@ -36,7 +36,7 @@ const leaders = [
     name: "Dr. Preeti Bakshi",
     role: "Executive Director",
     quote: "We believe in providing an environment that facilitates intellectual curiosity, character development, and academic excellence.",
-    image: "/smhs_images/seedling_images/excutive _director.webp",
+    image: "/assets/img/preeti-bakshi.webp",
     initials: "PB"
   },
   {

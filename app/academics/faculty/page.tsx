@@ -38,7 +38,7 @@ const leadership = [
     name: "Dr. Preeti Bakshi",
     role: "Executive Director",
     quote: "Give pupils something to do, not something to learn — and the doing demands thinking; learning naturally results.",
-    image: "/smhs_images/seedling_images/excutive _director.webp",
+    image: "/assets/img/preeti-bakshi.webp",
     initials: "PB"
   },
   {
