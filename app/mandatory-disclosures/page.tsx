@@ -18,7 +18,7 @@ const mandatoryData = [
       { label: "Fax No.", value: "0141-2761830" },
     ]
   },
-  { section: "2", field: "Year of establishment of School", value: "1997" },
+  { section: "2", field: "Year of establishment of School", value: "1993" },
   { section: "3", field: "School Code", value: "10481" },
   { section: "4", field: "Name & Qualification of Principal", value: "Mrs. Nidhi Adha (M.A., M.Sc., M.Ed.)" },
   {
