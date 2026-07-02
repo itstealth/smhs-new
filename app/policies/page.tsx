@@ -84,9 +84,9 @@ export default function PrivacyPolicyPage() {
       <HeroWrapper
         backgroundImage="/smhs_images/seedling_images/privacy.webp"
         objectPosition="center 60%"
-        title="Policies"
+        title="Privacy Policy"
         badge="Privacy & Safety"
-        breadcrumbs={[{ label: "Policies" }]}
+        breadcrumbs={[{ label: "Privacy Policy" }]}
       />
 
       {/* Content */}

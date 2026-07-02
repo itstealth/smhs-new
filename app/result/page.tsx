@@ -37,7 +37,7 @@ const achievements = [
   { value: "20,000+", label: "Students Enrolled", sub: "Across 5 schools", icon: "👩‍🎓" },
   { value: "20:1", label: "Student–Teacher Ratio", sub: "Personalised attention", icon: "📐" },
   { value: "5,000+", label: "Alumni Network", sub: "Across 50+ nations", icon: "🌍" },
-  { value: "30+", label: "Years of Excellence", sub: "Since 1993", icon: "⭐" },
+  { value: "33+", label: "Years of Excellence", sub: "Since 1993", icon: "⭐" },
   { value: "2", label: "Boards Offered", sub: "CBSE & Cambridge", icon: "📜" },
 ];
 

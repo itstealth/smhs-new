@@ -10,7 +10,7 @@ const dmSans = DM_Sans({ variable: "--font-dm", subsets: ["latin"], weight: ["30
 
 export const metadata: Metadata = {
   title: "Best CBSE School in Durgapura Jaipur | Seedling Modern High School",
-  description: "Seedling Modern High School — top CBSE school in Durgapura, Mahaveer Nagar, Jaipur. 30+ years of excellence, 100% board results, English medium, Nursery to Class XII. Admissions open 2026.",
+  description: "Seedling Modern High School — top CBSE school in Durgapura, Mahaveer Nagar, Jaipur. 33+ years of excellence, 100% board results, English medium, Nursery to Class XII. Admissions open 2026.",
   verification: {
     google: "LzKlHJhPde7RhG9zSVx4gbkk7ZuWP0GnfhcHhcK1Qe0",
   },

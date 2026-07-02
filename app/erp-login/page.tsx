@@ -74,7 +74,7 @@ export default function ERPLoginPage() {
           {[
             { value: "20,000+", label: "Students" },
             { value: "200+", label: "Faculty" },
-            { value: "30+", label: "Years" },
+            { value: "33+", label: "Years" },
           ].map((s) => (
             <div key={s.label}>
               <p className="font-serif text-2xl font-bold text-white">{s.value}</p>

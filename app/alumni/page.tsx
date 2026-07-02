@@ -58,7 +58,7 @@ const stats = [
     icon: "🏆",
   },
   {
-    value: 30,
+    value: 33,
     suffix: "+",
     label: "Years of Excellence",
     description: "Shaping futures since 1993",

@@ -38,7 +38,7 @@ const STATS = [
   { value: '20:1', label: 'Student-Teacher Ratio' },
   { value: '5,000+', label: 'Alumni Network' },
   { value: '100%', label: 'Board Results' },
-  { value: '30+', label: 'Years of Excellence' },
+  { value: '33+', label: 'Years of Excellence' },
 ]
 
 const HOURS = [

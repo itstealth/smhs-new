@@ -158,7 +158,7 @@ const whyWork = [
       </svg>
     ),
     title: "Growth Opportunities",
-    desc: "30+ years of institutional growth means new roles, expanded responsibilities, and career advancement paths for educators and administrators alike.",
+    desc: "33+ years of institutional growth means new roles, expanded responsibilities, and career advancement paths for educators and administrators alike.",
   },
   {
     icon: (
@@ -614,7 +614,7 @@ export default function CareersPage() {
             <em className="font-semibold text-crimson">With Us</em>
           </h2>
           <p className="text-text-light mt-5 max-w-lg mx-auto leading-relaxed font-dm font-light">
-            More than a job — a calling. Teaching at Seedling means becoming part of a 30+ year legacy of educational excellence and community.
+            More than a job — a calling. Teaching at Seedling means becoming part of a 33+ year legacy of educational excellence and community.
           </p>
         </Reveal>
 

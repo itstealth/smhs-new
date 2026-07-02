@@ -34,7 +34,7 @@ const events = [
     category: "Events",
     icon: Star,
     image: "/smhs_images/seedling_images/excexutice_director_mam_cutting_cake.webp",
-    desc: "Commemorating the founding vision of Seedling Group of Institutions with speeches, cake cutting, and a celebration of 30+ years of educational excellence."
+    desc: "Commemorating the founding vision of Seedling Group of Institutions with speeches, cake cutting, and a celebration of 33+ years of educational excellence."
   },
   {
     title: "Dandiya Night — Cultural Extravaganza",

@@ -146,12 +146,11 @@ const campusImages = [
 ];
 
 const stats = [
-  { value: "20,000+", label: "Students Enrolled" },
-  { value: "20:1", label: "Student–Teacher Ratio" },
-  { value: "5,000+", label: "Alumni Worldwide" },
+  { value: "20,000+", label: "Students" },
+  { value: "20:1", label: "Student-Teacher Ratio" },
+  { value: "5,000+", label: "Alumni Network" },
   { value: "100%", label: "Board Results" },
-  { value: "50+", label: "Nations Represented" },
-  { value: "1993", label: "Year Established" },
+  { value: "33+", label: "Years of Excellence" },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -199,9 +198,9 @@ export default function AboutPage() {
       {/* ══════════════════════════════════════════════════════════════
           STATS BAND
       ══════════════════════════════════════════════════════════════ */}
-      {/* <section className="bg-navy-deeper text-white py-12 border-y border-sand/20">
+      <section className="bg-navy-deeper text-white py-12 border-y border-sand/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-3 md:grid-cols-6 divide-x divide-sand/20">
+          <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-sand/20">
             {stats.map((s) => (
               <div key={s.label} className="px-6 py-4 text-center">
                 <p className="font-playfair text-3xl md:text-5xl font-semibold text-sand">{s.value}</p>
@@ -210,7 +209,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* ══════════════════════════════════════════════════════════════
           2. WHO WE ARE
@@ -269,7 +268,7 @@ export default function AboutPage() {
                 className="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover rounded-2xl shadow-xl border-4 border-white"
               />
               <div className="absolute -top-6 -right-6 bg-crimson text-white rounded-2xl px-6 py-4 shadow-xl">
-                <p className="font-playfair text-4xl font-semibold">30+</p>
+                <p className="font-playfair text-4xl font-semibold">33+</p>
                 <p className="text-white/80 text-xs tracking-widest uppercase font-dm">Years of Excellence</p>
               </div>
             </div>
@@ -417,7 +416,7 @@ export default function AboutPage() {
                   {/* text */}
                   <div className="md:w-5/12">
                     <div className={`${item.side === "left" ? "md:text-right" : ""}`}>
-                      {/* <span className="font-playfair text-7xl font-light text-sand/40 leading-none block">{item.year}</span> */}
+                      <span className="font-playfair text-7xl font-light text-sand/40 leading-none block">{item.year}</span>
                       <h3 className="font-playfair text-3xl font-semibold mt-2 mb-4 text-navy-deeper">{item.title}</h3>
                       <p className="text-text-light leading-[1.9] text-base font-dm">{item.desc}</p>
                     </div>

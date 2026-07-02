@@ -169,7 +169,7 @@ function IntroSection() {
               <img src={IMGS.intro} alt="Classroom technology" className="relative w-full h-[480px] object-cover rounded-3xl shadow-2xl" />
               {/* floating badge */}
               <div className="absolute -bottom-6 -right-6 rounded-2xl p-5 shadow-2xl" style={{ background: "#175190" }}>
-                <div className="font-black text-4xl text-white" style={{ fontFamily: "'Playfair Display', serif" }}>30+</div>
+                <div className="font-black text-4xl text-white" style={{ fontFamily: "'Playfair Display', serif" }}>33+</div>
                 <div className="text-white/70 text-xs mt-1 tracking-wide" style={{ fontFamily: "'DM Sans', sans-serif" }}>Years of Excellence</div>
               </div>
             </div>

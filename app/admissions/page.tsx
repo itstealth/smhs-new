@@ -562,14 +562,13 @@ export default function AdmissionsPage() {
       <section className="bg-navy-deeper text-white py-12 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #D6D1CF 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
         <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-8 divide-x-0 lg:divide-x lg:divide-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 divide-x-0 lg:divide-x lg:divide-white/10">
             {[
               { target: 20, suffix: "k+", label: "Students" },
               { target: null, display: "20:1", label: "Student-Teacher Ratio" },
-              { target: 10000, suffix: "+", label: "Alumni" },
-              { target: 100, suffix: "%", label: "Results" },
-              { target: 50, suffix: "+", label: "Nations" },
-              { target: null, display: "1993", label: "Est." },
+              { target: 5000, suffix: "+", label: "Alumni Network" },
+              { target: 100, suffix: "%", label: "Board Results" },
+              { target: 33, suffix: "+", label: "Years of Excellence" },
             ].map((s) => (
               <div key={s.label} className="px-4 text-center">
                 <p className="font-playfair text-4xl font-black text-sand mb-1">
