@@ -37,7 +37,7 @@ const navigation = [
     name: "School Life",
     href: "/school-life",
     children: [
-      { name: "School Life", href: "/school-life" },
+      { name: "Campus Life", href: "/school-life" },
       { name: "Sports", href: "/sports" },
     ],
   },
@@ -46,7 +46,8 @@ const navigation = [
     name: "Admissions",
     href: "/admissions",
     children: [
-      { name: "Admissions", href: "/admissions" },
+      { name: "Admission Procedure", href: "/admissions/process" },
+      { name: "Fee Structure", href: "/admissions/fee-structure" },
       { name: "Transport Facility", href: "/transport-facility" },
     ],
   },
