@@ -6,7 +6,7 @@ import { useEnquiry } from "@/components/EnquiryContext";
 
 const STATS = [
   { n: "20K+", label: "Happy Students" },
-  { n: "2", label: "Premier Schools" },
+  { n: "2", label: "Campuses in Jaipur" },
 ];
 
 export default function ModernHero() {

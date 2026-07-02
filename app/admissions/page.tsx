@@ -565,11 +565,11 @@ export default function AdmissionsPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-8 divide-x-0 lg:divide-x lg:divide-white/10">
             {[
               { target: 20, suffix: "k+", label: "Students" },
-              { target: null, display: "20:1", label: "Alumni Network Ratio" },
+              { target: null, display: "20:1", label: "Student-Teacher Ratio" },
               { target: 10000, suffix: "+", label: "Alumni" },
               { target: 100, suffix: "%", label: "Results" },
               { target: 50, suffix: "+", label: "Nations" },
-              { target: 1993, suffix: "", label: "Est." },
+              { target: null, display: "1993", label: "Est." },
             ].map((s) => (
               <div key={s.label} className="px-4 text-center">
                 <p className="font-playfair text-4xl font-black text-sand mb-1">
@@ -695,16 +695,6 @@ export default function AdmissionsPage() {
                     <option value="Class 8">Class 8</option>
                     <option value="Class 9">Class 9</option>
                     <option value="Class 11">Class 11</option>
-                    <option value="Cambridge Primary 1">Cambridge Primary 1</option>
-                    <option value="Cambridge Primary 2">Cambridge Primary 2</option>
-                    <option value="Cambridge Primary 3">Cambridge Primary 3</option>
-                    <option value="Cambridge Primary 4">Cambridge Primary 4</option>
-                    <option value="Cambridge Primary 5">Cambridge Primary 5</option>
-                    <option value="Lower Secondary 1 (Grade 6)">Lower Secondary 1 (Grade 6)</option>
-                    <option value="Lower Secondary 2 (Grade 7)">Lower Secondary 2 (Grade 7)</option>
-                    <option value="Lower Secondary 3 (Grade 8)">Lower Secondary 3 (Grade 8)</option>
-                    <option value="IGCSE 1 (Grade 9)">IGCSE 1 (Grade 9)</option>
-                    <option value="IGCSE 2 (Grade 10)">IGCSE 2 (Grade 10)</option>
                   </select>
                 </div>
 

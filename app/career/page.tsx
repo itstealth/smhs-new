@@ -614,7 +614,7 @@ export default function CareersPage() {
             <em className="font-semibold text-crimson">With Us</em>
           </h2>
           <p className="text-text-light mt-5 max-w-lg mx-auto leading-relaxed font-dm font-light">
-            More than a job — a calling. Teaching at Seedling means becoming part of a 30-year legacy of educational excellence and community.
+            More than a job — a calling. Teaching at Seedling means becoming part of a 30+ year legacy of educational excellence and community.
           </p>
         </Reveal>
 
@@ -931,7 +931,7 @@ export default function CareersPage() {
           <Reveal delay={220}>
             <div className="mt-16 flex flex-wrap justify-center gap-4">
               {[
-                "🏫 2 Schools",
+                "🏫 2 Campuses",
                 "🎓 CBSE Board",
                 "🌿 Est. 1993",
               ].map((b) => (

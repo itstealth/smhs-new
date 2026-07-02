@@ -2,7 +2,7 @@
 import HeroVideo from "@/components/ui/HeroVideo";
 
 const STATS = [
-  { n: "2", label: "Premier Schools" },
+  { n: "2", label: "Campuses in Jaipur" },
   { n: "20K+", label: "Students Enrolled" },
   { n: "30+", label: "Years of Trust" },
   { n: "100%", label: "Board Results" },

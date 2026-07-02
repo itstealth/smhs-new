@@ -64,7 +64,7 @@ const timeline = [
   {
     year: "2005",
     title: "Opening New Horizons — Durgapura",
-    desc: "Our Journey (CBSE) opened its doors in Durgapura, expanding the group's reach and bringing the same ethos of joyful, reflective learning to a new community.",
+    desc: "Seedling Modern High School (CBSE) opened its doors in Durgapura, expanding the group's reach and bringing the same ethos of joyful, reflective learning to a new community.",
     img: "/smhs_images/seedling_images/smhs_about.webp",
     side: "right",
   },

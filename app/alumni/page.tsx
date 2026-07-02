@@ -37,7 +37,7 @@ const stats = [
     value: 20000,
     suffix: "+",
     label: "Students Empowered",
-    description: "Across five world-class campuses in Jaipur",
+    description: "Across 2 campuses in Jaipur",
     color: "from-navy to-navy-deeper",
     icon: "🎓",
   },
@@ -56,6 +56,14 @@ const stats = [
     description: "Consistent academic excellence since 1993",
     color: "from-navy-deeper to-navy",
     icon: "🏆",
+  },
+  {
+    value: 30,
+    suffix: "+",
+    label: "Years of Excellence",
+    description: "Shaping futures since 1993",
+    color: "from-crimson-dark to-navy-deeper",
+    icon: "🕰️",
   },
 ];
 
@@ -92,18 +100,21 @@ const networkCards = [
     title: "Share News",
     body: "Share your latest achievements, milestones, and updates with your alma mater and fellow alumni to inspire and stay connected.",
     cta: "Spread the word",
+    href: "mailto:smhsjaipur@jnujaipur.ac.in?subject=Alumni%20News%20Update",
   },
   {
     icon: "/smhs_images/seedling_images/alumni_classmate.webp",
     title: "Find Your Classmate",
     body: "Find and reconnect with classmates through alumni associations, social media, or class reunion events to strengthen old bonds.",
     cta: "Reconnect now",
+    href: "mailto:smhsjaipur@jnujaipur.ac.in?subject=Reconnect%20with%20Classmates",
   },
   {
     icon: "/smhs_images/seedling_images/alumni_involved.webp",
     title: "Get Involved",
     body: "Stay engaged with your alma mater by attending alumni events, reunions, networking opportunities, and cultural activities.",
     cta: "Connect & learn",
+    href: "mailto:smhsjaipur@jnujaipur.ac.in?subject=Alumni%20Involvement",
   },
 ];
 
@@ -606,10 +617,10 @@ function AlumniNetwork() {
               </div>
               <h3 className="font-playfair text-xl font-bold text-white mb-3">{card.title}</h3>
               <p className="text-white/60 text-sm leading-relaxed mb-6 font-dm font-light">{card.body}</p>
-              <button className="text-sand text-[10px] font-black tracking-widest uppercase group-hover:underline flex items-center gap-2 font-dm">
+              <a href={card.href} className="text-sand text-[10px] font-black tracking-widest uppercase group-hover:underline flex items-center gap-2 font-dm">
                 {card.cta}
                 <span className="transition-transform group-hover:translate-x-1">→</span>
-              </button>
+              </a>
             </div>
           ))}
         </div>
@@ -728,7 +739,7 @@ function CTASection() {
 
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="/alumni"
+                href="mailto:smhsjaipur@jnujaipur.ac.in?subject=Alumni%20Network%20Registration"
                 rel="noopener noreferrer"
                 className="bg-sand text-navy-deeper font-black px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-[11px] uppercase tracking-widest font-dm"
               >

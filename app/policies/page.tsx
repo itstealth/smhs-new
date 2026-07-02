@@ -8,7 +8,7 @@ const sections = [
   {
     title: "Privacy Policy of Seedling School",
     icon: Shield,
-    content: `This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. Our Privacy Policy for the School App is managed with the help of standard privacy policy frameworks.\n\nWe use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.\n\nThis Privacy Policy applies to the mobile application and digital services operated by Seedling School.`
+    content: `This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. Our Privacy Policy is managed with the help of standard privacy policy frameworks.\n\nWe use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.\n\nThis Privacy Policy applies to this website (smhs.seedlingschools.com), the school mobile application, and other digital services operated by Seedling School.`
   },
   {
     title: "Usage Device ID for Mobile App",
