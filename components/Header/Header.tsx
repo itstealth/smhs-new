@@ -46,8 +46,7 @@ const navigation = [
     name: "Admissions",
     href: "/admissions",
     children: [
-      { name: "Admission Procedure", href: "/admissions/process" },
-      { name: "Fee Structure", href: "/admissions/fee-structure" },
+      { name: "Admissions", href: "/admissions" },
       { name: "Transport Facility", href: "/transport-facility" },
     ],
   },
