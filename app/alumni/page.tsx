@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import HeroWrapper from "@/components/layout/HeroWrapper";
+import { Megaphone, Users, HeartHandshake } from "lucide-react";
 
 // ==========================================
 // DATA CONSTANTS
@@ -96,21 +97,21 @@ const achievements = [
 
 const networkCards = [
   {
-    icon: "/smhs_images/seedling_images/alumni_news.webp",
+    icon: Megaphone,
     title: "Share News",
     body: "Share your latest achievements, milestones, and updates with your alma mater and fellow alumni to inspire and stay connected.",
     cta: "Spread the word",
     href: "mailto:smhsjaipur@jnujaipur.ac.in?subject=Alumni%20News%20Update",
   },
   {
-    icon: "/smhs_images/seedling_images/alumni_classmate.webp",
+    icon: Users,
     title: "Find Your Classmate",
     body: "Find and reconnect with classmates through alumni associations, social media, or class reunion events to strengthen old bonds.",
     cta: "Reconnect now",
     href: "mailto:smhsjaipur@jnujaipur.ac.in?subject=Reconnect%20with%20Classmates",
   },
   {
-    icon: "/smhs_images/seedling_images/alumni_involved.webp",
+    icon: HeartHandshake,
     title: "Get Involved",
     body: "Stay engaged with your alma mater by attending alumni events, reunions, networking opportunities, and cultural activities.",
     cta: "Connect & learn",
@@ -607,13 +608,8 @@ function AlumniNetwork() {
               className="group rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-sand/30 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-sand/5"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="relative w-14 h-14 mb-6">
-                <Image
-                  src={card.icon}
-                  alt={card.title}
-                  fill
-                  className="object-contain"
-                />
+              <div className="w-14 h-14 mb-6 rounded-xl bg-sand/10 flex items-center justify-center">
+                <card.icon className="w-7 h-7 text-sand" />
               </div>
               <h3 className="font-playfair text-xl font-bold text-white mb-3">{card.title}</h3>
               <p className="text-white/60 text-sm leading-relaxed mb-6 font-dm font-light">{card.body}</p>
