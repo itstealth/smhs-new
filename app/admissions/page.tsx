@@ -558,11 +558,10 @@ export default function AdmissionsPage() {
         </div>
       </section> */}
 
-      {/* STATS BAND — matches About page exactly */}
-      <section className="bg-navy-deeper text-white py-12 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #D6D1CF 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 divide-x-0 lg:divide-x lg:divide-white/10">
+      {/* STATS BAND — matches Contact Us page exactly */}
+      <section className="bg-navy-deeper py-8">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center text-white">
             {[
               { target: 20, suffix: "k+", label: "Students" },
               { target: null, display: "20:1", label: "Student-Teacher Ratio" },
@@ -570,13 +569,13 @@ export default function AdmissionsPage() {
               { target: 100, suffix: "%", label: "Board Results" },
               { target: 33, suffix: "+", label: "Years of Excellence" },
             ].map((s) => (
-              <div key={s.label} className="px-4 text-center">
-                <p className="font-playfair text-4xl font-black text-sand mb-1">
+              <div key={s.label}>
+                <p className="font-playfair text-2xl font-bold">
                   {s.target !== null
                     ? <AnimatedCounter target={s.target!} suffix={s.suffix} />
                     : s.display}
                 </p>
-                <p className="text-white/40 text-[10px] font-black tracking-[0.25em] uppercase">{s.label}</p>
+                <p className="text-sand text-[10px] font-black mt-0.5 uppercase tracking-[0.2em] font-dm">{s.label}</p>
               </div>
             ))}
           </div>
@@ -693,9 +692,7 @@ export default function AdmissionsPage() {
                     <option value="Class 7">Class 7</option>
                     <option value="Class 8">Class 8</option>
                     <option value="Class 9">Class 9</option>
-                    <option value="Class 10">Class 10</option>
                     <option value="Class 11">Class 11</option>
-                    <option value="Class 12">Class 12</option>
                   </select>
                 </div>
 

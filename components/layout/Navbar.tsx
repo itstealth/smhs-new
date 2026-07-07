@@ -16,7 +16,7 @@ const navItems = [
     ]
   },
   {
-    name: "Academics", href: "/academics", dropdown: [
+    name: "Academics", href: "/curriculum", dropdown: [
       { name: "Curriculum", href: "/curriculum" },
       // { name: "Result", href: "/result" },
       { name: "Learning Support", href: "/learning-support" },

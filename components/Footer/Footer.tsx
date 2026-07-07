@@ -13,6 +13,7 @@ const quickLinks: { label: string; href: string; external?: boolean }[] = [
 
 const institutions = [
   { name: "Seedling Modern High School", sub: "Durgapura, Jaipur" },
+  { name: "Seedling Modern International Academy", sub: "Durgapura, Jaipur" },
 ];
 
 const contact = [

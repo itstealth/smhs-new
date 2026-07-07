@@ -27,7 +27,7 @@ export default function AcademicsSection() {
           <p className="text-white/60 mt-4 max-w-2xl leading-relaxed">
             At Seedling Modern High School, we go beyond traditional education — creating a learning environment where every child is valued, inspired, and empowered to succeed.
           </p>
-          <Link href="/academics" className="inline-flex items-center gap-2 px-6 py-3 bg-[#a3123f] text-white text-sm font-bold rounded-sm hover:bg-[#8e1037] transition-colors duration-300 mt-5">
+          <Link href="/curriculum" className="inline-flex items-center gap-2 px-6 py-3 bg-[#a3123f] text-white text-sm font-bold rounded-sm hover:bg-[#8e1037] transition-colors duration-300 mt-5">
             Explore Academics
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
           </Link>

@@ -254,7 +254,7 @@ export default function AboutPage() {
             Experience <br /> <span className="text-primary tracking-tighter">Growth.</span>
           </h2>
           <Link
-            href="/academics"
+            href="/curriculum"
             className="inline-flex h-24 px-16 bg-neutral-950 text-white rounded-full items-center justify-center font-black text-2xl shadow-editorial hover:bg-primary transition-all group"
           >
             Browse Academics

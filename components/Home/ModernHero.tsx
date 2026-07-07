@@ -96,7 +96,7 @@ export default function ModernHero() {
               </span>
             </button>
             <Link
-              href="/academics"
+              href="/curriculum"
               className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-[#013975]/20 text-[#013975] font-semibold text-sm tracking-wide rounded-full hover:border-[#013975] hover:bg-[#034ea2]/5 transition-all duration-300"
             >
               Academic Excellence

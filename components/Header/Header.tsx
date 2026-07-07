@@ -26,7 +26,7 @@ const navigation = [
   },
   {
     name: "Academics",
-    href: "/academics",
+    href: "/curriculum",
     children: [
       { name: "Curriculum", href: "/curriculum" },
       // { name: "Result", href: "/result" },
