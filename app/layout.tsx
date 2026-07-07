@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, DM_Serif_Text, DM_Sans } from "next/font/google";
 import Script from "next/script";
+import { headers } from "next/headers";
 import ShellWrapper from "@/components/layout/ShellWrapper";
 import "./globals.css";
 
@@ -8,13 +9,24 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 const dmSerif = DM_Serif_Text({ variable: "--font-serif", subsets: ["latin"], weight: ["400"] });
 const dmSans = DM_Sans({ variable: "--font-dm", subsets: ["latin"], weight: ["300","400","500","600","700"] });
 
-export const metadata: Metadata = {
-  title: "Best CBSE School in Durgapura Jaipur | Seedling Modern High School",
-  description: "Seedling Modern High School — top CBSE school in Durgapura, Mahaveer Nagar, Jaipur. 33+ years of excellence, 100% board results, English medium, Nursery to Class XII. Admissions open 2026.",
-  verification: {
-    google: "LzKlHJhPde7RhG9zSVx4gbkk7ZuWP0GnfhcHhcK1Qe0",
-  },
-};
+const SITE_URL = "https://smhs.seedlingschools.com";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") || "/";
+
+  return {
+    title: "Best CBSE School in Durgapura Jaipur | Seedling Modern High School",
+    description: "Seedling Modern High School — top CBSE school in Durgapura, Mahaveer Nagar, Jaipur. 33+ years of excellence, 100% board results, English medium, Nursery to Class XII. Admissions open 2026.",
+    verification: {
+      google: "LzKlHJhPde7RhG9zSVx4gbkk7ZuWP0GnfhcHhcK1Qe0",
+    },
+    metadataBase: new URL(SITE_URL),
+    alternates: {
+      canonical: pathname,
+    },
+  };
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
