@@ -21,14 +21,14 @@ const MID_CTA = `<div style="margin:2.5rem 0;border-radius:1rem;background:linea
   <p style="color:#c9a96e;font-size:10px;font-weight:900;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:0.5rem;">Admissions Open</p>
   <h3 style="font-size:1.5rem;font-weight:700;color:#ffffff !important;margin-bottom:0.75rem;border:none;padding:0;">Give Your Child the Best Start</h3>
   <p style="color:rgba(255,255,255,0.75);font-size:0.875rem;margin-bottom:1.5rem;max-width:28rem;margin-left:auto;margin-right:auto;">Join Seedling Modern High School and unlock a world-class learning environment built for tomorrow's leaders.</p>
-  <a href="/admission" style="display:inline-flex;align-items:center;gap:0.5rem;background:#c0392b;color:#ffffff !important;font-weight:900;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.5rem;border-radius:9999px;text-decoration:none !important;transition:all 0.3s;">Apply for Admission →</a>
+  <a href="https://smhs.seedlingschools.com/admissions" style="display:inline-flex;align-items:center;gap:0.5rem;background:#c0392b;color:#ffffff !important;font-weight:900;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.5rem;border-radius:9999px;text-decoration:none !important;transition:all 0.3s;">Apply for Admission →</a>
 </div>`;
 
 const END_CTA = `<div style="margin-top:3rem;border-radius:1rem;border:2px solid rgba(192,57,43,0.2);background:rgba(192,57,43,0.04);padding:2rem;text-align:center;">
   <p style="color:#c0392b;font-size:10px;font-weight:900;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:0.5rem;">Ready to Enrol?</p>
   <h3 style="font-size:1.5rem;font-weight:700;color:#1a2f5e !important;margin-bottom:0.75rem;border:none;padding:0;">Begin Your Admission Journey</h3>
   <p style="color:#6b7280;font-size:0.875rem;margin-bottom:1.5rem;max-width:28rem;margin-left:auto;margin-right:auto;">Seats are limited. Secure your child's place at Seedling Modern High School today.</p>
-  <a href="/admission" style="display:inline-flex;align-items:center;gap:0.5rem;background:#1a2f5e;color:#ffffff !important;font-weight:900;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.5rem;border-radius:9999px;text-decoration:none !important;transition:all 0.3s;">Enquire Now →</a>
+  <a href="https://smhs.seedlingschools.com/admissions" style="display:inline-flex;align-items:center;gap:0.5rem;background:#1a2f5e;color:#ffffff !important;font-weight:900;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.5rem;border-radius:9999px;text-decoration:none !important;transition:all 0.3s;">Enquire Now →</a>
 </div>`;
 
 function buildProcessedContent(post: WPPost): string {
