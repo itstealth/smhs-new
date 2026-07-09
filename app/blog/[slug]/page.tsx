@@ -17,6 +17,20 @@ const ArrowRight = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
+const MID_CTA = `<div class="my-10 rounded-2xl bg-gradient-to-r from-navy-deeper to-navy-deeper/90 p-8 text-center shadow-lg">
+  <p class="text-sand text-[10px] font-black uppercase tracking-[0.25em] mb-2">Admissions Open</p>
+  <h3 class="font-playfair text-2xl font-bold text-white mb-3">Give Your Child the Best Start</h3>
+  <p class="text-white/70 text-sm mb-6 max-w-md mx-auto">Join Seedling Modern High School and unlock a world-class learning environment built for tomorrow's leaders.</p>
+  <a href="/admission" class="inline-flex items-center gap-2 bg-crimson hover:bg-crimson/90 text-white font-black text-[11px] uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-300 no-underline">Apply for Admission →</a>
+</div>`;
+
+const END_CTA = `<div class="mt-12 rounded-2xl border-2 border-crimson/20 bg-crimson/5 p-8 text-center">
+  <p class="text-crimson text-[10px] font-black uppercase tracking-[0.25em] mb-2">Ready to Enrol?</p>
+  <h3 class="font-playfair text-2xl font-bold text-navy-deeper mb-3">Begin Your Admission Journey</h3>
+  <p class="text-text-light text-sm mb-6 max-w-md mx-auto">Seats are limited. Secure your child's place at Seedling Modern High School today.</p>
+  <a href="/admission" class="inline-flex items-center gap-2 bg-navy-deeper hover:bg-navy text-white font-black text-[11px] uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-300 no-underline">Enquire Now →</a>
+</div>`;
+
 function buildProcessedContent(post: WPPost): string {
   let content = post.content.rendered;
 
@@ -65,6 +79,24 @@ function buildProcessedContent(post: WPPost): string {
       content = content.slice(0, firstH2Index) + tocHtml + content.slice(firstH2Index);
     }
   }
+
+  // Inject mid CTA after 4th </p>
+  let pCount = 0;
+  let midInsertIdx = -1;
+  let searchFrom = 0;
+  while (pCount < 4) {
+    const idx = content.indexOf('</p>', searchFrom);
+    if (idx === -1) break;
+    pCount++;
+    if (pCount === 4) { midInsertIdx = idx + 4; break; }
+    searchFrom = idx + 4;
+  }
+  if (midInsertIdx !== -1) {
+    content = content.slice(0, midInsertIdx) + MID_CTA + content.slice(midInsertIdx);
+  }
+
+  // Inject end CTA at bottom of content
+  content = content + END_CTA;
 
   return content;
 }
@@ -159,6 +191,23 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
             dangerouslySetInnerHTML={{ __html: processedContent }}
           />
         </div>
+
+        {/* Author Box */}
+        <div className="max-w-3xl mx-auto mt-14 mb-4">
+          <div className="flex gap-5 items-start bg-white border border-sand/40 rounded-2xl p-6 shadow-sm">
+            <div className="w-14 h-14 rounded-full bg-navy-deeper flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-black text-lg">S</span>
+            </div>
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-text-light mb-1">Written by</p>
+              <h4 className="font-playfair text-lg font-bold text-navy-deeper mb-2">SPS Editorial Team</h4>
+              <p className="text-sm text-text-light leading-relaxed">
+                SPS Editorial Team creates trusted educational content for Seedling Public School (SPS). Our articles are developed with insights from experienced educators and academic professionals, ensuring every piece is accurate, practical, and relevant. We are committed to providing reliable resources that support students, parents, and lifelong learning.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </article>
 
       {relatedPosts.length > 0 && (

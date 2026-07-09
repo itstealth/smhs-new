@@ -136,6 +136,17 @@ export default function Footer() {
               <span className="text-[10px] uppercase tracking-widest">Architected for Future Leaders.</span>
             </p>
           </div>
+          <p className="text-[11px] text-white/30">
+            Design & Developed by{" "}
+            <a
+              href="https://stealthdigital.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sand/60 hover:text-sand transition-colors font-black"
+            >
+              Stealth Digital
+            </a>
+          </p>
           {/* <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
             <Link href="/privacy-policy" className="text-xs font-black uppercase tracking-[0.2em] text-white/40 hover:text-sand transition-colors">
               Privacy
