@@ -17,18 +17,18 @@ const ArrowRight = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
-const MID_CTA = `<div class="my-10 rounded-2xl bg-gradient-to-r from-navy-deeper to-navy-deeper/90 p-8 text-center shadow-lg">
-  <p class="text-sand text-[10px] font-black uppercase tracking-[0.25em] mb-2">Admissions Open</p>
-  <h3 class="font-playfair text-2xl font-bold text-white mb-3">Give Your Child the Best Start</h3>
-  <p class="text-white/70 text-sm mb-6 max-w-md mx-auto">Join Seedling Modern High School and unlock a world-class learning environment built for tomorrow's leaders.</p>
-  <a href="/admission" class="inline-flex items-center gap-2 bg-crimson hover:bg-crimson/90 text-white font-black text-[11px] uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-300 no-underline">Apply for Admission →</a>
+const MID_CTA = `<div style="margin:2.5rem 0;border-radius:1rem;background:linear-gradient(to right,#1a2f5e,#1e3566);padding:2rem;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+  <p style="color:#c9a96e;font-size:10px;font-weight:900;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:0.5rem;">Admissions Open</p>
+  <h3 style="font-size:1.5rem;font-weight:700;color:#ffffff !important;margin-bottom:0.75rem;border:none;padding:0;">Give Your Child the Best Start</h3>
+  <p style="color:rgba(255,255,255,0.75);font-size:0.875rem;margin-bottom:1.5rem;max-width:28rem;margin-left:auto;margin-right:auto;">Join Seedling Modern High School and unlock a world-class learning environment built for tomorrow's leaders.</p>
+  <a href="/admission" style="display:inline-flex;align-items:center;gap:0.5rem;background:#c0392b;color:#ffffff !important;font-weight:900;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.5rem;border-radius:9999px;text-decoration:none !important;transition:all 0.3s;">Apply for Admission →</a>
 </div>`;
 
-const END_CTA = `<div class="mt-12 rounded-2xl border-2 border-crimson/20 bg-crimson/5 p-8 text-center">
-  <p class="text-crimson text-[10px] font-black uppercase tracking-[0.25em] mb-2">Ready to Enrol?</p>
-  <h3 class="font-playfair text-2xl font-bold text-navy-deeper mb-3">Begin Your Admission Journey</h3>
-  <p class="text-text-light text-sm mb-6 max-w-md mx-auto">Seats are limited. Secure your child's place at Seedling Modern High School today.</p>
-  <a href="/admission" class="inline-flex items-center gap-2 bg-navy-deeper hover:bg-navy text-white font-black text-[11px] uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-300 no-underline">Enquire Now →</a>
+const END_CTA = `<div style="margin-top:3rem;border-radius:1rem;border:2px solid rgba(192,57,43,0.2);background:rgba(192,57,43,0.04);padding:2rem;text-align:center;">
+  <p style="color:#c0392b;font-size:10px;font-weight:900;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:0.5rem;">Ready to Enrol?</p>
+  <h3 style="font-size:1.5rem;font-weight:700;color:#1a2f5e !important;margin-bottom:0.75rem;border:none;padding:0;">Begin Your Admission Journey</h3>
+  <p style="color:#6b7280;font-size:0.875rem;margin-bottom:1.5rem;max-width:28rem;margin-left:auto;margin-right:auto;">Seats are limited. Secure your child's place at Seedling Modern High School today.</p>
+  <a href="/admission" style="display:inline-flex;align-items:center;gap:0.5rem;background:#1a2f5e;color:#ffffff !important;font-weight:900;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.5rem;border-radius:9999px;text-decoration:none !important;transition:all 0.3s;">Enquire Now →</a>
 </div>`;
 
 function buildProcessedContent(post: WPPost): string {
