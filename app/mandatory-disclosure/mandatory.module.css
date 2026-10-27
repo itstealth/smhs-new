@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.pageWrap {
+  background: #F5F3F2; /* var(--pearl-light) */
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  color: #222;
+}
+
+/* Header */
+.header {
+  background: #175190; /* var(--navy) */
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.headerTop {
+  background: #A41546; /* var(--crimson) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 32px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.95);
+  flex-wrap: wrap;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+.headerTop a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.headerTop a:hover {
+  opacity: 0.8;
+}
+
+.headerMain {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 32px;
+}
+
+.logoCircle {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logoInner {
+  width: 48px;
+  height: 48px;
+  background: #175190;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoLeaf {
+  width: 24px;
+  height: 24px;
+  background: #4CAF87;
+  border-radius: 50% 0 50% 0;
+  transform: rotate(45deg);
+}
+
+.schoolName {
+  color: #ffffff;
+}
+
+.schoolName h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.schoolName p {
+  font-size: 13px;
+  color: #D6D1CF; /* var(--pearl) */
+  margin: 4px 0 0;
+  opacity: 0.9;
+}
+
+/* Hero Banner */
+.hero {
+  background: linear-gradient(135deg, #175190 0%, #1a5fa8 50%, #896B85 100%);
+  padding: 60px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(164,21,70,0.1);
+}
+
+.heroBadge {
+  display: inline-block;
+  background: #A41546;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(164,21,70,0.3);
+}
+
+.hero h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  color: #F5F3F2;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Content */
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* Section Cards */
+.sectionCard {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  margin-bottom: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(214,209,207,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sectionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.sectionHeader {
+  background: #175190;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sectionNum {
+  background: #A41546;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.sectionTitle {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Info Rows */
+.infoRow {
+  display: flex;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  background: #F9F9F9;
+  color: #666;
+  font-size: 14px;
+  padding: 16px 24px;
+  width: 35%;
+  flex-shrink: 0;
+  font-weight: 500;
+  border-right: 1px solid #EAEAEA;
+  line-height: 1.4;
+}
+
+.infoValue {
+  color: #111;
+  font-size: 14px;
+  padding: 16px 24px;
+  flex: 1;
+  line-height: 1.6;
+}
+
+.infoValue strong {
+  font-weight: 600;
+  color: #175190;
+}
+
+.infoValue a {
+  color: #175190;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.infoValue a:hover {
+  color: #A41546;
+  border-bottom-color: #A41546;
+}
+
+/* Stats row */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.statBox {
+  text-align: center;
+  padding: 30px 20px;
+  border-right: 1px solid #EAEAEA;
+}
+
+.statBox:last-child {
+  border-right: none;
+}
+
+.statVal {
+  font-size: 28px;
+  font-weight: 700;
+  color: #175190;
+  margin-bottom: 4px;
+}
+
+.statLbl {
+  font-size: 13px;
+  color: #896B85;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Affiliation badge */
+.statusBadge {
+  display: inline-block;
+  background: #E8F5E9;
+  color: #2E7D32;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #C8E6C9;
+}
+
+.statusProv {
+  background: #FFF3E0;
+  color: #E65100;
+  border-color: #FFE0B2;
+}
+
+/* Docs Grid */
+.docsGrid {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.docItem {
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ffffff;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.docItem:hover {
+  border-color: #175190;
+  background: #F0F4F9;
+  transform: scale(1.02);
+}
+
+.docIcon {
+  width: 36px;
+  height: 36px;
+  background: #A41546;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(164,21,70,0.2);
+}
+
+.docIcon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.docContent {
+  flex: 1;
+}
+
+.docNum {
+  font-size: 11px;
+  color: #896B85;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.docName {
+  font-size: 13px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.viewBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #175190;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(23,81,144,0.2);
+}
+
+.viewBtn:hover {
+  background: #A41546;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(164,21,70,0.3);
+}
+
+/* Footer */
+.footer {
+  background: #175190;
+  padding: 30px 24px;
+  text-align: center;
+  color: #D6D1CF;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.footer span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .headerTop {
+    flex-direction: column;
+    padding: 8px 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerMain {
+    padding: 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .schoolName h1 {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .infoRow {
+    flex-direction: column;
+  }
+
+  .infoLabel {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 12px 20px;
+  }
+
+  .infoValue {
+    padding: 12px 20px;
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .statBox {
+    border-right: none;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 20px;
+  }
+
+  .statBox:last-child {
+    border-bottom: none;
+  }
+
+  .docsGrid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}

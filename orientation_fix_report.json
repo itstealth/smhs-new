@@ -1,0 +1,1031 @@
+{
+  "timestamp": "2026-07-01T10:29:45.404Z",
+  "total": 459,
+  "fixed": 0,
+  "reprocessed": 204,
+  "skipped": 0,
+  "errors": 255,
+  "fixedList": [],
+  "errorList": [
+    {
+      "file": "assets\\about\\about-banner.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\about\\about-banner.webp'"
+    },
+    {
+      "file": "assets\\about\\feature-education.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\about\\feature-education.webp'"
+    },
+    {
+      "file": "assets\\alumni\\abhishek.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\alumni\\abhishek.webp'"
+    },
+    {
+      "file": "assets\\alumni\\classmate.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\alumni\\classmate.webp'"
+    },
+    {
+      "file": "assets\\alumni\\harshil.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\alumni\\harshil.webp'"
+    },
+    {
+      "file": "assets\\alumni\\involved.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\alumni\\involved.webp'"
+    },
+    {
+      "file": "assets\\alumni\\news.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\alumni\\news.webp'"
+    },
+    {
+      "file": "assets\\alumni\\shashank.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\alumni\\shashank.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FETE\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FETE\\1.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FETE\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FETE\\2.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FETE\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FETE\\3.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FETE\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FETE\\4.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FUNCTION\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FUNCTION\\1.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FUNCTION\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FUNCTION\\2.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FUNCTION\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FUNCTION\\3.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FUNCTION\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FUNCTION\\4.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FUNCTION\\5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FUNCTION\\5.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FUNCTION\\6.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FUNCTION\\6.webp'"
+    },
+    {
+      "file": "assets\\ANNUAL FUNCTION\\7.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ANNUAL FUNCTION\\7.webp'"
+    },
+    {
+      "file": "assets\\BAISAKHI\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BAISAKHI\\1.webp'"
+    },
+    {
+      "file": "assets\\BAISAKHI\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BAISAKHI\\2.webp'"
+    },
+    {
+      "file": "assets\\BAISAKHI\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BAISAKHI\\3.webp'"
+    },
+    {
+      "file": "assets\\BAISAKHI\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BAISAKHI\\4.webp'"
+    },
+    {
+      "file": "assets\\BOOK FAIR VISIT\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BOOK FAIR VISIT\\1.webp'"
+    },
+    {
+      "file": "assets\\BOOK FAIR VISIT\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BOOK FAIR VISIT\\2.webp'"
+    },
+    {
+      "file": "assets\\BOOK FAIR VISIT\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BOOK FAIR VISIT\\3.webp'"
+    },
+    {
+      "file": "assets\\BOOT CAMP\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BOOT CAMP\\1.webp'"
+    },
+    {
+      "file": "assets\\BOOT CAMP\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BOOT CAMP\\2.webp'"
+    },
+    {
+      "file": "assets\\BOOT CAMP\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BOOT CAMP\\3.webp'"
+    },
+    {
+      "file": "assets\\BOOT CAMP\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\BOOT CAMP\\4.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\1.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\10.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\10.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\2.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\3.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\4.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\5.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\6.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\6.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\7.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\7.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\8.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\8.webp'"
+    },
+    {
+      "file": "assets\\campus-images\\9.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\campus-images\\9.webp'"
+    },
+    {
+      "file": "assets\\CRICKET FEVER\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\CRICKET FEVER\\1.webp'"
+    },
+    {
+      "file": "assets\\CRICKET FEVER\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\CRICKET FEVER\\2.webp'"
+    },
+    {
+      "file": "assets\\DESIGN CAREER FAIR\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DESIGN CAREER FAIR\\1.webp'"
+    },
+    {
+      "file": "assets\\DESIGN CAREER FAIR\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DESIGN CAREER FAIR\\2.webp'"
+    },
+    {
+      "file": "assets\\DESIGN CAREER FAIR\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DESIGN CAREER FAIR\\3.webp'"
+    },
+    {
+      "file": "assets\\DESIGN CAREER FAIR\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DESIGN CAREER FAIR\\4.webp'"
+    },
+    {
+      "file": "assets\\DESIGN CAREER FAIR\\5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DESIGN CAREER FAIR\\5.webp'"
+    },
+    {
+      "file": "assets\\DIGITAL DETOX\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DIGITAL DETOX\\1.webp'"
+    },
+    {
+      "file": "assets\\DIGITAL DETOX\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DIGITAL DETOX\\2.webp'"
+    },
+    {
+      "file": "assets\\DIGITAL DETOX\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DIGITAL DETOX\\3.webp'"
+    },
+    {
+      "file": "assets\\DIWALI DANCE BEATS\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DIWALI DANCE BEATS\\1.webp'"
+    },
+    {
+      "file": "assets\\DIWALI DANCE BEATS\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DIWALI DANCE BEATS\\2.webp'"
+    },
+    {
+      "file": "assets\\DIWALI DANCE BEATS\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DIWALI DANCE BEATS\\3.webp'"
+    },
+    {
+      "file": "assets\\DIWALI DANCE BEATS\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\DIWALI DANCE BEATS\\4.webp'"
+    },
+    {
+      "file": "assets\\FAREWELL 12TH\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FAREWELL 12TH\\1.webp'"
+    },
+    {
+      "file": "assets\\FAREWELL 12TH\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FAREWELL 12TH\\2.webp'"
+    },
+    {
+      "file": "assets\\FAREWELL 12TH\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FAREWELL 12TH\\3.webp'"
+    },
+    {
+      "file": "assets\\FELICITATING TOPPERS IN BOARDS\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FELICITATING TOPPERS IN BOARDS\\1.webp'"
+    },
+    {
+      "file": "assets\\FELICITATING TOPPERS IN BOARDS\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FELICITATING TOPPERS IN BOARDS\\2.webp'"
+    },
+    {
+      "file": "assets\\FELICITATING TOPPERS IN BOARDS\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FELICITATING TOPPERS IN BOARDS\\3.webp'"
+    },
+    {
+      "file": "assets\\FELICITATING TOPPERS IN BOARDS\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FELICITATING TOPPERS IN BOARDS\\4.webp'"
+    },
+    {
+      "file": "assets\\FELICITATING TOPPERS IN BOARDS\\5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FELICITATING TOPPERS IN BOARDS\\5.webp'"
+    },
+    {
+      "file": "assets\\FELICITATING TOPPERS IN BOARDS\\6.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FELICITATING TOPPERS IN BOARDS\\6.webp'"
+    },
+    {
+      "file": "assets\\FRENCH CUISINE\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FRENCH CUISINE\\1.webp'"
+    },
+    {
+      "file": "assets\\FRENCH CUISINE\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FRENCH CUISINE\\2.webp'"
+    },
+    {
+      "file": "assets\\FUN FACTORY\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FUN FACTORY\\1.webp'"
+    },
+    {
+      "file": "assets\\FUN FACTORY\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FUN FACTORY\\2.webp'"
+    },
+    {
+      "file": "assets\\FUN FACTORY\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FUN FACTORY\\3.webp'"
+    },
+    {
+      "file": "assets\\FUN FACTORY\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FUN FACTORY\\4.webp'"
+    },
+    {
+      "file": "assets\\FUN FACTORY\\5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\FUN FACTORY\\5.webp'"
+    },
+    {
+      "file": "assets\\GRADUATION WONDERLAND\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\GRADUATION WONDERLAND\\1.webp'"
+    },
+    {
+      "file": "assets\\GRADUATION WONDERLAND\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\GRADUATION WONDERLAND\\2.webp'"
+    },
+    {
+      "file": "assets\\GRADUATION WONDERLAND\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\GRADUATION WONDERLAND\\3.webp'"
+    },
+    {
+      "file": "assets\\HALLOWEEN\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\HALLOWEEN\\1.webp'"
+    },
+    {
+      "file": "assets\\HALLOWEEN\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\HALLOWEEN\\2.webp'"
+    },
+    {
+      "file": "assets\\HALLOWEEN\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\HALLOWEEN\\3.webp'"
+    },
+    {
+      "file": "assets\\HALLOWEEN\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\HALLOWEEN\\4.webp'"
+    },
+    {
+      "file": "assets\\Home\\career.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Home\\career.webp'"
+    },
+    {
+      "file": "assets\\Home\\classroom.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Home\\classroom.webp'"
+    },
+    {
+      "file": "assets\\Home\\library.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Home\\library.webp'"
+    },
+    {
+      "file": "assets\\Home\\pgt.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Home\\pgt.webp'"
+    },
+    {
+      "file": "assets\\Home\\prt.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Home\\prt.webp'"
+    },
+    {
+      "file": "assets\\Home\\smart-classroom.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Home\\smart-classroom.webp'"
+    },
+    {
+      "file": "assets\\img\\aishwarya.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\aishwarya.webp'"
+    },
+    {
+      "file": "assets\\img\\akansha.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\akansha.webp'"
+    },
+    {
+      "file": "assets\\img\\career.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\career.webp'"
+    },
+    {
+      "file": "assets\\img\\counselling-1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\counselling-1.webp'"
+    },
+    {
+      "file": "assets\\img\\feature-2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\feature-2.webp'"
+    },
+    {
+      "file": "assets\\img\\feature-3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\feature-3.webp'"
+    },
+    {
+      "file": "assets\\img\\feature-6.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\feature-6.webp'"
+    },
+    {
+      "file": "assets\\img\\life-at-sps.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\life-at-sps.webp'"
+    },
+    {
+      "file": "assets\\img\\mohini.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\mohini.webp'"
+    },
+    {
+      "file": "assets\\img\\preeti-bakshi.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\preeti-bakshi.webp'"
+    },
+    {
+      "file": "assets\\img\\preeti.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\preeti.webp'"
+    },
+    {
+      "file": "assets\\img\\reflective.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\reflective.webp'"
+    },
+    {
+      "file": "assets\\img\\responsible.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\responsible.webp'"
+    },
+    {
+      "file": "assets\\img\\Sandeep-Bakshi.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\Sandeep-Bakshi.webp'"
+    },
+    {
+      "file": "assets\\img\\sandeep.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\sandeep.webp'"
+    },
+    {
+      "file": "assets\\img\\smhs-sports.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\smhs-sports.webp'"
+    },
+    {
+      "file": "assets\\img\\sps-banner.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\sps-banner.webp'"
+    },
+    {
+      "file": "assets\\img\\techintegrate.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\img\\techintegrate.webp'"
+    },
+    {
+      "file": "assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\1.webp'"
+    },
+    {
+      "file": "assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\2.webp'"
+    },
+    {
+      "file": "assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\3.webp'"
+    },
+    {
+      "file": "assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\4.webp'"
+    },
+    {
+      "file": "assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\5.webp'"
+    },
+    {
+      "file": "assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\6.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\INTERNATIONAL GUIDANCE (CAMBRIDGE)\\6.webp'"
+    },
+    {
+      "file": "assets\\INTR HS PATRIOTIC SONG COMP\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\INTR HS PATRIOTIC SONG COMP\\1.webp'"
+    },
+    {
+      "file": "assets\\INTR HS PATRIOTIC SONG COMP\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\INTR HS PATRIOTIC SONG COMP\\2.webp'"
+    },
+    {
+      "file": "assets\\JAISELMER TRIP\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\JAISELMER TRIP\\1.webp'"
+    },
+    {
+      "file": "assets\\JAISELMER TRIP\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\JAISELMER TRIP\\2.webp'"
+    },
+    {
+      "file": "assets\\JAISELMER TRIP\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\JAISELMER TRIP\\3.webp'"
+    },
+    {
+      "file": "assets\\JAISELMER TRIP\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\JAISELMER TRIP\\4.webp'"
+    },
+    {
+      "file": "assets\\Media\\foundation\\media-coverage-1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\foundation\\media-coverage-1.webp'"
+    },
+    {
+      "file": "assets\\Media\\foundation\\media-coverage-2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\foundation\\media-coverage-2.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-1.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-10.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-10.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-11.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-11.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-12.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-12.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-13.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-13.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-14.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-14.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-15.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-15.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-16.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-16.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-17.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-17.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-18.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-18.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-19.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-19.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-2.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-20.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-20.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-21.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-21.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-3.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-4.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-5.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-6.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-6.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-7.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-7.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-8.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-8.webp'"
+    },
+    {
+      "file": "assets\\Media\\media-coverage-9.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\Media\\media-coverage-9.webp'"
+    },
+    {
+      "file": "assets\\MOTHER CHILD COOK OFF\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\MOTHER CHILD COOK OFF\\1.webp'"
+    },
+    {
+      "file": "assets\\MOTHER CHILD COOK OFF\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\MOTHER CHILD COOK OFF\\2.webp'"
+    },
+    {
+      "file": "assets\\MOTHER CHILD COOK OFF\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\MOTHER CHILD COOK OFF\\3.webp'"
+    },
+    {
+      "file": "assets\\MOTHER_S DAY\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\MOTHER_S DAY\\1.webp'"
+    },
+    {
+      "file": "assets\\MOTHER_S DAY\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\MOTHER_S DAY\\2.webp'"
+    },
+    {
+      "file": "assets\\NATIONAL SPORTS DAY\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\NATIONAL SPORTS DAY\\2.webp'"
+    },
+    {
+      "file": "assets\\NATIONAL SPORTS DAY\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\NATIONAL SPORTS DAY\\4.webp'"
+    },
+    {
+      "file": "assets\\PRIMARY OUTING\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\PRIMARY OUTING\\1.webp'"
+    },
+    {
+      "file": "assets\\PRIMARY OUTING\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\PRIMARY OUTING\\2.webp'"
+    },
+    {
+      "file": "assets\\PRIMARY OUTING\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\PRIMARY OUTING\\3.webp'"
+    },
+    {
+      "file": "assets\\RANGOLI MAKING\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\RANGOLI MAKING\\1.webp'"
+    },
+    {
+      "file": "assets\\RANGOLI MAKING\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\RANGOLI MAKING\\2.webp'"
+    },
+    {
+      "file": "assets\\result\\ayush.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\result\\ayush.webp'"
+    },
+    {
+      "file": "assets\\result\\geetika.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\result\\geetika.webp'"
+    },
+    {
+      "file": "assets\\result\\neelvi.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\result\\neelvi.webp'"
+    },
+    {
+      "file": "assets\\result\\pranjal.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\result\\pranjal.webp'"
+    },
+    {
+      "file": "assets\\result\\saatvik.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\result\\saatvik.webp'"
+    },
+    {
+      "file": "assets\\result\\vidhi.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\result\\vidhi.webp'"
+    },
+    {
+      "file": "assets\\result\\yug.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\result\\yug.webp'"
+    },
+    {
+      "file": "assets\\ROAD SAFETY WEEK\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ROAD SAFETY WEEK\\1.webp'"
+    },
+    {
+      "file": "assets\\ROAD SAFETY WEEK\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\ROAD SAFETY WEEK\\2.webp'"
+    },
+    {
+      "file": "assets\\SARASWATI INSTALLATION\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SARASWATI INSTALLATION\\1.webp'"
+    },
+    {
+      "file": "assets\\SARASWATI INSTALLATION\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SARASWATI INSTALLATION\\2.webp'"
+    },
+    {
+      "file": "assets\\SARASWATI INSTALLATION\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SARASWATI INSTALLATION\\3.webp'"
+    },
+    {
+      "file": "assets\\SAY NO TO SUGAR\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SAY NO TO SUGAR\\1.webp'"
+    },
+    {
+      "file": "assets\\SAY NO TO SUGAR\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SAY NO TO SUGAR\\2.webp'"
+    },
+    {
+      "file": "assets\\SPARKLE FEST\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SPARKLE FEST\\1.webp'"
+    },
+    {
+      "file": "assets\\SPARKLE FEST\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SPARKLE FEST\\2.webp'"
+    },
+    {
+      "file": "assets\\SPARKLE FEST\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SPARKLE FEST\\3.webp'"
+    },
+    {
+      "file": "assets\\SPORTS DAY\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SPORTS DAY\\1.webp'"
+    },
+    {
+      "file": "assets\\SPORTS DAY\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SPORTS DAY\\2.webp'"
+    },
+    {
+      "file": "assets\\SPORTS DAY\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SPORTS DAY\\3.webp'"
+    },
+    {
+      "file": "assets\\STELLAR SATURDAYS\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\STELLAR SATURDAYS\\1.webp'"
+    },
+    {
+      "file": "assets\\STELLAR SATURDAYS\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\STELLAR SATURDAYS\\2.webp'"
+    },
+    {
+      "file": "assets\\STELLAR SATURDAYS\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\STELLAR SATURDAYS\\3.webp'"
+    },
+    {
+      "file": "assets\\STELLAR SATURDAYS\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\STELLAR SATURDAYS\\4.webp'"
+    },
+    {
+      "file": "assets\\STELLAR SATURDAYS\\5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\STELLAR SATURDAYS\\5.webp'"
+    },
+    {
+      "file": "assets\\STELLAR SATURDAYS\\6.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\STELLAR SATURDAYS\\6.webp'"
+    },
+    {
+      "file": "assets\\SUMMER CAMP\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SUMMER CAMP\\1.webp'"
+    },
+    {
+      "file": "assets\\SUMMER CAMP\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SUMMER CAMP\\2.webp'"
+    },
+    {
+      "file": "assets\\SUMMER CAMP\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SUMMER CAMP\\3.webp'"
+    },
+    {
+      "file": "assets\\SUMMER CAMP\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SUMMER CAMP\\4.webp'"
+    },
+    {
+      "file": "assets\\SUSTAINABLE FASHION SHOW\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SUSTAINABLE FASHION SHOW\\1.webp'"
+    },
+    {
+      "file": "assets\\SUSTAINABLE FASHION SHOW\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SUSTAINABLE FASHION SHOW\\2.webp'"
+    },
+    {
+      "file": "assets\\SUSTAINABLE FASHION SHOW\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SUSTAINABLE FASHION SHOW\\3.webp'"
+    },
+    {
+      "file": "assets\\SUSTAINABLE FASHION SHOW\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\SUSTAINABLE FASHION SHOW\\4.webp'"
+    },
+    {
+      "file": "assets\\testimonial\\aditi-sharma.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\testimonial\\aditi-sharma.webp'"
+    },
+    {
+      "file": "assets\\testimonial\\Anita-Gupta.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\testimonial\\Anita-Gupta.webp'"
+    },
+    {
+      "file": "assets\\testimonial\\Bhanupriya-Singh.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\testimonial\\Bhanupriya-Singh.webp'"
+    },
+    {
+      "file": "assets\\testimonial\\deepak-gupta.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\testimonial\\deepak-gupta.webp'"
+    },
+    {
+      "file": "assets\\testimonial\\ibha-chadra.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\testimonial\\ibha-chadra.webp'"
+    },
+    {
+      "file": "assets\\testimonial\\Muskan-Rupani.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\testimonial\\Muskan-Rupani.webp'"
+    },
+    {
+      "file": "assets\\testimonial\\Soniya-Yadav.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\testimonial\\Soniya-Yadav.webp'"
+    },
+    {
+      "file": "assets\\testimonial\\Sweta-Shrivastava.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\testimonial\\Sweta-Shrivastava.webp'"
+    },
+    {
+      "file": "assets\\transport-facility\\camera.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\transport-facility\\camera.webp'"
+    },
+    {
+      "file": "assets\\transport-facility\\entry-gate.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\transport-facility\\entry-gate.webp'"
+    },
+    {
+      "file": "assets\\transport-facility\\security-guard.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\transport-facility\\security-guard.webp'"
+    },
+    {
+      "file": "assets\\WHISPERS OF WELLNESS\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\WHISPERS OF WELLNESS\\1.webp'"
+    },
+    {
+      "file": "assets\\WHISPERS OF WELLNESS\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\WHISPERS OF WELLNESS\\2.webp'"
+    },
+    {
+      "file": "assets\\WHISPERS OF WELLNESS\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\WHISPERS OF WELLNESS\\3.webp'"
+    },
+    {
+      "file": "assets\\WHISPERS OF WELLNESS\\4.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\WHISPERS OF WELLNESS\\4.webp'"
+    },
+    {
+      "file": "assets\\WHISPERS OF WELLNESS\\5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\WHISPERS OF WELLNESS\\5.webp'"
+    },
+    {
+      "file": "assets\\WHISPERS OF WELLNESS\\6.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\WHISPERS OF WELLNESS\\6.webp'"
+    },
+    {
+      "file": "assets\\XMAS CARNIVAL\\1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\XMAS CARNIVAL\\1.webp'"
+    },
+    {
+      "file": "assets\\XMAS CARNIVAL\\2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\XMAS CARNIVAL\\2.webp'"
+    },
+    {
+      "file": "assets\\XMAS CARNIVAL\\3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\XMAS CARNIVAL\\3.webp'"
+    },
+    {
+      "file": "assets\\XMAS CARNIVAL\\christmas 1.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\XMAS CARNIVAL\\christmas 1.webp'"
+    },
+    {
+      "file": "assets\\XMAS CARNIVAL\\christmas 2.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\XMAS CARNIVAL\\christmas 2.webp'"
+    },
+    {
+      "file": "assets\\XMAS CARNIVAL\\christmas 3.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\XMAS CARNIVAL\\christmas 3.webp'"
+    },
+    {
+      "file": "assets\\XMAS CARNIVAL\\christmas 5.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\assets\\XMAS CARNIVAL\\christmas 5.webp'"
+    },
+    {
+      "file": "banner-poster.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\banner-poster.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG-20260421-WA0054.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG-20260421-WA0054.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG-20260421-WA0055.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG-20260421-WA0055.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG-20260421-WA0056.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG-20260421-WA0056.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG-20260421-WA0057.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG-20260421-WA0057.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG-20260421-WA0058.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG-20260421-WA0058.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG-20260421-WA0060.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG-20260421-WA0060.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG-20260421-WA0061.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG-20260421-WA0061.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG-20260421-WA0062.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG-20260421-WA0062.webp'"
+    },
+    {
+      "file": "events\\grow-glow\\IMG_20260421_153953.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\events\\grow-glow\\IMG_20260421_153953.webp'"
+    },
+    {
+      "file": "leadership\\aishwarya.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\leadership\\aishwarya.webp'"
+    },
+    {
+      "file": "leadership\\akansha.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\leadership\\akansha.webp'"
+    },
+    {
+      "file": "leadership\\mohini.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\leadership\\mohini.webp'"
+    },
+    {
+      "file": "leadership\\preeti.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\leadership\\preeti.webp'"
+    },
+    {
+      "file": "leadership\\sandeep.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\leadership\\sandeep.webp'"
+    },
+    {
+      "file": "leadership\\SMHS_Principal_Nidhi.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\leadership\\SMHS_Principal_Nidhi.webp'"
+    },
+    {
+      "file": "logo.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\logo.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\aishwariya.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\aishwariya.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\alumni_abhishek.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\alumni_abhishek.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\alumni_classmate.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\alumni_classmate.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\alumni_harshil.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\alumni_harshil.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\alumni_involved.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\alumni_involved.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\alumni_news.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\alumni_news.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\alumni_shashank.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\alumni_shashank.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\blog_image.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\blog_image.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\career.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\career.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\computer_lab.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\computer_lab.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\director.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\director.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\emotional.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\emotional.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\jnu.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\jnu.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\karate.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\karate.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\lab-stem.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\lab-stem.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\leaders.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\leaders.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\learning_support.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\learning_support.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\Mohini_bakshi.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\Mohini_bakshi.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\multisport_ground.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\multisport_ground.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\NCC.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\NCC.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\SMHS.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\SMHS.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\SMHS_Principal_Nidhi.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\SMHS_Principal_Nidhi.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\winner_at_cbse.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\winner_at_cbse.webp'"
+    },
+    {
+      "file": "smhs_images\\seedling_images\\yoga.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\seedling_images\\yoga.webp'"
+    },
+    {
+      "file": "smhs_images\\testimonials\\aditi-sharma.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\testimonials\\aditi-sharma.webp'"
+    },
+    {
+      "file": "smhs_images\\testimonials\\Anita-Gupta.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\testimonials\\Anita-Gupta.webp'"
+    },
+    {
+      "file": "smhs_images\\testimonials\\Bhanupriya-Singh.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\testimonials\\Bhanupriya-Singh.webp'"
+    },
+    {
+      "file": "smhs_images\\testimonials\\deepak-gupta.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\testimonials\\deepak-gupta.webp'"
+    },
+    {
+      "file": "smhs_images\\testimonials\\ibha-chadra.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\testimonials\\ibha-chadra.webp'"
+    },
+    {
+      "file": "smhs_images\\testimonials\\Muskan-Rupani.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\testimonials\\Muskan-Rupani.webp'"
+    },
+    {
+      "file": "smhs_images\\testimonials\\Soniya-Yadav.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\testimonials\\Soniya-Yadav.webp'"
+    },
+    {
+      "file": "smhs_images\\testimonials\\Sweta-Shrivastava.webp",
+      "reason": "EBUSY: resource busy or locked, unlink 'C:\\inetpub\\wwwroot\\smhs.seedlingschools.com\\public\\smhs_images\\testimonials\\Sweta-Shrivastava.webp'"
+    }
+  ]
+}
