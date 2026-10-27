@@ -76,7 +76,7 @@ export default function Footer() {
                 alt="Seedling Modern High School"
                 width={44}
                 height={44}
-                className="rounded-full object-cover flex-shrink-0"
+                className="h-11 w-11 rounded-full object-cover flex-shrink-0"
               />
               <div className="font-serif text-[15px] font-bold text-white leading-tight tracking-wide uppercase">
                 Seedling<br />

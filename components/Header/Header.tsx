@@ -80,7 +80,7 @@ export default function Header() {
                 width={52}
                 height={52}
                 priority
-                className="rounded-full object-cover"
+                className="h-[52px] w-[52px] rounded-full object-cover"
               />
               <div className="leading-tight">
                 <p className="font-serif text-[13.5px] font-bold text-white tracking-widest uppercase">
@@ -194,7 +194,7 @@ export default function Header() {
         {/* Drawer header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
           <Link href="/" onClick={() => { setIsMobileOpen(false); setMobileExpanded(null); }} className="flex items-center gap-2.5">
-            <Image src="/logo.webp" alt="Seedling" width={44} height={44} priority className="rounded-full object-cover" />
+            <Image src="/logo.webp" alt="Seedling" width={44} height={44} priority className="h-11 w-11 rounded-full object-cover" />
             <div className="leading-tight">
               <p className="font-serif text-[12px] font-bold text-[#013975] tracking-widest uppercase">Seedling</p>
               <p className="text-[8px] text-gray-400 tracking-[0.2em] uppercase">Modern High School</p>

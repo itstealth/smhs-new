@@ -54,3 +54,31 @@ next-env.d.ts
 /public/assets/
 /public/smhs_images/
 /public/events/
+!/public/smhs_images/
+!/public/smhs_images/seedling_images/
+!/public/smhs_images/seedling_images/group_students.webp
+!/public/smhs_images/seedling_images/SMHS.webp
+!/public/smhs_images/seedling_images/sports_home.webp
+!/public/smhs_images/seedling_images/computer_lab.webp
+!/public/smhs_images/seedling_images/library_image.webp
+!/public/smhs_images/seedling_images/lab-stem.webp
+!/public/smhs_images/seedling_images/swimming_home.webp
+!/public/smhs_images/seedling_images/student_life.webp
+!/public/smhs_images/seedling_images/arts.webp
+!/public/smhs_images/seedling_images/pre-primary.webp
+!/public/smhs_images/seedling_images/primary_home.webp
+!/public/smhs_images/seedling_images/middle_home.webp
+!/public/smhs_images/seedling_images/senior_home.webp
+!/public/smhs_images/testimonials/
+!/public/smhs_images/testimonials/deepak-gupta.webp
+!/public/events/
+!/public/events/ANNUAL DAY/
+!/public/events/ANNUAL DAY/P1230432.webp
+!/public/events/ATL LAB/
+!/public/events/ATL LAB/1P3A4229.webp
+!/public/events/grow-glow/
+!/public/events/grow-glow/IMG_20260421_153953.webp
+!/public/events/honoring-achievers/
+!/public/events/honoring-achievers/IMG20260420102847.webp
+!/public/events/INVESTITURE CEREMONY/
+!/public/events/INVESTITURE CEREMONY/P1500918.webp

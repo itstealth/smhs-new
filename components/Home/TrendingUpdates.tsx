@@ -153,7 +153,7 @@ export default function TrendingUpdates() {
   });
 
   return (
-    <section className="bg-[#f0f4ff] py-10 lg:py-14">
+    <section className="relative bg-[#f0f4ff] py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between gap-6 pb-6">
           <div className="max-w-2xl">
