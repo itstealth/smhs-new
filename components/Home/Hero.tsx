@@ -1,4 +1,3 @@
-"use client";
 import HeroVideo from "@/components/ui/HeroVideo";
 
 const STATS = [

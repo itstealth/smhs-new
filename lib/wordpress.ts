@@ -55,9 +55,23 @@ export function getPostCategories(post: WPPost): string[] {
 }
 
 export function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, '').trim();
+  return html
+    .replace(/<[^>]*>/g, '')
+    .replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|nbsp|ndash|mdash|rsquo|lsquo|rdquo|ldquo|hellip);/gi, (_, entity: string) => {
+      const named: Record<string, string> = {
+        amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ",
+        ndash: "–", mdash: "—", rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“", hellip: "…",
+      };
+      if (entity[0] === "#") {
+        const codePoint = entity[1]?.toLowerCase() === "x"
+          ? parseInt(entity.slice(2), 16)
+          : parseInt(entity.slice(1), 10);
+        return Number.isFinite(codePoint) ? String.fromCodePoint(codePoint) : "";
+      }
+      return named[entity.toLowerCase()] ?? "";
+    })
+    .trim();
 }
-
 export function formatDate(dateStr: string): string {
   const date = new Date(dateStr);
   return date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });

@@ -47,6 +47,7 @@ const navigation = [
     href: "/admissions",
     children: [
       { name: "Procedure", href: "/admissions" },
+      { name: "Apply & Pay Online", href: "/admissions/apply" },
       { name: "Transport Facility", href: "/transport-facility" },
     ],
   },
@@ -143,6 +144,16 @@ export default function Header() {
                   </div>
                 );
               })}
+            </div>
+
+            {/* Apply & pay the registration fee online */}
+            <div className="hidden lg:block flex-shrink-0">
+              <Link
+                href="/admissions/apply"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#013975] hover:bg-[#034ea2] text-white text-[11px] font-bold tracking-[0.15em] uppercase rounded-full transition-colors duration-200 whitespace-nowrap"
+              >
+                Apply &amp; Pay
+              </Link>
             </div>
 
             {/* Enquire CTA */}

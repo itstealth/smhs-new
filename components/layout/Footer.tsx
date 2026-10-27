@@ -27,9 +27,9 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               {[
-                { icon: Instagram, href: "https://www.instagram.com/seedlingschoolsjaipur" },
-                { icon: Facebook, href: "https://www.facebook.com/seedlingschoolsjaipur?mibextid=ZbWKwL" },
-                { icon: Youtube, href: "https://www.youtube.com/@seedlingschoolsjaipur6258" },
+                { icon: Instagram, href: "https://www.instagram.com/smhsjaipur/?hl=en" },
+                { icon: Facebook, href: "https://www.facebook.com/SMHSJaipur/" },
+                { icon: Youtube, href: "https://www.youtube.com/channel/UCJndN6j3ObAl8G1jbiY0TtA" },
                 { icon: Linkedin, href: "https://www.linkedin.com/school/seedling-schools/posts/?feedView=all" },
                 { icon: Twitter, href: "https://x.com/SeedlingSchools?t=X94ppyw3vv8U40SzkrU9Cg&s=09" },
               ].map((social, idx) => (
@@ -90,7 +90,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="h-44 sm:h-48 md:h-[200px] rounded-xl overflow-hidden border border-white/10">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5!2d75.79!3d26.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3ebad9f3edb%3A0x7c6a0adf0e0f0e1b!2sSeedling%20Modern%20High%20School!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps?q=Seedling+Modern+High+School,+Ashok+Marg,+Mahaveer+Nagar-II,+Durgapura,+Jaipur+302018&output=embed"
                   width="100%"
                   height="200"
                   className="h-full"

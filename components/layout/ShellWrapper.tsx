@@ -9,13 +9,14 @@ export default function ShellWrapper({ children }: { children: React.ReactNode }
   const pathname = usePathname();
   const isHome = pathname === "/";
   const isErpLogin = pathname.startsWith("/erp-login");
+  const isAdmin = pathname.startsWith("/admin");
 
   return (
     <EnquiryProvider>
-      {!isHome && <Header />}
+      {!isHome && !isAdmin && <Header />}
       <main className="flex-1 flex flex-col">{children}</main>
-      {!isHome && !isErpLogin && <Footer />}
-      <FloatingButtons />
+      {!isHome && !isErpLogin && !isAdmin && <Footer />}
+      {!isAdmin && <FloatingButtons />}
     </EnquiryProvider>
   );
 }

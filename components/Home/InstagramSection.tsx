@@ -7,9 +7,9 @@ export default function InstagramSection() {
         <div className="flex items-center justify-between mb-10">
           <div>
             <p className="text-[#a3123f] text-[11px] font-semibold tracking-[0.5em] uppercase mb-3">Instagram</p>
-            <h2 className="font-serif text-3xl font-bold text-[#034ea2]">Follow Our Journey <span className="text-[#a3123f] italic">@seedlingschool</span></h2>
+            <h2 className="font-serif text-3xl font-bold text-[#034ea2]">Follow Our Journey <span className="text-[#a3123f] italic">@smhsjaipur</span></h2>
           </div>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.instagram.com/smhsjaipur/" target="_blank" rel="noopener noreferrer"
             className="px-5 py-2.5 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white text-xs font-semibold rounded-full hover:opacity-90 transition-opacity hidden md:block">
             Follow on Instagram
           </a>
@@ -23,7 +23,7 @@ export default function InstagramSection() {
             </div>
           ))}
         </div>
-        <p className="text-center text-gray-400 text-xs mt-6">Connect your Instagram feed via @seedlingschool for live posts</p>
+        <p className="text-center text-gray-400 text-xs mt-6">Follow @smhsjaipur for the latest from campus</p>
       </div>
     </section>
   );

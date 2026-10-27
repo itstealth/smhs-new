@@ -49,7 +49,7 @@ export default function ModernHero() {
             </span>
           </motion.div>
 
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
@@ -60,7 +60,7 @@ export default function ModernHero() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#034ea2] to-[#a3123f] not-italic font-sans font-bold">
               Bloom Brightly.
             </span>
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

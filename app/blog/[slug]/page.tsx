@@ -43,6 +43,7 @@ function buildProcessedContent(post: WPPost): string {
     return match.toLowerCase().includes('toc') ? '' : match;
   });
   content = content.replace(/\[toc[^\]]*\]/gi, '');
+  content = content.replace(/<h1(\b[^>]*)>/gi, "<h2$1>").replace(/<\/h1>/gi, "</h2>");
   content = content.replace(/\[block[^>]*class="[^"]*jm-toc[^"]*"[^>]*\]/gi, '');
   content = content.replace(/<!--[^-]*-->/gi, '');
   content = content.replace(/https:\/\/smhs\.seedlingschools\.com\/blog(?!\/wp-)/g, '');
@@ -101,6 +102,30 @@ function buildProcessedContent(post: WPPost): string {
   return content;
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const response = await fetch(
+    "https://smhs.seedlingschools.com/blog/wp-json/wp/v2/posts?slug=" + encodeURIComponent(slug),
+    { next: { revalidate: 300 } }
+  );
+  if (!response.ok) return {};
+  const posts: WPPost[] = await response.json();
+  const post = posts[0];
+  if (!post) return {};
+  const description = stripHtml(post.excerpt.rendered).slice(0, 160);
+  return {
+    title: stripHtml(post.title.rendered),
+    description,
+    alternates: { canonical: "/blog/" + post.slug },
+    openGraph: {
+      title: stripHtml(post.title.rendered),
+      description,
+      type: "article" as const,
+      url: "/blog/" + post.slug,
+      images: [getMediaUrl(post)],
+    },
+  };
+}
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
@@ -181,7 +206,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
           <img
             src={getMediaUrl(post)}
             alt={stripHtml(post.title.rendered)}
-            className="w-full aspect-[16/9] object-cover"
+            className="w-full aspect-[16/9] object-contain bg-white"
           />
         </div>
 
@@ -200,9 +225,9 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
             </div>
             <div>
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-text-light mb-1">Written by</p>
-              <h4 className="font-playfair text-lg font-bold text-navy-deeper mb-2">SPS Editorial Team</h4>
+              <h4 className="font-playfair text-lg font-bold text-navy-deeper mb-2">SMHS Editorial Team</h4>
               <p className="text-sm text-text-light leading-relaxed">
-                SPS Editorial Team creates trusted educational content for Seedling Public School (SPS). Our articles are developed with insights from experienced educators and academic professionals, ensuring every piece is accurate, practical, and relevant. We are committed to providing reliable resources that support students, parents, and lifelong learning.
+                Seedling Modern High School shares expert educational insights, parenting guidance, and student success resources developed by experienced educators and academic professionals. Every article is carefully researched, reviewed for accuracy, and designed to provide practical, reliable information that supports students, parents, and lifelong learning.
               </p>
             </div>
           </div>
@@ -229,7 +254,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
                     <img
                       src={getMediaUrl(relatedPost)}
                       alt={stripHtml(relatedPost.title.rendered)}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-contain bg-white transition-transform duration-700 group-hover:scale-[1.02]"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1">

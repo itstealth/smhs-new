@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+
+Sitemap: https://smhs.seedlingschools.com/sitemap.xml
+
+# AI Discovery
+LLMS: https://smhs.seedlingschools.com/llms.txt

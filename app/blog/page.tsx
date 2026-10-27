@@ -5,6 +5,7 @@ import { type WPPost, type WPCategory } from "@/lib/wordpress";
 export const metadata: Metadata = {
   title: "Blog | Education Insights from Seedling Modern Jaipur",
   description: "Read expert articles on parenting, CBSE education, school life, and learning tips from the educators at Seedling Modern High School, Durgapura, Jaipur.",
+  alternates: { canonical: "/blog" },
 };
 
 export const revalidate = 300;

@@ -24,7 +24,7 @@ const navItems = [
   },
   { name: "School Life", href: "/school-life", dropdown: [{ name: "School Life", href: "/school-life" }, { name: "Sports", href: "/sports" },] },
   { name: "News & Events", href: "/news-and-events" },
-  { name: "Admissions", href: "/admissions", dropdown: [{ name: "Admissions", href: "/admissions" }, { name: "Transport Facility", href: "/transport-facility" }] },
+  { name: "Admissions", href: "/admissions", dropdown: [{ name: "Admissions", href: "/admissions" }, { name: "Apply & Pay Online", href: "/admissions/apply" }, { name: "Transport Facility", href: "/transport-facility" }] },
   { name: "Career", href: "/career" },
   { name: "Alumni", href: "/alumni" },
   { name: "Contact", href: "/contact-us" },
@@ -373,6 +373,17 @@ export default function Navbar() {
                   </div>
                 ))}
               </nav>
+
+              {/* Apply & pay the registration fee online */}
+              <Link
+                href="/admissions/apply"
+                className="hidden xl:inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-crimson px-5 py-2.5 text-[12px] font-black uppercase tracking-widest text-white transition-colors hover:bg-crimson-dark"
+              >
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Apply &amp; Pay
+              </Link>
 
               {/* Mobile Menu Button */}
               <div className="xl:hidden flex items-center">

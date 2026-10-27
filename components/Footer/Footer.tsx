@@ -11,9 +11,13 @@ const quickLinks: { label: string; href: string; external?: boolean }[] = [
   { label: "Career", href: "/career" },
 ];
 
+// The group's other campuses. This school is deliberately absent — a footer
+// linking to its own site is noise. Entries carry an href; previously they
+// were plain text a visitor could not act on.
 const institutions = [
-  { name: "Seedling Modern High School", sub: "Durgapura, Jaipur" },
-  { name: "Seedling Modern International Academy", sub: "Durgapura, Jaipur" },
+  { name: "Seedling Public School", sub: "Jawahar Nagar · CBSE", href: "https://sps.seedlingschools.com" },
+  { name: "Seedling International Academy", sub: "Jawahar Nagar · Cambridge", href: "https://cambridge.seedlingschools.com" },
+  { name: "Seedling Modern International Academy", sub: "Durgapura · Cambridge", href: "https://cambridge.seedlingschools.com/smia" },
 ];
 
 const contact = [
@@ -26,7 +30,7 @@ const contact = [
 const socials = [
   {
     label: "Instagram",
-    href: "https://www.instagram.com/seedlingschoolsjaipur",
+    href: "https://www.instagram.com/smhsjaipur/?hl=en",
     icon: (
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -36,41 +40,21 @@ const socials = [
     ),
   },
   {
-    label: "Facebook",
-    href: "https://www.facebook.com/seedlingschoolsjaipur?mibextid=ZbWKwL",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-      </svg>
-    ),
-  },
-  {
     label: "YouTube",
-    href: "https://www.youtube.com/@seedlingschoolsjaipur6258",
+    href: "https://www.youtube.com/channel/UCJndN6j3ObAl8G1jbiY0TtA",
     icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
         <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
         <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
       </svg>
     ),
   },
   {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/school/seedling-schools/posts/?feedView=all",
+    label: "Facebook",
+    href: "https://www.facebook.com/SMHSJaipur/",
     icon: (
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-        <rect x="2" y="9" width="4" height="12" />
-        <circle cx="4" cy="4" r="2" />
-      </svg>
-    ),
-  },
-  {
-    label: "X",
-    href: "https://x.com/SeedlingSchools?t=X94ppyw3vv8U40SzkrU9Cg&s=09",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
       </svg>
     ),
   },
@@ -166,7 +150,14 @@ export default function Footer() {
             <ul className="space-y-5">
               {institutions.map((inst) => (
                 <li key={inst.name}>
-                  <p className="text-white text-[13.5px] font-semibold leading-tight">{inst.name}</p>
+                  <a
+                    href={inst.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-white text-[13.5px] font-semibold leading-tight hover:text-white/70 transition-colors"
+                  >
+                    {inst.name}
+                  </a>
                   <p className="text-white/30 text-[10.5px] tracking-[0.15em] uppercase mt-1">{inst.sub}</p>
                 </li>
               ))}
@@ -183,7 +174,7 @@ export default function Footer() {
               {contact.map((c) => (
                 <li key={c.label}>
                   <p className="text-white/30 text-[9.5px] tracking-[0.35em] uppercase mb-1.5">{c.label}</p>
-                  <p className="text-white text-[13.5px] font-semibold leading-snug whitespace-pre-line">{c.value}</p>
+                  <p className="text-white text-[13.5px] font-semibold leading-snug whitespace-pre-line">{c.label === "Email" ? <a href={"mailto:" + c.value}>{c.value}</a> : c.label === "Mobile" ? <a href="tel:+919587772837">{c.value}</a> : c.label === "Landline" ? <a href="tel:01413624000">{c.value}</a> : c.value}</p>
                 </li>
               ))}
             </ul>
@@ -201,6 +192,12 @@ export default function Footer() {
           <div className="text-center">
             <p className="text-white/40 text-[11.5px] font-medium">
               {new Date().getFullYear()} Seedling Modern High School.
+            </p>
+            <p className="text-white/30 text-[10px] mt-2">
+              Design and developed by{" "}
+              <a href="https://stealthdigital.in" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 underline">
+                Stealth Digital
+              </a>
             </p>
             <p className="text-white/20 text-[9.5px] tracking-[0.2em] uppercase mt-0.5">
               Nurturing Minds · Shaping Futures

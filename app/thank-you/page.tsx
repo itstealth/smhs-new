@@ -27,7 +27,7 @@ export default function ThankYouPage() {
             Thank You!
           </h1>
           <p className="text-white/70 text-lg leading-relaxed mb-2">
-            Your admission inquiry has been submitted successfully.
+            Your message has been submitted successfully.
           </p>
           <p className="text-white/50 text-sm">
             Our team will contact you within <span className="text-sand font-semibold">24 hours</span>.
