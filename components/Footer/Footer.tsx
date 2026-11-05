@@ -25,6 +25,7 @@ const contact = [
   { label: "Mobile", value: "+91 95877 72837" },
   { label: "Landline", value: "0141-3624000" },
   { label: "Email", value: "smhsjaipur@jnujaipur.ac.in" },
+  { label: "Email", value: "smhsadmissions@seedlingschools.com" },
 ];
 
 const socials = [
@@ -76,7 +77,7 @@ export default function Footer() {
                 alt="Seedling Modern High School"
                 width={44}
                 height={44}
-                className="rounded-full object-cover flex-shrink-0"
+                className="h-11 w-11 rounded-full object-cover flex-shrink-0"
               />
               <div className="font-serif text-[15px] font-bold text-white leading-tight tracking-wide uppercase">
                 Seedling<br />
@@ -172,7 +173,7 @@ export default function Footer() {
             <div className="w-8 h-[1.5px] bg-white/30 mb-7" />
             <ul className="space-y-6">
               {contact.map((c) => (
-                <li key={c.label}>
+                <li key={`${c.label}-${c.value}`}>
                   <p className="text-white/30 text-[9.5px] tracking-[0.35em] uppercase mb-1.5">{c.label}</p>
                   <p className="text-white text-[13.5px] font-semibold leading-snug whitespace-pre-line">{c.label === "Email" ? <a href={"mailto:" + c.value}>{c.value}</a> : c.label === "Mobile" ? <a href="tel:+919587772837">{c.value}</a> : c.label === "Landline" ? <a href="tel:01413624000">{c.value}</a> : c.value}</p>
                 </li>

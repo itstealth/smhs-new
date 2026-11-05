@@ -4,6 +4,7 @@ import Script from "next/script";
 import { headers } from "next/headers";
 import ShellWrapper from "@/components/layout/ShellWrapper";
 import "./globals.css";
+import LeadAttribution from "@/components/LeadAttribution";
 
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const dmSerif = DM_Serif_Text({ variable: "--font-serif", subsets: ["latin"], weight: ["400"] });
@@ -30,20 +31,22 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geistMono.variable} ${dmSerif.variable} ${dmSans.variable} h-full antialiased`}>
+    <html lang="en" className={`${geistMono.variable} ${dmSerif.variable} ${dmSans.variable} relative h-full antialiased`}>
       <head>
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PG5KGJGQ');`}
+})(window,document,'script','dataLayer','GTM-MS6FKS3S');`}
         </Script>
       </head>
       <body className="min-h-full flex flex-col font-sans antialiased">
+        <script dangerouslySetInnerHTML={{ __html: `var npf_d='https://apply.seedlingschools.com';var npf_c='7260';var npf_m='1';var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://track.nopaperforms.com/js/track.js";document.body.appendChild(s);` }} />
+        <LeadAttribution />
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PG5KGJGQ"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MS6FKS3S"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
@@ -58,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               name: "Seedling Modern High School",
               url: "https://smhs.seedlingschools.com",
               logo: "https://smhs.seedlingschools.com/logo.webp",
-              email: "smhsjaipur@jnujaipur.ac.in",
+              email: ["smhsjaipur@jnujaipur.ac.in", "smhsadmissions@seedlingschools.com"],
               telephone: "+91-95877-72837",
               address: {
                 "@type": "PostalAddress",

@@ -3,6 +3,8 @@ import { requireAdmin } from '@/app/lib/admin-auth';
 import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { randomBytes } from 'crypto';
+import { after } from 'next/server';
+import { attributionFrom, flushOutbox, pageFrom, queueForCms } from '@/lib/cms-leads';
 
 // ─── POST: public career application submission ───────────────────────────
 export async function POST(request: Request) {
@@ -45,35 +47,23 @@ export async function POST(request: Request) {
       cvPath = await saveFile(cvFile);
     }
 
+    // Copy for the CMS career inbox (lib/cms-leads.ts): queued to the local
+    // outbox before the insert and delivered after the response, with
+    // retries, so the applicant never waits on or sees a CMS problem.
+    const { site } = pageFrom(request);
+    await queueForCms('career', {
+      name, qualification, email, mobile, experience, subject, board,
+      classes, jobType, roleApplied, cvFilename, cvPath, site,
+      attribution: attributionFrom(request),
+    });
+    after(() => flushOutbox());
+
     await sql`
       INSERT INTO career_applications
         (name, qualification, email, mobile, experience, subject, board, classes, job_type, role_applied, cv_filename, cv_path)
       VALUES
         (${name}, ${qualification}, ${email}, ${mobile}, ${experience}, ${subject}, ${board}, ${classes}, ${jobType}, ${roleApplied}, ${cvFilename}, ${cvPath})
     `;
-
-    // Mirror into the CMS so a school can triage applications in one place
-    // alongside every other institution. Deliberately best-effort and after
-    // the local insert: the row above is this site's own record, and an
-    // applicant must never see a failure because the CMS was unreachable.
-    if (process.env.CMS_URL && process.env.CMS_INGEST_TOKEN) {
-      try {
-        await fetch(`${process.env.CMS_URL}/api/ingest/v1/career`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${process.env.CMS_INGEST_TOKEN}`,
-          },
-          body: JSON.stringify({
-            name, qualification, email, mobile, experience, subject, board,
-            classes, jobType, roleApplied, cvFilename, cvPath,
-          }),
-          signal: AbortSignal.timeout(5000),
-        });
-      } catch (err) {
-        console.error('CMS career ingest failed (application saved locally):', err);
-      }
-    }
 
     return Response.json({ ok: true }, { status: 201 });
   } catch (err) {
