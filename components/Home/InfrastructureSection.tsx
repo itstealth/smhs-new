@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -13,8 +11,6 @@ const infrastructure = [
 ];
 
 export default function InfrastructureSection() {
-  const [infraActiveIndex, setInfraActiveIndex] = useState(0);
-
   return (
     <section className="relative py-14 overflow-hidden">
       {/* Parallax BG */}
@@ -29,23 +25,18 @@ export default function InfrastructureSection() {
         <div className="text-center mb-8">
           <p className="text-[#a3123f] text-[11px] font-semibold tracking-[0.5em] uppercase mb-4">Campus Highlights</p>
           <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#034ea2]">World-Class Infrastructure</h2>
-          <p className="text-[#013975]/55 mt-4 max-w-2xl mx-auto">
+          <p className="text-[#013975]/80 mt-4 max-w-2xl mx-auto">
             Our campus is designed to inspire curiosity, foster collaboration, and provide every resource children need to thrive.
           </p>
         </div>
 
         {/* Desktop accordion */}
         <div className="hidden lg:block">
-          <div className="flex gap-3">
-            {infrastructure.map((item, index) => {
-              const active = index === infraActiveIndex;
-
-              return (
+          <div className="infrastructure-accordion flex gap-3">
+            {infrastructure.map((item) => (
                 <div
                   key={item.title}
-                  onMouseEnter={() => setInfraActiveIndex(index)}
-                  onMouseLeave={() => setInfraActiveIndex(-1)}
-                  className={`group relative h-[420px] overflow-hidden rounded-2xl bg-[#034ea2] shadow-xl shadow-black/5 transition-[flex] duration-700 ease-[cubic-bezier(.5,.85,.25,1.15)] ${active ? "flex-[3]" : "flex-[1]"}`}
+                  className="infrastructure-card group relative h-[420px] overflow-hidden rounded-2xl bg-[#034ea2] shadow-xl shadow-black/5 transition-[flex] duration-700 ease-[cubic-bezier(.5,.85,.25,1.15)]"
                 >
                   <Image
                     src={item.image}
@@ -53,15 +44,11 @@ export default function InfrastructureSection() {
                     fill
                     sizes="(min-width: 1024px) 900px, 100vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    priority={index === 0}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-700 group-hover:bg-black/40" />
                   <div
                     className={[
-                      "absolute inset-0 z-10 flex flex-col justify-end p-6 text-white",
-                      active
-                        ? "opacity-100 translate-y-0 transition-all duration-500 delay-300"
-                        : "opacity-0 translate-y-3 transition-all duration-150 delay-0 pointer-events-none",
+                      "infrastructure-copy absolute inset-0 z-10 flex flex-col justify-end p-6 text-white",
                     ].join(" ")}
                     style={{ textShadow: "0 2px 8px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.6)" }}
                   >
@@ -74,8 +61,7 @@ export default function InfrastructureSection() {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+            ))}
           </div>
         </div>
 
@@ -96,7 +82,7 @@ export default function InfrastructureSection() {
                 </div>
               </div>
               <div className="p-5">
-                <p className="text-sm text-[#013975]/60 group-hover:text-white/70 leading-relaxed transition-colors duration-500">{item.desc}</p>
+                <p className="text-sm text-[#013975]/80 group-hover:text-white/70 leading-relaxed transition-colors duration-500">{item.desc}</p>
                 <Link href={item.href} className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-[#034ea2] group-hover:text-[#a3123f] transition-colors duration-500">
                   Explore <ArrowUpRight className="h-4 w-4" />
                 </Link>

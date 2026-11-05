@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Geist_Mono, DM_Serif_Text, DM_Sans } from "next/font/google";
+import { DM_Serif_Text, DM_Sans } from "next/font/google";
 import Script from "next/script";
 import { headers } from "next/headers";
 import ShellWrapper from "@/components/layout/ShellWrapper";
 import "./globals.css";
 import LeadAttribution from "@/components/LeadAttribution";
 
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const dmSerif = DM_Serif_Text({ variable: "--font-serif", subsets: ["latin"], weight: ["400"] });
 const dmSans = DM_Sans({ variable: "--font-dm", subsets: ["latin"], weight: ["300","400","500","600","700"] });
 
@@ -31,18 +30,46 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geistMono.variable} ${dmSerif.variable} ${dmSans.variable} relative h-full antialiased`}>
-      <head>
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MS6FKS3S');`}
-        </Script>
-      </head>
+    <html lang="en" className={`${dmSerif.variable} ${dmSans.variable} relative h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans antialiased">
-        <script dangerouslySetInnerHTML={{ __html: `var npf_d='https://apply.seedlingschools.com';var npf_c='7260';var npf_m='1';var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://track.nopaperforms.com/js/track.js";document.body.appendChild(s);` }} />
+        <Script id="deferred-tracking" strategy="afterInteractive">
+          {`(function(w,d){
+            var loaded=false;
+            var activityTimer;
+            function loadTracking(){
+              if(loaded)return;
+              loaded=true;
+              w.clearTimeout(activityTimer);
+              ['pointerdown','keydown','touchstart','scroll'].forEach(function(type){w.removeEventListener(type,onActivity);});
+              w.dataLayer=w.dataLayer||[];
+              w.gtag=w.gtag||function(){w.dataLayer.push(arguments);};
+              w.gtag('js',new Date());
+              w.gtag('config','G-K12SSGBQDP');
+              var first=d.getElementsByTagName('script')[0];
+              var gtm=d.createElement('script');
+              gtm.async=true;
+              gtm.src='https://www.googletagmanager.com/gtm.js?id=GTM-MS6FKS3S';
+              first.parentNode.insertBefore(gtm,first);
+              var ga=d.createElement('script');
+              ga.async=true;
+              ga.src='https://www.googletagmanager.com/gtag/js?id=G-K12SSGBQDP';
+              first.parentNode.insertBefore(ga,first);
+              w.npf_d='https://apply.seedlingschools.com';
+              w.npf_c='7260';
+              w.npf_m='1';
+              var tracker=d.createElement('script');
+              tracker.async=true;
+              tracker.src='https://track.nopaperforms.com/js/track.js';
+              first.parentNode.insertBefore(tracker,first);
+            }
+            function onActivity(){
+              w.clearTimeout(activityTimer);
+              activityTimer=w.setTimeout(loadTracking,1500);
+            }
+            ['pointerdown','keydown','touchstart','scroll'].forEach(function(type){w.addEventListener(type,onActivity,{once:true,passive:true});});
+            w.setTimeout(loadTracking,18000);
+          })(window,document);`}
+        </Script>
         <LeadAttribution />
         <noscript>
           <iframe
@@ -79,18 +106,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }),
           }}
         />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-K12SSGBQDP"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-K12SSGBQDP');
-          `}
-        </Script>
         <ShellWrapper>{children}</ShellWrapper>
       </body>
     </html>

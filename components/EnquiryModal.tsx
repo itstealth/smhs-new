@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface EnquiryModalProps {
   isOpen: boolean;
@@ -30,23 +29,16 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
   }, [isOpen]);
 
   return (
-    <AnimatePresence>
+    <>
       {isOpen && (
         <>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
             onClick={onClose}
-            className="fixed inset-0 z-[100] bg-black/55 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] animate-backdrop-in bg-black/55 backdrop-blur-sm"
             aria-hidden="true"
           />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 16 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: 16 }}
-            transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[101] flex items-center justify-center p-3 pointer-events-none"
+          <div
+            className="fixed inset-0 z-[101] flex animate-modal-in items-center justify-center p-3 pointer-events-none"
           >
             <section
               role="dialog"
@@ -85,9 +77,9 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 />
               </div>
             </section>
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
+    </>
   );
 }

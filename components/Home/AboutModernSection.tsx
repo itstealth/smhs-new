@@ -1,5 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -32,11 +30,7 @@ export default function AboutModernSection() {
             <div className="relative h-[300px] lg:h-[400px]">
               <div className="grid grid-cols-12 gap-3 h-full">
                 {/* Large left image */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
+                <div
                   className="col-span-5 relative group overflow-hidden rounded-lg h-full"
                 >
                   <Image
@@ -51,15 +45,11 @@ export default function AboutModernSection() {
                     <p className="text-white font-semibold text-lg">Library</p>
                     <p className="text-white/70 text-sm">20,000+ titles & digital resources</p>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Right column - stacked images */}
                 <div className="col-span-7 flex flex-col gap-3 h-full">
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    viewport={{ once: true }}
+                  <div
                     className="relative flex-1 min-h-[100px] group overflow-hidden rounded-lg"
                   >
                     <Image
@@ -74,14 +64,10 @@ export default function AboutModernSection() {
                       <p className="text-white font-semibold text-lg">Sports</p>
                       <p className="text-white/70 text-sm">Olympic facilities</p>
                     </div>
-                  </motion.div>
+                  </div>
 
                   <div className="grid grid-cols-2 gap-3 flex-1 min-h-[100px]">
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                      viewport={{ once: true }}
+                    <div
                       className="relative group overflow-hidden rounded-lg"
                     >
                       <Image
@@ -96,13 +82,9 @@ export default function AboutModernSection() {
                         <p className="text-white font-semibold text-sm">Student Life</p>
                         <p className="text-white/60 text-xs">Learning beyond classrooms</p>
                       </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.3 }}
-                      viewport={{ once: true }}
+                    <div
                       className="relative group overflow-hidden rounded-lg"
                     >
                       <Image
@@ -117,7 +99,7 @@ export default function AboutModernSection() {
                         <p className="text-white font-semibold text-sm">Arts</p>
                         <p className="text-white/60 text-xs">Creativity unleashed</p>
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -125,7 +107,7 @@ export default function AboutModernSection() {
               {/* Floating badge */}
               <div className="absolute -bottom-3 -left-3 bg-[#a3123f] text-white px-4 py-2 rounded-lg shadow-xl z-10">
                 <p className="font-serif text-xl font-black">33+</p>
-                <p className="text-white/60 text-[9px] uppercase tracking-wider">Years</p>
+                <p className="text-white/90 text-[9px] uppercase tracking-wider">Years</p>
               </div>
             </div>
           </div>

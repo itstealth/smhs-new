@@ -1,10 +1,6 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 
 type Event = {
   tag: string;
@@ -71,26 +67,15 @@ const events: Event[] = [
 
 type EventCardProps = {
   index: number;
-  progress: MotionValue<number>;
-  range: [number, number];
   targetScale: number;
   event: Event;
 };
 
-function EventCard({ index, progress, range, targetScale, event }: EventCardProps) {
-  const cardRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: cardRef,
-    offset: ["start end", "start start"],
-  });
-
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
-  const scale = useTransform(progress, range, [1, targetScale]);
-
+function EventCard({ index, targetScale, event }: EventCardProps) {
   return (
-    <div ref={cardRef} className="sticky top-[12vh] flex h-[70vh] items-center justify-center">
-      <motion.article
-        style={{ scale, top: `calc(-2.5vh + ${index * 20}px)` }}
+    <div className="sticky top-[12vh] flex h-[70vh] items-center justify-center">
+      <article
+        style={{ transform: `scale(${targetScale})`, top: `calc(-2.5vh + ${index * 20}px)` }}
         className="relative -top-[12%] flex w-[90%] max-w-5xl origin-top flex-col overflow-hidden rounded-lg border border-[#013975]/8 bg-white shadow-[0_24px_80px_rgba(1,57,117,0.10)] lg:h-[430px] lg:w-[74%] lg:flex-row"
       >
         <div className="absolute inset-x-0 top-0 h-1.5" style={{ backgroundColor: event.accent }} />
@@ -104,7 +89,7 @@ function EventCard({ index, progress, range, targetScale, event }: EventCardProp
               >
                 {event.tag}
               </span>
-              <span className="text-xs font-medium uppercase tracking-[0.18em] text-[#034ea2]/55">
+              <span className="text-xs font-medium uppercase tracking-[0.18em] text-[#034ea2]/80">
                 {event.date}
               </span>
             </div>
@@ -112,7 +97,7 @@ function EventCard({ index, progress, range, targetScale, event }: EventCardProp
             <h3 className="max-w-md text-[1.7rem] font-bold leading-tight text-[#034ea2] sm:text-[2rem]">
               {event.title}
             </h3>
-            <p className="mt-3 max-w-lg text-sm leading-6 text-[#034ea2]/75 sm:text-[15px]">
+            <p className="mt-3 max-w-lg text-sm leading-6 text-[#034ea2]/90 sm:text-[15px]">
               {event.description}
             </p>
           </div>
@@ -129,29 +114,22 @@ function EventCard({ index, progress, range, targetScale, event }: EventCardProp
         </div>
 
         <div className="relative h-52 sm:h-64 flex-shrink-0 overflow-hidden bg-[#034ea2]/5 lg:min-h-0 lg:h-auto lg:flex-1">
-          <motion.div style={{ scale: imageScale }} className="relative h-full w-full">
+          <div className="group relative h-full w-full overflow-hidden">
             <Image
               fill
               src={event.image}
               alt={event.title}
-              className="object-cover"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 56vw"
-              priority={index === 0}
             />
-          </motion.div>
+          </div>
         </div>
-      </motion.article>
+      </article>
     </div>
   );
 }
 
 export default function TrendingUpdates() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
   return (
     <section className="bg-[#f0f4ff] py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-6">
@@ -174,7 +152,7 @@ export default function TrendingUpdates() {
         </div>
       </div>
 
-      <div ref={containerRef} className="relative">
+      <div className="relative">
         {events.map((event, index) => {
           const targetScale = 1 - (events.length - index) * 0.05;
           return (
@@ -182,8 +160,6 @@ export default function TrendingUpdates() {
               key={event.title}
               index={index}
               event={event}
-              progress={scrollYProgress}
-              range={[index * 0.2, 1]}
               targetScale={targetScale}
             />
           );

@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -110,9 +109,9 @@ export default function Footer() {
 
           {/* Quick Overview */}
           <div className="pt-12 lg:pt-0 pb-12 lg:pb-0 lg:px-10 border-t border-white/[0.06] lg:border-0">
-            <h4 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase mb-3">
+            <h2 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase mb-3">
               Quick Overview
-            </h4>
+            </h2>
             <div className="w-8 h-[1.5px] bg-white/30 mb-7" />
             <ul className="space-y-4">
               {quickLinks.map((l) => (
@@ -144,9 +143,9 @@ export default function Footer() {
 
           {/* Our Institutions */}
           <div className="pt-12 lg:pt-0 pb-12 lg:pb-0 lg:px-10 border-t border-white/[0.06] lg:border-0">
-            <h4 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase mb-3">
+            <h2 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase mb-3">
               Our Institutions
-            </h4>
+            </h2>
             <div className="w-8 h-[1.5px] bg-white/30 mb-7" />
             <ul className="space-y-5">
               {institutions.map((inst) => (
@@ -159,7 +158,7 @@ export default function Footer() {
                   >
                     {inst.name}
                   </a>
-                  <p className="text-white/30 text-[10.5px] tracking-[0.15em] uppercase mt-1">{inst.sub}</p>
+                  <p className="text-white/70 text-[10.5px] tracking-[0.15em] uppercase mt-1">{inst.sub}</p>
                 </li>
               ))}
             </ul>
@@ -167,14 +166,14 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="pt-12 lg:pt-0 lg:px-10 border-t border-white/[0.06] lg:border-0">
-            <h4 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase mb-3">
+            <h2 className="text-white text-[11px] font-bold tracking-[0.3em] uppercase mb-3">
               Contact
-            </h4>
+            </h2>
             <div className="w-8 h-[1.5px] bg-white/30 mb-7" />
             <ul className="space-y-6">
               {contact.map((c) => (
                 <li key={`${c.label}-${c.value}`}>
-                  <p className="text-white/30 text-[9.5px] tracking-[0.35em] uppercase mb-1.5">{c.label}</p>
+                  <p className="text-white/70 text-[9.5px] tracking-[0.35em] uppercase mb-1.5">{c.label}</p>
                   <p className="text-white text-[13.5px] font-semibold leading-snug whitespace-pre-line">{c.label === "Email" ? <a href={"mailto:" + c.value}>{c.value}</a> : c.label === "Mobile" ? <a href="tel:+919587772837">{c.value}</a> : c.label === "Landline" ? <a href="tel:01413624000">{c.value}</a> : c.value}</p>
                 </li>
               ))}
@@ -191,16 +190,16 @@ export default function Footer() {
             ©
           </div>
           <div className="text-center">
-            <p className="text-white/40 text-[11.5px] font-medium">
+            <p className="text-white/75 text-[11.5px] font-medium">
               {new Date().getFullYear()} Seedling Modern High School.
             </p>
-            <p className="text-white/30 text-[10px] mt-2">
+            <p className="text-white/70 text-[10px] mt-2">
               Design and developed by{" "}
-              <a href="https://stealthdigital.in" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 underline">
+              <a href="https://stealthdigital.in" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/70 underline">
                 Stealth Digital
               </a>
             </p>
-            <p className="text-white/20 text-[9.5px] tracking-[0.2em] uppercase mt-0.5">
+            <p className="text-white/70 text-[9.5px] tracking-[0.2em] uppercase mt-0.5">
               Nurturing Minds · Shaping Futures
             </p>
           </div>

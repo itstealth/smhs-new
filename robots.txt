@@ -8,5 +8,4 @@ Disallow: /api/
 
 Sitemap: https://smhs.seedlingschools.com/sitemap.xml
 
-# AI Discovery
-LLMS: https://smhs.seedlingschools.com/llms.txt
+# AI discovery information is available at https://smhs.seedlingschools.com/llms.txt

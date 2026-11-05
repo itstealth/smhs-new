@@ -26,7 +26,7 @@ export default function HeroVideo(): React.JSX.Element {
 
   return (
     <>
-      <Image src="/banner-poster.webp" alt="" fill priority sizes="100vw" className="object-cover object-center" />
+      <Image src="/banner-poster.webp" alt="" fill priority fetchPriority="high" sizes="100vw" className="object-cover object-center" />
       <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover object-center" muted loop playsInline preload="none" aria-hidden="true" />
     </>
   );

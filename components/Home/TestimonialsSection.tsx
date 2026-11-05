@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
 
@@ -127,29 +126,6 @@ export default function TestimonialsSection() {
 
   const current = testimonials[currentIndex];
 
-  const variants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 300 : -300,
-      opacity: 0,
-      scale: 0.95,
-      rotateY: direction > 0 ? 15 : -15,
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      rotateY: 0,
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 300 : -300,
-      opacity: 0,
-      scale: 0.95,
-      rotateY: direction < 0 ? 15 : -15,
-    }),
-  };
-
   return (
     <section
       id="testimonials"
@@ -175,34 +151,22 @@ export default function TestimonialsSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 flex flex-col justify-center">
 
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+        <div
           className="text-center mb-12 md:mb-16"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+          <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/15 text-white/80 text-sm font-medium mb-6"
           >
             <Star className="w-4 h-4 fill-[#d6d1cf] text-[#d6d1cf]" />
             Community Voices
-          </motion.div>
+          </div>
 
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
             Stories That
             <br />
             <span className="relative inline-block mt-2">
               <span className="relative z-10 text-[#d6d1cf]">Define Us</span>
-              <motion.span
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6, duration: 0.8, ease: "circOut" }}
+              <span
                 className="absolute bottom-1 left-0 w-full h-2 md:h-3 bg-[#d6d1cf]/20 -z-0 origin-left"
               />
             </span>
@@ -212,26 +176,14 @@ export default function TestimonialsSection() {
             Real experiences from the Seedling community—students discovering their potential,
             parents witnessing transformation, and alumni changing the world.
           </p>
-        </motion.div>
+        </div>
 
         {/* ─── Main Testimonial Card ───────────────────────────────── */}
         <div className="relative max-w-5xl mx-auto w-full perspective-1000">
 
-          <AnimatePresence initial={false} custom={direction} mode="wait">
-            <motion.div
+            <div
               key={currentIndex}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.4 },
-                scale: { duration: 0.4 },
-                rotateY: { duration: 0.5 },
-              }}
-              className="relative bg-white rounded-3xl md:rounded-[2.5rem] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.35)] border border-white/10 overflow-hidden"
+              className={`relative bg-white rounded-3xl md:rounded-[2.5rem] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.35)] border border-white/10 overflow-hidden ${direction >= 0 ? "animate-testimonial-next" : "animate-testimonial-previous"}`}
             >
               <div className="grid md:grid-cols-[1fr_1.2fr] gap-0">
 
@@ -247,11 +199,7 @@ export default function TestimonialsSection() {
                   </div>
 
                   <div className="relative z-10 mt-auto">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                    >
+                    <div>
                       <div className="w-14 h-14 md:w-18 md:h-18 rounded-full overflow-hidden border-2 border-[#d6d1cf]/40 mb-4 flex-shrink-0">
                         <Image
                           src={current.avatar}
@@ -267,7 +215,7 @@ export default function TestimonialsSection() {
                       <p className="text-white/70 text-xs md:text-sm font-medium">
                         {current.role}
                       </p>
-                    </motion.div>
+                    </div>
                   </div>
 
                   {/* Large decorative quote */}
@@ -276,22 +224,13 @@ export default function TestimonialsSection() {
 
                 {/* Right: Content */}
                 <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center relative">
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                  >
+                  <div>
                     {/* Stars */}
                     <div className="flex gap-1 mb-6">
                       {[...Array(current.rating)].map((_, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, scale: 0 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.4 + i * 0.1 }}
-                        >
+                        <div key={i}>
                           <Star className="w-4 h-4 fill-[#d6d1cf] text-[#d6d1cf]" />
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
 
@@ -306,15 +245,14 @@ export default function TestimonialsSection() {
                     {/* School branding */}
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-[#d6d1cf]" />
-                      <span className="text-sm font-semibold text-[#034ea2]/50 uppercase tracking-wider">
+                      <span className="text-sm font-semibold text-[#034ea2]/80 uppercase tracking-wider">
                         Seedling Modern High School
                       </span>
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
 
           {/* ─── Navigation ─────────────────────────────────────────── */}
           <div className="flex items-center justify-between mt-10 md:mt-14">
@@ -334,11 +272,7 @@ export default function TestimonialsSection() {
                 >
                   <div className="absolute inset-0 bg-white/20 rounded-full" />
                   {idx === currentIndex && (
-                    <motion.div
-                      layoutId="activeTestimonial"
-                      className="absolute inset-0 bg-[#d6d1cf] rounded-full"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
+                    <div className="absolute inset-0 rounded-full bg-[#d6d1cf] transition-all duration-500" />
                   )}
                   {idx < currentIndex && (
                     <div className="absolute inset-0 bg-[#d6d1cf]/40 rounded-full" />
@@ -349,24 +283,20 @@ export default function TestimonialsSection() {
 
             {/* Arrow Buttons */}
             <div className="flex gap-3">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 onClick={() => paginate(-1)}
                 className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 shadow-sm flex items-center justify-center text-white hover:border-[#a3123f] hover:text-[#a3123f] transition-colors group"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </button>
+              <button
                 onClick={() => paginate(1)}
                 className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#a3123f] shadow-lg shadow-[#a3123f]/25 flex items-center justify-center text-white hover:bg-[#8e1037] transition-colors group"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-              </motion.button>
+              </button>
             </div>
           </div>
 
