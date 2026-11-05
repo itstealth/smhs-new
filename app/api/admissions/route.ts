@@ -1,4 +1,6 @@
 import { sql } from '@/app/lib/db';
+import { after } from 'next/server';
+import { attributionFrom, flushOutbox, pageFrom, queueForCms } from '@/lib/cms-leads';
 import { requireAdmin } from '@/app/lib/admin-auth';
 
 // ─── POST: public admissions enquiry submission ────────────────────────────
@@ -10,6 +12,24 @@ export async function POST(request: Request) {
     if (!candidateName?.trim() || !className?.trim() || !parentName?.trim() || !phone?.trim()) {
       return Response.json({ error: 'Missing required fields' }, { status: 400 });
     }
+
+    // Copy for the CMS (lib/cms-leads.ts): never throws, changes nothing here.
+    const { site, pageUrl } = pageFrom(request);
+    await queueForCms('lead', {
+      formType: 'admission-enquiry',
+      formName: 'Admissions page',
+      site,
+      pageUrl,
+      name: parentName.trim(),
+      phone: phone.trim(),
+      email: email?.trim() || undefined,
+      studentName: candidateName.trim(),
+      className: className.trim(),
+      message: message?.trim() || undefined,
+      details: school?.trim() ? { school: school.trim() } : {},
+      attribution: attributionFrom(request),
+    });
+    after(() => flushOutbox());
 
     await sql`
       INSERT INTO admission_enquiries (candidate_name, class_name, parent_name, email, phone, school, message)

@@ -1,4 +1,6 @@
 import { sql } from '@/app/lib/db';
+import { after } from 'next/server';
+import { attributionFrom, flushOutbox, pageFrom, queueForCms } from '@/lib/cms-leads';
 import { requireAdmin } from '@/app/lib/admin-auth';
 
 // ─── POST: public contact form submission ─────────────────────────────────
@@ -10,6 +12,22 @@ export async function POST(request: Request) {
     if (!name?.trim() || !email?.trim() || !phone?.trim() || !message?.trim()) {
       return Response.json({ error: 'Missing required fields' }, { status: 400 });
     }
+
+    // Copy for the CMS (lib/cms-leads.ts): never throws, changes nothing here.
+    const { site, pageUrl } = pageFrom(request);
+    await queueForCms('lead', {
+      formType: 'contact',
+      formName: 'Contact us page',
+      site,
+      pageUrl,
+      name: name.trim(),
+      phone: phone.trim(),
+      email: email.trim(),
+      message: message.trim(),
+      details: school?.trim() ? { school: school.trim() } : {},
+      attribution: attributionFrom(request),
+    });
+    after(() => flushOutbox());
 
     await sql`
       INSERT INTO contact_messages (name, email, phone, school, message)

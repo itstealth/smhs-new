@@ -159,7 +159,7 @@ export default function ApplyClient({ campus }: { campus: CampusConfig }) {
             <p>
               Seedling Public School &amp; Seedling International Academy: 0141-3623000, 7413012351
               <br />
-              Seedling Modern High School &amp; Seedling Modern International Academy: 7412044410, 7413012352, 0141-7194000
+              Seedling Modern High School &amp; Seedling Modern International Academy: 9587772837, 0141-3624000
             </p>
             <h2 className="font-serif text-xl text-navy pt-2">
               Admission are open for all classes : Play Group to IX and XI

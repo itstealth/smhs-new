@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Phone, Mail, MapPin, X, Menu, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { copyLeadToCms } from '@/lib/cms-lead-client';
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -102,6 +103,17 @@ function InquiryPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
     }
     setFormErrors({});
     setSubmitting(true);
+    copyLeadToCms({
+      formType: 'enquiry',
+      formName: 'Header enquiry form',
+      name: formData.parentName,
+      phone: formData.phone,
+      email: formData.email,
+      studentName: formData.candidateName,
+      className: formData.className,
+      message: formData.message,
+      details: formData.school ? { gender: formData.school } : {},
+    });
     try {
       await fetch("https://script.google.com/macros/s/AKfycbxQxDh9kDCYD-SWIS_JIXYGtSf3F9Id8lESGKrqT9GJ4NT9fuqh63Gu1BW6lhYITjMR/exec", {
         method: "POST",

@@ -37,6 +37,10 @@
     "**/*.mts",
     ".next-perf/types/**/*.ts",
     ".next-perf/dev/types/**/*.ts",
+    ".next-leads/types/**/*.ts",
+    ".next-leads/dev/types/**/*.ts",
+    ".next-career/types/**/*.ts",
+    ".next-career/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
