@@ -7,7 +7,7 @@ export default function QuoteStrip({ quote, highlight }: QuoteStripProps) {
   const parts = highlight ? quote.split(highlight) : null;
 
   return (
-    <section className="relative py-16 lg:py-20 bg-white overflow-hidden">
+    <section className="home-deferred-content home-deferred-quote relative py-16 lg:py-20 bg-white overflow-hidden">
       {/* Faint large " behind text */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"

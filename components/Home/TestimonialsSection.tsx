@@ -1,24 +1,8 @@
-"use client";
-
-import React, { useState, useEffect, useCallback } from "react";
-import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
+import Script from "next/script";
 
-// ─── Types ─────────────────────────────────────────────────────────
-interface Testimonial {
-  id: number;
-  name: string;
-  role: string;
-  relation: "Parent";
-  content: string;
-  rating: number;
-  avatar: string;
-}
-
-// ─── Data ──────────────────────────────────────────────────────────
-const testimonials: Testimonial[] = [
+const testimonials = [
   {
-    id: 1,
     name: "Deepak Gupta & Renu Gupta",
     role: "Parents · Jaipur",
     relation: "Parent",
@@ -27,7 +11,6 @@ const testimonials: Testimonial[] = [
     avatar: "/smhs_images/testimonials/deepak-gupta.webp",
   },
   {
-    id: 2,
     name: "Narendra Kumar Sharma & Soniya Yadav",
     role: "Parents · Vaishali Nagar",
     relation: "Parent",
@@ -36,7 +19,6 @@ const testimonials: Testimonial[] = [
     avatar: "/smhs_images/testimonials/Soniya-Yadav.webp",
   },
   {
-    id: 3,
     name: "Bhanupriya Singh",
     role: "Parent · MI Road",
     relation: "Parent",
@@ -45,7 +27,6 @@ const testimonials: Testimonial[] = [
     avatar: "/smhs_images/testimonials/Bhanupriya-Singh.webp",
   },
   {
-    id: 4,
     name: "Mrs. Anita Gupta",
     role: "Parent · Raja Park",
     relation: "Parent",
@@ -54,7 +35,6 @@ const testimonials: Testimonial[] = [
     avatar: "/smhs_images/testimonials/Anita-Gupta.webp",
   },
   {
-    id: 5,
     name: "Ibha Chhabra",
     role: "Parent · Jhotwara",
     relation: "Parent",
@@ -63,7 +43,6 @@ const testimonials: Testimonial[] = [
     avatar: "/smhs_images/testimonials/ibha-chadra.webp",
   },
   {
-    id: 6,
     name: "Aditi Sharma",
     role: "Parent · Vaishali Nagar",
     relation: "Parent",
@@ -72,7 +51,6 @@ const testimonials: Testimonial[] = [
     avatar: "/smhs_images/testimonials/aditi-sharma.webp",
   },
   {
-    id: 7,
     name: "Sweta Shrivastava",
     role: "Parent · MI Road",
     relation: "Parent",
@@ -81,7 +59,6 @@ const testimonials: Testimonial[] = [
     avatar: "/smhs_images/testimonials/Sweta-Shrivastava.webp",
   },
   {
-    id: 8,
     name: "Muskan Rupani",
     role: "Parent · Jaipur",
     relation: "Parent",
@@ -91,223 +68,136 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-// ─── Components ────────────────────────────────────────────────────
-
-const RelationBadge = ({ relation }: { relation: Testimonial["relation"] }) => (
-  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase border bg-[#d6d1cf]/20 text-[#d6d1cf] border-[#d6d1cf]/30">
-    {relation}
-  </span>
-);
+function Chevron({ direction }: { direction: "left" | "right" }) {
+  return direction === "left" ? (
+    <svg className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="m15 18-6-6 6-6" /></svg>
+  ) : (
+    <svg className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="m9 18 6-6-6-6" /></svg>
+  );
+}
 
 export default function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const paginate = useCallback(
-    (newDirection: number) => {
-      setDirection(newDirection);
-      setCurrentIndex((prev) => {
-        let next = prev + newDirection;
-        if (next < 0) next = testimonials.length - 1;
-        if (next >= testimonials.length) next = 0;
-        return next;
-      });
-    },
-    []
-  );
-
-  // Auto-play
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    const timer = setInterval(() => paginate(1), 6000);
-    return () => clearInterval(timer);
-  }, [isAutoPlaying, paginate]);
-
-  const current = testimonials[currentIndex];
+  const first = testimonials[0];
 
   return (
     <section
       id="testimonials"
-      className="relative w-full overflow-hidden bg-[#034ea2] py-14 md:py-20"
-      onMouseEnter={() => setIsAutoPlaying(false)}
-      onMouseLeave={() => setIsAutoPlaying(true)}
+      data-testimonials
+      className="home-deferred-content home-deferred-testimonials relative w-full overflow-hidden bg-[#034ea2] py-14 md:py-20"
     >
-      {/* ─── Background Elements ───────────────────────────────────── */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(249,148,30,0.08)_0%,transparent_50%)]" />
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(3,78,162,0.06)_0%,transparent_50%)]" />
-
-        {/* Decorative quote marks */}
-        <div className="absolute top-20 left-10 md:left-32 text-white/5">
-          <Quote className="w-32 h-32 md:w-48 md:h-48 rotate-180" strokeWidth={1} />
-        </div>
-        <div className="absolute bottom-20 right-10 md:right-32 text-white/5">
-          <Quote className="w-32 h-32 md:w-48 md:h-48" strokeWidth={1} />
-        </div>
+        <div className="absolute top-20 left-10 md:left-32 text-white/5"><svg className="w-32 h-32 md:w-48 md:h-48 rotate-180" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C8 3 5 6 5 10v8h7v-7H8c0-2 1-4 4-4zm8 0c-4 0-7 3-7 7v8h7v-7h-4c0-2 1-4 4-4z" /></svg></div>
+        <div className="absolute bottom-20 right-10 md:right-32 text-white/5"><svg className="w-32 h-32 md:w-48 md:h-48" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C8 3 5 6 5 10v8h7v-7H8c0-2 1-4 4-4zm8 0c-4 0-7 3-7 7v8h7v-7h-4c0-2 1-4 4-4z" /></svg></div>
       </div>
 
-      {/* ─── Content Container ─────────────────────────────────────── */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 flex flex-col justify-center">
-
-        {/* Section Header */}
-        <div
-          className="text-center mb-12 md:mb-16"
-        >
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/15 text-white/80 text-sm font-medium mb-6"
-          >
-            <Star className="w-4 h-4 fill-[#d6d1cf] text-[#d6d1cf]" />
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/8 border border-white/15 text-white/80 text-sm font-medium mb-6">
+            <svg className="w-4 h-4 fill-[#d6d1cf] text-[#d6d1cf]" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6-5.8-3.1-5.8 3.1 1.1-6.6L2.5 8.9l6.6-.9L12 2Z" /></svg>
             Community Voices
           </div>
-
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
-            Stories That
-            <br />
-            <span className="relative inline-block mt-2">
-              <span className="relative z-10 text-[#d6d1cf]">Define Us</span>
-              <span
-                className="absolute bottom-1 left-0 w-full h-2 md:h-3 bg-[#d6d1cf]/20 -z-0 origin-left"
-              />
-            </span>
-          </h2>
-
-          <p className="mt-4 text-base md:text-lg text-white/55 max-w-2xl mx-auto leading-relaxed">
-            Real experiences from the Seedling community—students discovering their potential,
-            parents witnessing transformation, and alumni changing the world.
-          </p>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">Stories That<br /><span className="relative inline-block mt-2"><span className="relative z-10 text-[#d6d1cf]">Define Us</span><span className="absolute bottom-1 left-0 w-full h-2 md:h-3 bg-[#d6d1cf]/20 -z-0 origin-left" /></span></h2>
+          <p className="mt-4 text-base md:text-lg text-white/55 max-w-2xl mx-auto leading-relaxed">Real experiences from the Seedling community—students discovering their potential, parents witnessing transformation, and alumni changing the world.</p>
         </div>
 
-        {/* ─── Main Testimonial Card ───────────────────────────────── */}
         <div className="relative max-w-5xl mx-auto w-full perspective-1000">
-
-            <div
-              key={currentIndex}
-              className={`relative bg-white rounded-3xl md:rounded-[2.5rem] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.35)] border border-white/10 overflow-hidden ${direction >= 0 ? "animate-testimonial-next" : "animate-testimonial-previous"}`}
-            >
-              <div className="grid md:grid-cols-[1fr_1.2fr] gap-0">
-
-                {/* Left: Visual/Identity */}
-                <div className="relative bg-gradient-to-br from-[#034ea2] via-[#034ea2] to-[#0a3264] p-4 md:p-6 flex flex-col justify-between min-h-[200px] md:min-h-[280px]">
-                  <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-[#d6d1cf]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                    <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#d6d1cf]/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-                  </div>
-
-                  <div className="relative z-10">
-                    <RelationBadge relation={current.relation} />
-                  </div>
-
-                  <div className="relative z-10 mt-auto">
-                    <div>
-                      <div className="w-14 h-14 md:w-18 md:h-18 rounded-full overflow-hidden border-2 border-[#d6d1cf]/40 mb-4 flex-shrink-0">
-                        <Image
-                          src={current.avatar}
-                          alt={current.name}
-                          width={72}
-                          height={72}
-                          className="w-full h-full object-cover object-top"
-                        />
-                      </div>
-                      <h3 className="text-lg md:text-xl font-bold text-white mb-1 leading-tight">
-                        {current.name}
-                      </h3>
-                      <p className="text-white/70 text-xs md:text-sm font-medium">
-                        {current.role}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Large decorative quote */}
-                  <Quote className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-white/5 rotate-180" />
+          <article data-testimonial-card className="relative bg-white rounded-3xl md:rounded-[2.5rem] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.35)] border border-white/10 overflow-hidden">
+            <div className="grid md:grid-cols-[1fr_1.2fr] gap-0">
+              <div className="relative bg-gradient-to-br from-[#034ea2] via-[#034ea2] to-[#0a3264] p-4 md:p-6 flex flex-col justify-between min-h-[200px] md:min-h-[280px]">
+                <div className="absolute inset-0 opacity-20" aria-hidden="true"><div className="absolute top-0 right-0 w-64 h-64 bg-[#d6d1cf]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" /><div className="absolute bottom-0 left-0 w-48 h-48 bg-[#d6d1cf]/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" /></div>
+                <span className="relative z-10 inline-flex w-fit items-center rounded-full bg-white/10 border border-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white/80">{first.relation}</span>
+                <div className="relative z-10 mt-auto">
+                  <div className="w-14 h-14 md:w-18 md:h-18 rounded-full overflow-hidden border-2 border-[#d6d1cf]/40 mb-4 flex-shrink-0"><Image data-testimonial-avatar src={first.avatar} alt={first.name} width={72} height={72} className="w-full h-full object-cover object-top" /></div>
+                  <h3 data-testimonial-name className="text-lg md:text-xl font-bold text-white mb-1 leading-tight">{first.name}</h3>
+                  <p data-testimonial-role className="text-white/70 text-xs md:text-sm font-medium">{first.role}</p>
                 </div>
+                <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 text-white/5 rotate-180" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C8 3 5 6 5 10v8h7v-7H8c0-2 1-4 4-4zm8 0c-4 0-7 3-7 7v8h7v-7h-4c0-2 1-4 4-4z" /></svg>
+              </div>
 
-                {/* Right: Content */}
-                <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center relative">
-                  <div>
-                    {/* Stars */}
-                    <div className="flex gap-1 mb-6">
-                      {[...Array(current.rating)].map((_, i) => (
-                        <div key={i}>
-                          <Star className="w-4 h-4 fill-[#d6d1cf] text-[#d6d1cf]" />
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Quote Text */}
-                    <blockquote className="text-base md:text-lg text-[#034ea2] font-medium leading-relaxed mb-4">
-                      &ldquo;{current.content}&rdquo;
-                    </blockquote>
-
-                    {/* Decorative line */}
-                    <div className="w-12 h-0.5 bg-[#d6d1cf] rounded-full mb-6" />
-
-                    {/* School branding */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[#d6d1cf]" />
-                      <span className="text-sm font-semibold text-[#034ea2]/80 uppercase tracking-wider">
-                        Seedling Modern High School
-                      </span>
-                    </div>
-                  </div>
-                </div>
+              <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-center relative">
+                <div data-testimonial-rating className="flex gap-1 mb-6" aria-label="5 out of 5 stars">{Array.from({ length: first.rating }, (_, i) => <span key={i} className="text-[#d6d1cf]" aria-hidden="true">★</span>)}</div>
+                <blockquote data-testimonial-content className="text-base md:text-lg text-[#034ea2] font-medium leading-relaxed mb-4">&ldquo;{first.content}&rdquo;</blockquote>
+                <div className="w-12 h-0.5 bg-[#d6d1cf] rounded-full mb-6" />
+                <div className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[#d6d1cf]" /><span className="text-sm font-semibold text-[#034ea2]/80 uppercase tracking-wider">Seedling Modern High School</span></div>
               </div>
             </div>
+          </article>
 
-          {/* ─── Navigation ─────────────────────────────────────────── */}
           <div className="flex items-center justify-between mt-10 md:mt-14">
-
-            {/* Progress Indicators */}
-            <div className="flex gap-2">
-              {testimonials.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    setDirection(idx > currentIndex ? 1 : -1);
-                    setCurrentIndex(idx);
-                  }}
-                  className="group relative h-2 rounded-full overflow-hidden transition-all duration-500"
-                  style={{ width: idx === currentIndex ? 48 : 16 }}
-                  aria-label={`Go to testimonial ${idx + 1}`}
-                >
-                  <div className="absolute inset-0 bg-white/20 rounded-full" />
-                  {idx === currentIndex && (
-                    <div className="absolute inset-0 rounded-full bg-[#d6d1cf] transition-all duration-500" />
-                  )}
-                  {idx < currentIndex && (
-                    <div className="absolute inset-0 bg-[#d6d1cf]/40 rounded-full" />
-                  )}
+            <div data-testimonial-indicators className="flex gap-2">
+              {testimonials.map((item, index) => (
+                <button key={item.name} type="button" data-testimonial-index={index} aria-label={`Go to testimonial ${index + 1}`} aria-current={index === 0 ? "true" : undefined} className={`group relative h-2 rounded-full overflow-hidden transition-all duration-500 ${index === 0 ? "w-12" : "w-4"}`}>
+                  <span className={`absolute inset-0 rounded-full ${index === 0 ? "bg-[#d6d1cf]" : "bg-white/20"}`} />
                 </button>
               ))}
             </div>
-
-            {/* Arrow Buttons */}
             <div className="flex gap-3">
-              <button
-                onClick={() => paginate(-1)}
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 shadow-sm flex items-center justify-center text-white hover:border-[#a3123f] hover:text-[#a3123f] transition-colors group"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" />
-              </button>
-              <button
-                onClick={() => paginate(1)}
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#a3123f] shadow-lg shadow-[#a3123f]/25 flex items-center justify-center text-white hover:bg-[#8e1037] transition-colors group"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-              </button>
+              <button type="button" data-testimonial-previous aria-label="Previous testimonial" className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 shadow-sm flex items-center justify-center text-white hover:border-[#a3123f] hover:text-[#a3123f] transition-colors group"><Chevron direction="left" /></button>
+              <button type="button" data-testimonial-next aria-label="Next testimonial" className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#a3123f] shadow-lg shadow-[#a3123f]/25 flex items-center justify-center text-white hover:bg-[#8e1037] transition-colors group"><Chevron direction="right" /></button>
             </div>
           </div>
 
-          {/* Counter */}
-          <div className="absolute -bottom-8 right-0 text-white/30 font-mono text-sm">
-            <span className="text-white font-bold">0{currentIndex + 1}</span>
-            <span className="mx-2">/</span>
-            <span>0{testimonials.length}</span>
-          </div>
+          <div className="absolute -bottom-8 right-0 text-white/30 font-mono text-sm"><span data-testimonial-current className="text-white font-bold">01</span><span className="mx-2">/</span><span>08</span></div>
         </div>
       </div>
+
+      <Script id="testimonials-behavior" strategy="afterInteractive">
+        {`(function(){
+          var section=document.querySelector('[data-testimonials]');
+          if(!section)return;
+          var items=${JSON.stringify(testimonials)};
+          var active=false;
+          function activate(){
+            if(active)return;
+            active=true;
+            var index=0;
+            var direction=1;
+            var card=section.querySelector('[data-testimonial-card]');
+            var avatar=section.querySelector('[data-testimonial-avatar]');
+            var name=section.querySelector('[data-testimonial-name]');
+            var role=section.querySelector('[data-testimonial-role]');
+            var content=section.querySelector('[data-testimonial-content]');
+            var rating=section.querySelector('[data-testimonial-rating]');
+            var current=section.querySelector('[data-testimonial-current]');
+            var dots=Array.from(section.querySelectorAll('[data-testimonial-index]'));
+            function show(next){
+              index=(next+items.length)%items.length;
+              var item=items[index];
+              avatar.src=item.avatar;
+              avatar.alt=item.name;
+              name.textContent=item.name;
+              role.textContent=item.role;
+              content.textContent='“'+item.content+'”';
+              rating.setAttribute('aria-label',item.rating+' out of 5 stars');
+              current.textContent=String(index+1).padStart(2,'0');
+              dots.forEach(function(dot,i){
+                var selected=i===index;
+                dot.setAttribute('aria-current',selected?'true':'false');
+                dot.classList.toggle('w-12',selected);
+                dot.classList.toggle('w-4',!selected);
+                var fill=dot.firstElementChild;
+                fill.classList.toggle('bg-[#d6d1cf]',selected);
+                fill.classList.toggle('bg-white/20',!selected);
+              });
+              card.classList.remove('animate-testimonial-next','animate-testimonial-previous');
+              void card.offsetWidth;
+              card.classList.add(direction>0?'animate-testimonial-next':'animate-testimonial-previous');
+            }
+            section.querySelector('[data-testimonial-previous]').addEventListener('click',function(){direction=-1;show(index-1);});
+            section.querySelector('[data-testimonial-next]').addEventListener('click',function(){direction=1;show(index+1);});
+            dots.forEach(function(dot){dot.addEventListener('click',function(){var next=Number(dot.dataset.testimonialIndex);direction=next>index?1:-1;show(next);});});
+            var timer=window.setInterval(function(){if(!section.matches(':hover')){direction=1;show(index+1);}},6000);
+            section.addEventListener('mouseenter',function(){window.clearInterval(timer);});
+            section.addEventListener('mouseleave',function(){window.clearInterval(timer);timer=window.setInterval(function(){direction=1;show(index+1);},6000);});
+          }
+          if('IntersectionObserver' in window){
+            var observer=new IntersectionObserver(function(entries){if(entries.some(function(entry){return entry.isIntersecting})){activate();observer.disconnect();}},{rootMargin:'1400px 0px'});
+            observer.observe(section);
+          }else{activate();}
+        })();`}
+      </Script>
     </section>
   );
 }

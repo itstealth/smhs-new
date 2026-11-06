@@ -1,7 +1,4 @@
-"use client";
-
 import type { ReactNode } from "react";
-import { useEnquiry } from "@/components/EnquiryContext";
 
 export default function EnquiryTrigger({
   children,
@@ -10,10 +7,8 @@ export default function EnquiryTrigger({
   children: ReactNode;
   className: string;
 }) {
-  const { openEnquiry } = useEnquiry();
-
   return (
-    <button type="button" onClick={openEnquiry} className={className}>
+    <button type="button" data-open-enquiry className={className}>
       {children}
     </button>
   );

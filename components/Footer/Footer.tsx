@@ -62,7 +62,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#080f1f] text-white">
+    <footer className="home-deferred-content home-deferred-footer bg-[#080f1f] text-white">
 
       {/* ── MAIN BODY ── */}
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-20 pt-20 pb-14">

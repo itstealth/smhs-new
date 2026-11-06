@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutModernSection() {
   return (
-    <section className="py-14 lg:py-20 bg-[#034ea2]">
+    <section className="home-deferred-content home-deferred-about py-14 lg:py-20 bg-[#034ea2]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>

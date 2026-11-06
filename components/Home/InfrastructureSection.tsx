@@ -12,7 +12,7 @@ const infrastructure = [
 
 export default function InfrastructureSection() {
   return (
-    <section className="relative py-14 overflow-hidden">
+    <section className="home-deferred-content home-deferred-infrastructure relative py-14 overflow-hidden">
       {/* Parallax BG */}
       <div
         className="absolute inset-0 -z-10 will-change-transform pointer-events-none"

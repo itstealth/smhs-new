@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,7 +10,7 @@ const curriculum = [
 
 export default function AcademicsSection() {
   return (
-    <section className="relative py-12 lg:py-16 bg-[#034ea2] overflow-hidden">
+    <section className="home-deferred-content home-deferred-academics relative py-12 lg:py-16 bg-[#034ea2] overflow-hidden">
       <div className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: `radial-gradient(circle at 2px 2px, #d6d1cf 1px, transparent 0)`,
         backgroundSize: "32px 32px",

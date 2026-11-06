@@ -5,6 +5,7 @@ import { headers } from "next/headers";
 import ShellWrapper from "@/components/layout/ShellWrapper";
 import "./globals.css";
 import LeadAttribution from "@/components/LeadAttribution";
+import EnquiryDialog from "@/components/EnquiryDialog";
 
 const dmSerif = DM_Serif_Text({ variable: "--font-serif", subsets: ["latin"], weight: ["400"] });
 const dmSans = DM_Sans({ variable: "--font-dm", subsets: ["latin"], weight: ["300","400","500","600","700"] });
@@ -40,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               if(loaded)return;
               loaded=true;
               w.clearTimeout(activityTimer);
-              ['pointerdown','keydown','touchstart','scroll'].forEach(function(type){w.removeEventListener(type,onActivity);});
+              ['pointerdown','keydown','touchstart'].forEach(function(type){w.removeEventListener(type,onActivity);});
               w.dataLayer=w.dataLayer||[];
               w.gtag=w.gtag||function(){w.dataLayer.push(arguments);};
               w.gtag('js',new Date());
@@ -66,8 +67,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               w.clearTimeout(activityTimer);
               activityTimer=w.setTimeout(loadTracking,1500);
             }
-            ['pointerdown','keydown','touchstart','scroll'].forEach(function(type){w.addEventListener(type,onActivity,{once:true,passive:true});});
-            w.setTimeout(loadTracking,18000);
+            ['pointerdown','keydown','touchstart'].forEach(function(type){w.addEventListener(type,onActivity,{once:true,passive:true});});
+            w.setTimeout(loadTracking,30000);
           })(window,document);`}
         </Script>
         <LeadAttribution />
@@ -107,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <ShellWrapper>{children}</ShellWrapper>
+        <EnquiryDialog />
       </body>
     </html>
   );

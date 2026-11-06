@@ -1,4 +1,4 @@
-import Header from "@/components/Header/Header";
+import SiteHeader from "@/components/Header/SiteHeader";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Home/Hero";
 import ModernHero from "@/components/Home/ModernHero";
@@ -13,7 +13,7 @@ import QuoteStrip from "@/components/QuoteStrip";
 export default function Home() {
   return (
     <div className="bg-white overflow-x-clip">
-      <Header />
+      <SiteHeader />
       <Hero />
       <ModernHero />
       <InfrastructureSection />

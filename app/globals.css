@@ -147,4 +147,79 @@
       radial-gradient(at 100% 100%, rgba(137, 107, 133, 0.05) 0px, transparent 50%),
       radial-gradient(at 0% 100%, rgba(23, 81, 144, 0.05) 0px, transparent 50%);
   }
+
+  .home-deferred-content {
+    content-visibility: auto;
+  }
+
+  .home-desktop-dropdown {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 150ms ease, transform 150ms ease, visibility 150ms;
+  }
+
+  .home-desktop-nav-item:hover .home-desktop-dropdown,
+  .home-desktop-nav-item:focus-within .home-desktop-dropdown {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .home-desktop-nav-item:hover .home-desktop-chevron,
+  .home-desktop-nav-item:focus-within .home-desktop-chevron,
+  .home-mobile-submenu[open] .home-mobile-chevron {
+    transform: rotate(180deg);
+  }
+
+  .home-mobile-menu .home-mobile-backdrop {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .home-mobile-menu[open] .home-mobile-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .home-mobile-menu .home-mobile-drawer {
+    transform: translateX(-100%);
+  }
+
+  .home-mobile-menu[open] .home-mobile-drawer {
+    transform: translateX(0);
+  }
+
+  .home-deferred-infrastructure { contain-intrinsic-size: auto 2271px; }
+  .home-deferred-about { contain-intrinsic-size: auto 1093px; }
+  .home-deferred-quote { contain-intrinsic-size: auto 290px; }
+  .home-deferred-academics { contain-intrinsic-size: auto 1102px; }
+  .home-deferred-events { contain-intrinsic-size: auto 3369px; }
+  .home-deferred-testimonials { contain-intrinsic-size: auto 986px; }
+  .home-deferred-cta { contain-intrinsic-size: auto 409px; }
+  .home-deferred-footer { contain-intrinsic-size: auto 1662px; }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .home-deferred-infrastructure { contain-intrinsic-size: auto 2093px; }
+    .home-deferred-about { contain-intrinsic-size: auto 885px; }
+    .home-deferred-quote { contain-intrinsic-size: auto 286px; }
+    .home-deferred-academics { contain-intrinsic-size: auto 1558px; }
+    .home-deferred-events { contain-intrinsic-size: auto 2966px; }
+    .home-deferred-testimonials { contain-intrinsic-size: auto 900px; }
+    .home-deferred-cta { contain-intrinsic-size: auto 349px; }
+    .home-deferred-footer { contain-intrinsic-size: auto 1662px; }
+  }
+
+  @media (min-width: 1024px) {
+    .home-deferred-infrastructure { contain-intrinsic-size: auto 709px; }
+    .home-deferred-about { contain-intrinsic-size: auto 625px; }
+    .home-deferred-quote { contain-intrinsic-size: auto 344px; }
+    .home-deferred-academics { contain-intrinsic-size: auto 860px; }
+    .home-deferred-events { contain-intrinsic-size: auto 2893px; }
+    .home-deferred-testimonials { contain-intrinsic-size: auto 914px; }
+    .home-deferred-cta { contain-intrinsic-size: auto 353px; }
+    .home-deferred-footer { contain-intrinsic-size: auto 769px; }
+  }
 }
