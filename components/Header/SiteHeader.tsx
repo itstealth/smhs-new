@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import EnquiryTrigger from "@/components/ui/EnquiryTrigger";
 
 const navigation = [
@@ -144,7 +143,7 @@ export default function SiteHeader({ pathname = "/" }: { pathname?: string }) {
           </nav>
         </header>
       </div>
-      <Script id="home-header-behavior" strategy="afterInteractive">
+      <script type="module">
         {`(function(){
           var menu=document.querySelector('.home-mobile-menu');
           if(!menu)return;
@@ -166,7 +165,7 @@ export default function SiteHeader({ pathname = "/" }: { pathname?: string }) {
             }
           });
         })();`}
-      </Script>
+      </script>
     </>
   );
 }

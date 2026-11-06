@@ -1,8 +1,6 @@
-import Script from "next/script";
-
 export default function LeadAttribution() {
   return (
-    <Script id="lead-attribution" strategy="afterInteractive">
+    <script type="module">
       {`(function(){
         try {
           var key='sd_attr';
@@ -33,6 +31,6 @@ export default function LeadAttribution() {
           document.cookie=key+'='+encodeURIComponent(JSON.stringify(value))+'; Max-Age='+maxAge+'; Path=/; SameSite=Lax'+domain+secure;
         } catch(e) {}
       })();`}
-    </Script>
+    </script>
   );
 }

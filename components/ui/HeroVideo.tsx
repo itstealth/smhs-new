@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 export default function HeroVideo(): React.JSX.Element {
   return (
     <>
@@ -30,7 +28,7 @@ export default function HeroVideo(): React.JSX.Element {
         preload="none"
         aria-hidden="true"
       />
-      <Script id="hero-video-playback" strategy="afterInteractive">
+      <script type="module">
         {`(function(){
           var video=document.querySelector('[data-hero-video]');
           var connection=navigator.connection;
@@ -41,7 +39,7 @@ export default function HeroVideo(): React.JSX.Element {
             video.play().catch(function(){});
           },2500);
         })();`}
-      </Script>
+      </script>
     </>
   );
 }

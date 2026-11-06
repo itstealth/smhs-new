@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Script from "next/script";
 
 const testimonials = [
   {
@@ -143,7 +142,7 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
-      <Script id="testimonials-behavior" strategy="afterInteractive">
+      <script type="module">
         {`(function(){
           var section=document.querySelector('[data-testimonials]');
           if(!section)return;
@@ -197,7 +196,7 @@ export default function TestimonialsSection() {
             observer.observe(section);
           }else{activate();}
         })();`}
-      </Script>
+      </script>
     </section>
   );
 }

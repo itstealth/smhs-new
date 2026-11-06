@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { DM_Serif_Text, DM_Sans } from "next/font/google";
-import Script from "next/script";
 import { headers } from "next/headers";
 import ShellWrapper from "@/components/layout/ShellWrapper";
 import "./globals.css";
@@ -8,7 +7,7 @@ import LeadAttribution from "@/components/LeadAttribution";
 import EnquiryDialog from "@/components/EnquiryDialog";
 
 const dmSerif = DM_Serif_Text({ variable: "--font-serif", subsets: ["latin"], weight: ["400"] });
-const dmSans = DM_Sans({ variable: "--font-dm", subsets: ["latin"], weight: ["300","400","500","600","700"] });
+const dmSans = DM_Sans({ variable: "--font-dm", subsets: ["latin"] });
 
 const SITE_URL = "https://smhs.seedlingschools.com";
 
@@ -33,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${dmSerif.variable} ${dmSans.variable} relative h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans antialiased">
-        <Script id="deferred-tracking" strategy="afterInteractive">
+        <script type="module">
           {`(function(w,d){
             var loaded=false;
             var activityTimer;
@@ -70,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             ['pointerdown','keydown','touchstart'].forEach(function(type){w.addEventListener(type,onActivity,{once:true,passive:true});});
             w.setTimeout(loadTracking,30000);
           })(window,document);`}
-        </Script>
+        </script>
         <LeadAttribution />
         <noscript>
           <iframe

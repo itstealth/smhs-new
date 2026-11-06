@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 export default function EnquiryDialog() {
   return (
     <>
@@ -33,7 +31,7 @@ export default function EnquiryDialog() {
           </div>
         </section>
       </dialog>
-      <Script id="enquiry-dialog-behavior" strategy="afterInteractive">
+      <script type="module">
         {`(function(){
           var dialog=document.querySelector('[data-enquiry-dialog]');
           if(!dialog)return;
@@ -67,7 +65,7 @@ export default function EnquiryDialog() {
           });
           document.addEventListener('keydown',function(event){if(event.key==='Escape'&&dialog.open)dialog.close();});
         })();`}
-      </Script>
+      </script>
     </>
   );
 }
