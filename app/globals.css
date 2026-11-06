@@ -47,9 +47,6 @@
     font-weight: 400;
   }
 
-  *, *::before, *::after {
-    font-family: inherit;
-  }
 }
 
 /* 🎯 CUSTOM UTILITIES */
