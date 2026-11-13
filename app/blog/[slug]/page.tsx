@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import HeroWrapper from "@/components/layout/HeroWrapper";
-import { getMediaUrl, getPostCategories, stripHtml, formatDate, type WPPost } from "@/lib/wordpress";
+import { pageMetadata } from "@/lib/seo";
+import {
+  getMediaUrl,
+  getPostBySlug,
+  getPostCategories,
+  getRelatedPosts,
+  stripHtml,
+  formatDate,
+  type WPPost,
+} from "@/lib/wordpress";
 
 export const revalidate = 300;
 
@@ -102,59 +112,72 @@ function buildProcessedContent(post: WPPost): string {
   return content;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const response = await fetch(
-    "https://smhs.seedlingschools.com/blog/wp-json/wp/v2/posts?slug=" + encodeURIComponent(slug),
-    { next: { revalidate: 300 } }
-  );
-  if (!response.ok) return {};
-  const posts: WPPost[] = await response.json();
-  const post = posts[0];
-  if (!post) return {};
-  const description = stripHtml(post.excerpt.rendered).slice(0, 160);
-  return {
-    title: stripHtml(post.title.rendered),
-    description,
-    alternates: { canonical: "/blog/" + post.slug },
-    openGraph: {
-      title: stripHtml(post.title.rendered),
-      description,
-      type: "article" as const,
-      url: "/blog/" + post.slug,
-      images: [getMediaUrl(post)],
-    },
-  };
+// Used when WordPress cannot be reached: reuses the blog index description.
+const BLOG_FALLBACK_DESCRIPTION =
+  "Read expert articles on parenting, CBSE education, school life, and learning tips from the educators at Seedling Modern High School, Durgapura, Jaipur.";
+
+/** "what-is-the-ideal-age" -> "What Is The Ideal Age" (only used when WordPress is down). */
+function titleFromSlug(slug: string): string {
+  return slug
+    .split("-")
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
+
+/** Excerpt as a meta description: whole words, at most 158 characters. */
+function postDescription(post: WPPost): string {
+  const text = stripHtml(post.excerpt.rendered).replace(/\s+/g, " ").trim();
+  if (!text) return BLOG_FALLBACK_DESCRIPTION;
+  if (text.length <= 158) return text;
+  const cut = text.slice(0, 157);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[\s,;:.\u2013\u2014-]+$/, "") + "\u2026";
+}
+
+// Always returns a title, description and canonical, even when WordPress is
+// slow or down (the request is time-limited in lib/wordpress.ts).
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const lookup = await getPostBySlug(slug);
+
+  if (lookup.status === "found") {
+    const { post } = lookup;
+    const title = stripHtml(post.title.rendered);
+    const image = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+    return pageMetadata({
+      title,
+      description: postDescription(post),
+      path: "/blog/" + post.slug,
+      type: "article",
+      images: image ? [{ url: image, alt: title }] : undefined,
+    });
+  }
+
+  if (lookup.status === "missing") {
+    return {
+      title: "Article Not Found | Seedling Modern High School",
+      description: BLOG_FALLBACK_DESCRIPTION,
+      robots: { index: false },
+    };
+  }
+
+  return pageMetadata({
+    title: titleFromSlug(slug),
+    description: BLOG_FALLBACK_DESCRIPTION,
+    path: "/blog/" + encodeURIComponent(slug),
+    type: "article",
+  });
+}
+
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  const postRes = await fetch(
-    `https://smhs.seedlingschools.com/blog/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed`,
-    { next: { revalidate: 300 } }
-  );
+  const lookup = await getPostBySlug(slug);
+  if (lookup.status === "missing") notFound();
+  if (lookup.status === "unavailable") return <ArticleUnavailable slug={slug} />;
 
-  if (!postRes.ok) notFound();
-
-  const posts: WPPost[] = await postRes.json();
-  const post = posts[0];
-
-  if (!post) notFound();
-
-  // Fetch related posts by same categories (not all 100)
-  const categoryIds = post.categories.join(',');
-  let relatedPosts: WPPost[] = [];
-  try {
-    const relatedRes = await fetch(
-      `https://smhs.seedlingschools.com/blog/wp-json/wp/v2/posts?categories=${categoryIds}&per_page=4&_embed&exclude=${post.id}`,
-      { next: { revalidate: 300 } }
-    );
-    if (relatedRes.ok) {
-      relatedPosts = (await relatedRes.json()).slice(0, 3);
-    }
-  } catch {
-    // no related posts
-  }
+  const { post } = lookup;
+  const relatedPosts = await getRelatedPosts(post);
 
   const processedContent = buildProcessedContent(post);
   const readTime = Math.max(1, Math.ceil(stripHtml(post.content.rendered).split(' ').length / 200));
@@ -165,6 +188,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
       <HeroWrapper
         backgroundImage="/assets/img/sps-banner.webp"
         title="Blog"
+        titleAs="p"
         badge="Stories & Updates"
         breadcrumbs={[{ label: "Blog" }]}
       />
@@ -274,6 +298,35 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
           </div>
         </section>
       )}
+    </div>
+  );
+}
+
+/** Shown when WordPress is unreachable, instead of a bare 500 error page. */
+function ArticleUnavailable({ slug }: { slug: string }) {
+  return (
+    <div className="min-h-screen bg-off-white font-dm">
+      <HeroWrapper
+        backgroundImage="/assets/img/sps-banner.webp"
+        title="Blog"
+        titleAs="p"
+        badge="Stories & Updates"
+        breadcrumbs={[{ label: "Blog" }]}
+      />
+      <section className="pt-32 pb-24 px-6 max-w-3xl mx-auto text-center">
+        <h1 className="font-playfair text-4xl md:text-5xl font-bold text-navy-deeper leading-tight mb-6">
+          {titleFromSlug(slug)}
+        </h1>
+        <p className="text-text-light mb-10">
+          This article could not be loaded right now. Please try again in a few minutes.
+        </p>
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-navy-deeper/60 font-black text-[11px] uppercase tracking-widest hover:text-navy-deeper transition-colors"
+        >
+          <ArrowLeft size={14} /> Back to Blog
+        </Link>
+      </section>
     </div>
   );
 }

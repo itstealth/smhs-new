@@ -18,6 +18,8 @@ interface HeroWrapperProps {
   height?: "small" | "medium" | "large";
   overlayOpacity?: number;
   objectPosition?: string;
+  /** Pages that render their own <h1> (e.g. a blog post title) pass "p" so the page keeps a single H1. */
+  titleAs?: "h1" | "p";
 }
 
 export default function HeroWrapper({
@@ -27,6 +29,7 @@ export default function HeroWrapper({
   badge,
   breadcrumbs = [],
   objectPosition = "center 35%",
+  titleAs: TitleTag = "h1",
 }: HeroWrapperProps): React.JSX.Element {
   return (
     <div className="relative h-[360px] md:h-[420px] overflow-hidden">
@@ -52,12 +55,12 @@ export default function HeroWrapper({
           <span className="text-white text-[10px] font-bold tracking-[0.55em] uppercase">{badge}</span>
           <span className="block w-6 h-[1.5px] bg-white" />
         </div>
-        <h1
+        <TitleTag
           className="font-serif font-bold text-white leading-[1.1]"
           style={{ fontSize: "clamp(2.6rem, 5vw, 4rem)" }}
         >
           {title}
-        </h1>
+        </TitleTag>
         {subtitle && (
           <p className="text-white/80 text-lg md:text-xl max-w-xl leading-relaxed font-light">
             {subtitle}

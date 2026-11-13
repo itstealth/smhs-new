@@ -9,6 +9,9 @@ import TrendingUpdates from "@/components/Home/TrendingUpdates";
 import TestimonialsSection from "@/components/Home/TestimonialsSection";
 import CTABanner from "@/components/CTA/CTABanner";
 import QuoteStrip from "@/components/QuoteStrip";
+import { HOME_SEO, pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({ ...HOME_SEO, path: "/" });
 
 export default function Home() {
   return (

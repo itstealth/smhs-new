@@ -1,6 +1,14 @@
 import HeroWrapper from "@/components/layout/HeroWrapper";
 import { cmsPageContent } from "@/lib/cms";
 import ResultClient, { type Achievement, type Topper } from "./ResultClient";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Board Results & Toppers | Seedling Modern High School",
+  description:
+    "Board examination results and toppers at Seedling Modern High School, Jaipur. Meet the students felicitated for excellence and see our academic consistency.",
+  path: "/result",
+});
 
 export default async function ResultPage() {
   const content = await cmsPageContent("/result");

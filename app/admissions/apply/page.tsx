@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import ApplyClient, { type CampusConfig } from "./ApplyClient";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Registration / Admission | Seedling Modern High School",
   description:
     "Apply online for admission to Seedling Modern High School, Durgapura, Jaipur, and pay the registration fee securely.",
-};
+  path: "/admissions/apply",
+});
 
 export const dynamic = "force-dynamic";
 

@@ -5,26 +5,25 @@ import ShellWrapper from "@/components/layout/ShellWrapper";
 import "./globals.css";
 import LeadAttribution from "@/components/LeadAttribution";
 import EnquiryDialog from "@/components/EnquiryDialog";
+import { HOME_SEO, SITE_URL, pageMetadata } from "@/lib/seo";
 
 const dmSerif = DM_Serif_Text({ variable: "--font-serif", subsets: ["latin"], weight: ["400"] });
 const dmSans = DM_Sans({ variable: "--font-dm", subsets: ["latin"] });
 
-const SITE_URL = "https://smhs.seedlingschools.com";
-
+// Site-wide defaults. Every indexable page overrides these with its own
+// pageMetadata() (title, description, canonical, og:*, twitter:*). The
+// request path is only a fallback so a route that forgets to set its own
+// canonical still points at itself rather than at the homepage.
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "/";
 
   return {
-    title: "Best CBSE School in Durgapura Jaipur | Seedling Modern High School",
-    description: "Seedling Modern High School — top CBSE school in Durgapura, Mahaveer Nagar, Jaipur. 33+ years of excellence, 100% board results, English medium, Nursery to Class XII. Admissions open 2026.",
+    ...pageMetadata({ ...HOME_SEO, path: pathname }),
     verification: {
       google: "LzKlHJhPde7RhG9zSVx4gbkk7ZuWP0GnfhcHhcK1Qe0",
     },
     metadataBase: new URL(SITE_URL),
-    alternates: {
-      canonical: pathname,
-    },
   };
 }
 

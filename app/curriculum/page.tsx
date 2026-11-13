@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "CBSE Curriculum at Senior Secondary School Jaipur | Seedling Schools",
-  description: "Explore the CBSE curriculum at Seedling Modern High School, Jaipur, with student-focused learning, smart classrooms, STEM activities, sports and skill development.",
-};
+export const metadata = pageMetadata({
+  title: "CBSE Curriculum in Jaipur | Seedling Modern High School",
+  description:
+    "Explore the CBSE curriculum at Seedling Modern High School, Jaipur: student-focused learning, smart classrooms, STEM activities, sports and skill development.",
+  path: "/curriculum",
+});
 import { cmsPageContent } from "@/lib/cms";
 import CurriculumClient, {
   type CmsHighlight,

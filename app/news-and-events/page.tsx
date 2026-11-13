@@ -6,6 +6,16 @@ import NewsAndEventsClient, {
   type CampusEvent,
   type Snapshot,
 } from "./NewsAndEventsClient";
+import { pageMetadata } from "@/lib/seo";
+
+// Set on the page, not the layout: a layout canonical would be inherited by
+// /news-and-events/news and /news-and-events/events.
+export const metadata = pageMetadata({
+  title: "News & Events | Seedling Modern High School Jaipur",
+  description:
+    "Stay updated with the latest events, achievements, and school news from Seedling Modern High School — the top CBSE school in Durgapura, Jaipur.",
+  path: "/news-and-events",
+});
 
 export default async function CampusHighlightsPage() {
   const content = await cmsPageContent("/news-and-events");

@@ -1,34 +1,20 @@
 import type { Metadata } from "next";
 import BlogClient from "@/components/blog/BlogClient";
-import { type WPPost, type WPCategory } from "@/lib/wordpress";
+import { getCategories, getPosts } from "@/lib/wordpress";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Blog | Education Insights from Seedling Modern Jaipur",
   description: "Read expert articles on parenting, CBSE education, school life, and learning tips from the educators at Seedling Modern High School, Durgapura, Jaipur.",
-  alternates: { canonical: "/blog" },
-};
+  path: "/blog",
+});
 
 export const revalidate = 300;
 
 export default async function BlogPage() {
-  let posts: WPPost[] = [];
-  let categories: WPCategory[] = [];
-
-  try {
-    const [postsRes, categoriesRes] = await Promise.all([
-      fetch('https://smhs.seedlingschools.com/blog/wp-json/wp/v2/posts?per_page=100&_embed', {
-        next: { revalidate: 300 },
-      }),
-      fetch('https://smhs.seedlingschools.com/blog/wp-json/wp/v2/categories?per_page=50', {
-        next: { revalidate: 300 },
-      }),
-    ]);
-
-    if (postsRes.ok) posts = await postsRes.json();
-    if (categoriesRes.ok) categories = await categoriesRes.json();
-  } catch {
-    // render empty state handled by BlogClient
-  }
+  // Both helpers are time-limited and return [] on failure; BlogClient
+  // renders its empty state in that case.
+  const [posts, categories] = await Promise.all([getPosts(100), getCategories()]);
 
   return <BlogClient posts={posts} categories={categories} />;
 }

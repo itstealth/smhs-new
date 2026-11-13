@@ -1,10 +1,14 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import HeroWrapper from '@/components/layout/HeroWrapper';
+import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Mandatory Public Disclosure | Seedling Modern High School, Jaipur',
-  description: 'Mandatory public disclosure information for Seedling Modern High School (SMHS), Jaipur, as per CBSE Affiliation Bye-Laws. Includes school info, affiliation status, and certificates.',
+  ...pageMetadata({
+    title: 'Mandatory Public Disclosure | Seedling Modern High School',
+    description: 'Mandatory public disclosure for Seedling Modern High School (SMHS), Jaipur, per CBSE Affiliation Bye-Laws: school info, affiliation status and certificates.',
+    path: '/mandatory-disclosure',
+  }),
   keywords: 'Seedling Modern High School, Jaipur, Mandatory Disclosure, CBSE Compliance, School Information, Affiliation Status',
 };
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroWrapper from "@/components/layout/HeroWrapper";
 import { cmsFetch, cmsPageContent } from "@/lib/cms";
+import { pageMetadata } from "@/lib/seo";
 import TransportFacilityClient, {
   type SafetyFeature,
   type RouteStep,
@@ -8,9 +9,12 @@ import TransportFacilityClient, {
 } from "./TransportFacilityClient";
 
 export const metadata: Metadata = {
-  title: "Transport Facility | Safe School Bus Service in Jaipur | Seedling Schools",
-  description:
-    "Explore Seedling Schools' transport facility in Jaipur with safe school buses, trained attendants, CCTV monitoring, route planning, and convenient pickup support for families.",
+  ...pageMetadata({
+    title: "School Bus & Transport Facility in Jaipur | Seedling Schools",
+    description:
+      "Explore Seedling Schools' transport facility in Jaipur: safe school buses, trained attendants, CCTV monitoring, route planning and convenient pickup support.",
+    path: "/transport-facility",
+  }),
   keywords: [
     "Seedling Schools transport facility",
     "school bus service Jaipur",

@@ -29,7 +29,7 @@ export default function Hero() {
           className="font-serif italic text-white leading-[1.1] font-light max-w-3xl mb-5 md:mb-8"
           style={{ fontSize: "clamp(1.8rem, 5vw, 4rem)" }}
         >
-          Inspiring Young minds<br />
+          Inspiring young minds<br />
           <span className="text-[#f7941e] not-italic font-bold">to think, create and achieve beyond limits</span>
         </h1>
 
