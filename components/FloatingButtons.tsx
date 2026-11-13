@@ -5,16 +5,6 @@ import { Mail, Phone } from "lucide-react";
 export default function FloatingButtons() {
   return (
     <div className="fixed left-3 sm:left-6 bottom-5 sm:bottom-8 z-[110] hidden md:flex flex-col items-start gap-2 sm:gap-3">
-      <button
-        type="button"
-        onClick={() => window.dispatchEvent(new Event("open-enquiry-popup"))}
-        className="flex items-center justify-center gap-2 bg-crimson hover:bg-crimson-dark text-white w-11 h-11 sm:w-auto sm:h-auto sm:px-5 sm:py-3 rounded-full font-black text-xs tracking-widest uppercase shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 border border-white/10"
-        aria-label="Enquire now"
-      >
-        <Mail className="w-4 h-4 flex-shrink-0" />
-        <span className="hidden sm:inline">Enquire Now</span>
-      </button>
-
       <a
         href="tel:+919587772837"
         className="flex items-center justify-center gap-2 bg-navy-deeper hover:bg-navy text-white w-11 h-11 sm:w-auto sm:h-auto sm:px-5 sm:py-3 rounded-full font-black text-xs tracking-widest uppercase shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 border border-white/10"
@@ -36,6 +26,16 @@ export default function FloatingButtons() {
         </svg>
         <span className="hidden sm:inline">WhatsApp</span>
       </a>
+
+      <button
+        type="button"
+        onClick={() => window.dispatchEvent(new Event("open-enquiry-popup"))}
+        className="flex items-center justify-center gap-2 bg-crimson hover:bg-crimson-dark text-white w-11 h-11 sm:w-auto sm:h-auto sm:px-5 sm:py-3 rounded-full font-black text-xs tracking-widest uppercase shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 border border-white/10"
+        aria-label="Enquire now"
+      >
+        <Mail className="w-4 h-4 flex-shrink-0" />
+        <span className="hidden sm:inline">Enquire Now</span>
+      </button>
     </div>
   );
 }
