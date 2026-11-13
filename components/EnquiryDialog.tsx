@@ -37,21 +37,24 @@ export default function EnquiryDialog() {
           if(!dialog)return;
           var widgetScript=null;
           var widget=dialog.querySelector('.npf_wgts');
+          function openDialog(){
+            if(dialog.open)return;
+            dialog.showModal();
+            document.body.style.overflow='hidden';
+            if(!widgetScript){
+              widgetScript=document.createElement('script');
+              widgetScript.type='text/javascript';
+              widgetScript.async=true;
+              widgetScript.src='https://ke9zpvp4xn.in4.widgets.nopaperforms.com/vemwgts.js';
+              document.body.appendChild(widgetScript);
+            }
+          }
+          window.addEventListener('open-enquiry-popup',openDialog);
           document.addEventListener('click',function(event){
             if(!(event.target instanceof Element))return;
             if(event.target.closest('[data-open-enquiry]')){
               event.preventDefault();
-              if(!dialog.open){
-                dialog.showModal();
-                document.body.style.overflow='hidden';
-                if(!widgetScript){
-                  widgetScript=document.createElement('script');
-                  widgetScript.type='text/javascript';
-                  widgetScript.async=true;
-                  widgetScript.src='https://ke9zpvp4xn.in4.widgets.nopaperforms.com/vemwgts.js';
-                  document.body.appendChild(widgetScript);
-                }
-              }
+              openDialog();
             } else if(event.target.closest('[data-close-enquiry]')){
               dialog.close();
             } else if(event.target===dialog){
