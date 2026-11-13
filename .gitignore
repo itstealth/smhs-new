@@ -50,3 +50,9 @@ next-env.d.ts
 *.bak*
 *.pre*
 *.tmp
+
+# Rollback builds, backups and the CMS outbox kept on the live server
+/.next*/
+/.gtm-backup*/
+/.cms-outbox/
+
