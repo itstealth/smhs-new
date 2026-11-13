@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import Footer from "@/components/Footer/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import SiteHeader from "@/components/Header/SiteHeader";
+import MobileActionBar, { MOBILE_BAR_SPACER } from "@/components/home/MobileActionBar";
 
 export default async function ShellWrapper({ children }: { children: React.ReactNode }) {
   const pathname = (await headers()).get("x-pathname") || "/";
@@ -14,7 +15,9 @@ export default async function ShellWrapper({ children }: { children: React.React
       {!isHome && !isAdmin && <SiteHeader pathname={pathname} />}
       <main className="flex-1 flex flex-col">{children}</main>
       {!isHome && !isErpLogin && !isAdmin && <Footer />}
+      {!isAdmin && !isErpLogin && <div className={`${MOBILE_BAR_SPACER} bg-indigo-950 md:hidden`} aria-hidden="true" />}
       {!isAdmin && <FloatingButtons />}
+      {!isAdmin && !isErpLogin && <MobileActionBar />}
     </>
   );
 }

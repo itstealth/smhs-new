@@ -2,20 +2,8 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Script from 'next/script'
 import HeroWrapper from "@/components/layout/HeroWrapper";
-
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-interface FormData {
-  name: string
-  email: string
-  phone: string
-  school: string
-  message: string
-}
-
-type FormErrors = Partial<Record<keyof Omit<FormData, 'school'>, string>>
-type SubmitStatus = 'idle' | 'loading' | 'success'
 
 // ─── CMS Types (see page.tsx -- page_content /contact-us) ──────────────────────
 
@@ -56,20 +44,6 @@ const ClockIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
     <circle cx="12" cy="12" r="10" />
     <polyline points="12 6 12 12 16 14" />
-  </svg>
-)
-
-const SendIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-    <line x1="22" y1="2" x2="11" y2="13" />
-    <polygon points="22 2 15 22 11 13 2 9 22 2" />
-  </svg>
-)
-
-const CheckIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-    <polyline points="22 4 12 14.01 9 11.01" />
   </svg>
 )
 
@@ -116,86 +90,16 @@ function ContactItem({ label, children }: { label: string; children: React.React
   )
 }
 
-function InputField({
-  label, required, error, children,
-}: {
-  label: string
-  required?: boolean
-  error?: string
-  children: React.ReactNode
-}) {
-  return (
-    <div>
-      <label className="block text-[10px] font-black text-navy-deeper mb-1.5 tracking-[0.2em] uppercase font-dm">
-        {label} {required && <span className="text-crimson">*</span>}
-      </label>
-      {children}
-      {error && <p className="mt-1.5 text-xs text-crimson font-dm">{error}</p>}
-    </div>
-  )
-}
-
-const inputCls = (hasError?: boolean) =>
-  `w-full rounded-xl px-4 py-3 text-text-base text-sm placeholder-sand border bg-white
-   transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-navy/10 font-dm
-   ${hasError
-    ? 'border-crimson bg-crimson/5'
-    : 'border-sand/40 hover:border-sand focus:border-navy'
-  }`
-
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 type ContactUsClientProps = {
   campusMaps: CmsCampusMap[]
-  schools: string[]
   stats: CmsStat[]
   hours: CmsHour[]
 }
 
-export default function ContactUsClient({ campusMaps, schools, stats, hours }: ContactUsClientProps) {
+export default function ContactUsClient({ campusMaps, stats, hours }: ContactUsClientProps) {
   const [activeMap, setActiveMap] = useState(0)
-  const [form, setForm] = useState<FormData>({ name: '', email: '', phone: '', school: '', message: '' })
-  const [errors, setErrors] = useState<FormErrors>({})
-  const [status, setStatus] = useState<SubmitStatus>('idle')
-
-  const setField = (key: keyof FormData) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
-      setForm(prev => ({ ...prev, [key]: e.target.value }))
-
-  const validate = (): boolean => {
-    const e: FormErrors = {}
-    if (!form.name.trim()) e.name = 'Your name is required.'
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'A valid email is required.'
-    if (!/^[0-9+\s\-(]{7,15}$/.test(form.phone)) e.phone = 'Enter a valid phone number.'
-    if (form.message.trim().length < 10) e.message = 'Please write at least 10 characters.'
-    setErrors(e)
-    return Object.keys(e).length === 0
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!validate()) return
-    setStatus('loading')
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (!res.ok) throw new Error('Failed to submit')
-      window.location.assign('/thank-you')
-    } catch {
-      setStatus('idle')
-      setErrors(prev => ({ ...prev, message: 'Something went wrong. Please try again.' }))
-    }
-  }
-
-  const resetForm = () => {
-    setForm({ name: '', email: '', phone: '', school: '', message: '' })
-    setErrors({})
-    setStatus('idle')
-  }
-
   const currentMap = campusMaps[activeMap]
 
   return (
@@ -359,105 +263,13 @@ export default function ContactUsClient({ campusMaps, schools, stats, hours }: C
               </div>
             </div>
 
-            {/* Right form */}
-            {status === 'success' ? (
-              <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-navy/10 flex items-center justify-center mx-auto">
-                  <CheckIcon className="w-7 h-7 text-navy" />
-                </div>
-                <h3
-                  className="font-playfair text-2xl font-bold text-navy-deeper"
-                >
-                  Message received!
-                </h3>
-                <p className="text-text-light text-sm max-w-xs font-dm font-light">
-                  Thank you for reaching out. Our team will respond within one working day.
-                </p>
-                <button
-                  onClick={resetForm}
-                  className="mt-2 text-[10px] font-black text-navy uppercase tracking-widest underline underline-offset-4 hover:text-navy-dark transition-colors font-dm"
-                >
-                  Send another message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-5">
-
-                <InputField label="Full Name" required error={errors.name}>
-                  <input
-                    type="text"
-                    value={form.name}
-                    onChange={setField('name')}
-                    placeholder="Your full name"
-                    className={inputCls(!!errors.name)}
-                  />
-                </InputField>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <InputField label="Email" required error={errors.email}>
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={setField('email')}
-                      placeholder="you@example.com"
-                      className={inputCls(!!errors.email)}
-                    />
-                  </InputField>
-                  <InputField label="Phone" required error={errors.phone}>
-                    <input
-                      type="tel"
-                      value={form.phone}
-                      onChange={setField('phone')}
-                      placeholder="+91 98765 00000"
-                      className={inputCls(!!errors.phone)}
-                    />
-                  </InputField>
-                </div>
-
-                <InputField label="School of Interest">
-                  <select
-                    value={form.school}
-                    onChange={setField('school')}
-                    className={inputCls() + ' cursor-pointer'}
-                  >
-                    <option value="">Select a school (optional)</option>
-                    {schools.map((s) => <option key={s}>{s}</option>)}
-                  </select>
-                </InputField>
-
-                <InputField label="Message" required error={errors.message}>
-                  <textarea
-                    rows={4}
-                    value={form.message}
-                    onChange={setField('message')}
-                    placeholder="Tell us how we can help you..."
-                    className={inputCls(!!errors.message) + ' resize-none'}
-                  />
-                  <p className="text-right text-xs text-stone-400 mt-1">
-                    {form.message.length} chars
-                  </p>
-                </InputField>
-
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className="w-full flex items-center justify-center gap-2.5 font-black text-[11px] uppercase tracking-widest py-4 rounded-full bg-navy hover:bg-navy-dark text-white shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed font-dm"
-                >
-                  {status === 'loading' ? (
-                    <>
-                      <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      Sending…
-                    </>
-                  ) : (
-                    <>
-                      <SendIcon className="w-4 h-4" />
-                      Send Message
-                    </>
-                  )}
-                </button>
-
-              </form>
-            )}
+            {/* Right admissions form */}
+            <div className="rounded-2xl border border-sand/40 bg-white p-5 shadow-sm md:p-7">
+              <h3 className="font-playfair text-2xl font-bold text-navy-deeper mb-2">Online Admission Enquiry</h3>
+              <p className="text-text-light text-sm mb-5 font-dm">Share your details and our admissions team will be in touch.</p>
+              <div className="npf_wgts w-full" data-height="400px" data-w="1044b64843af99283fc04912e7ad8bec" style={{ minHeight: 400 }} />
+              <Script src="https://ke9zpvp4xn.in4.widgets.nopaperforms.com/vemwgts.js" strategy="afterInteractive" />
+            </div>
           </div>
         </div>
       </section>

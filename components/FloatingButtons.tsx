@@ -13,17 +13,6 @@ const WaIcon = () => (
 export default function FloatingButtons() {
   return (
     <>
-      <div className="lg:hidden fixed left-3 bottom-5 z-[99]">
-        <a href="tel:+919587772837" aria-label="Call Us" className="flex items-center justify-center w-11 h-11 rounded-full bg-[#034ea2] text-white shadow-lg border border-white/10 active:scale-95 transition-transform">
-          <PhoneIcon />
-        </a>
-      </div>
-      <div className="lg:hidden fixed right-3 bottom-5 z-[99]">
-        <a href="https://wa.me/919587772837" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="flex items-center justify-center w-11 h-11 rounded-full bg-[#25D366] text-white shadow-lg active:scale-95 transition-transform">
-          <WaIcon />
-        </a>
-      </div>
-
       <div data-floating-contact className="hidden lg:flex fixed left-6 bottom-8 z-[99] opacity-0 translate-y-6 pointer-events-none transition-all duration-500">
         <a href="tel:+919587772837" className="flex items-center gap-2 px-5 py-2.5 bg-[#034ea2] hover:bg-[#034ea2] text-white rounded-full font-bold text-[11px] tracking-widest uppercase shadow-xl transition-all duration-200 hover:-translate-y-0.5 border border-white/10">
           <PhoneIcon /> Call Us

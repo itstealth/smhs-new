@@ -17,6 +17,11 @@
   --color-crimson-deeper: #7a0f35;
   --color-navy-light: #eef4fc;
   --color-cool-white: #f0f4ff;
+  --color-indigo-800: #034ea2;
+  --color-indigo-900: #013975;
+  --color-indigo-950: #013975;
+  --color-marigold-500: #a3123f;
+  --color-paper-50: #ffffff;
 
   /* Fonts */
   --font-serif: var(--font-serif);
