@@ -227,11 +227,11 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
               <Reveal key={item.title} delay={60}>
                 <div className={`grid md:grid-cols-2 gap-16 items-center ${i % 2 === 1 ? "md:[direction:rtl]" : ""}`}>
                   <div className={i % 2 === 1 ? "[direction:ltr]" : ""}>
-                    <div className="relative overflow-hidden rounded-3xl shadow-editorial group border border-sand/30">
+                    <div className="relative h-[400px] overflow-hidden rounded-3xl shadow-editorial group border border-sand/30">
                       <Image fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw"
                         src={item.img}
                         alt={item.title}
-                        className="w-full h-[400px] object-cover transition-transform duration-1000 group-hover:scale-110"
+                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
                       />
                     </div>
                   </div>
