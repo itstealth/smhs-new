@@ -30,6 +30,8 @@ export async function cmsFetch<T>(collection: string): Promise<T[]> {
     const res = await fetch(`${CMS_URL}/api/public/v1/${collection}`, {
       headers: { Authorization: `Bearer ${CMS_TOKEN}` },
       next: { revalidate: 60 },
+      // Bound upstream stalls so a slow CMS cannot hold the IIS request open indefinitely.
+      signal: AbortSignal.timeout(8_000),
     });
 
     if (!res.ok) {
@@ -62,6 +64,8 @@ export async function cmsPageContent(path: string): Promise<Record<string, unkno
       {
         headers: { Authorization: `Bearer ${CMS_TOKEN}` },
         next: { revalidate: 60 },
+      // Bound upstream stalls so a slow CMS cannot hold the IIS request open indefinitely.
+      signal: AbortSignal.timeout(8_000),
       }
     );
 

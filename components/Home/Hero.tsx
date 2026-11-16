@@ -1,10 +1,10 @@
 import HeroVideo from "@/components/ui/HeroVideo";
 
 const STATS = [
-  { n: "2", label: "Campuses in Jaipur" },
-  { n: "20K+", label: "Students Enrolled" },
+  { n: "Durgapura", label: "Jaipur" },
+  { n: "CBSE", label: "Curriculum" },
   { n: "33+", label: "Years of Trust" },
-  { n: "100%", label: "Board Results" },
+  { n: "Jaipur", label: "Durgapura" },
 ];
 
 export default function Hero() {

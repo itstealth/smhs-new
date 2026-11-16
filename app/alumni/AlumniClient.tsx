@@ -365,7 +365,7 @@ function AchievementsSection({ stats, achievements }: { stats: StatItem[]; achie
           <div className="relative rounded-2xl overflow-hidden h-56 shadow-md">
             <Image
               src="/alumni/alumni_group.webp"
-              alt="Alumni Accomplishments"
+              alt="Alumni of Seedling Modern High School at a reunion gathering"
               fill
               className="object-cover"
             />

@@ -13,7 +13,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "News & Events | Seedling Modern High School Jaipur",
   description:
-    "Stay updated with the latest events, achievements, and school news from Seedling Modern High School — the top CBSE school in Durgapura, Jaipur.",
+    "Stay updated with the latest events, achievements, and school news from Seedling Modern High School — best School in Jaipur.",
   path: "/news-and-events",
 });
 

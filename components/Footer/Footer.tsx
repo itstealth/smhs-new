@@ -4,7 +4,7 @@ import Image from "next/image";
 const quickLinks: { label: string; href: string; external?: boolean }[] = [
   { label: "Mandatory Disclosures", href: "/mandatory-disclosures" },
   { label: "Privacy Policy", href: "/policies" },
-  { label: "Download Brochure", href: "/SMHS_Prospectus.pdf", external: true },
+  { label: "Request Prospectus", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
   { label: "ERP Login", href: "/erp-login" },
   { label: "Career", href: "/career" },
@@ -15,8 +15,8 @@ const quickLinks: { label: string; href: string; external?: boolean }[] = [
 // were plain text a visitor could not act on.
 const institutions = [
   { name: "Seedling Public School", sub: "Jawahar Nagar · CBSE", href: "https://sps.seedlingschools.com" },
-  { name: "Seedling International Academy", sub: "Jawahar Nagar · Cambridge", href: "https://cambridge.seedlingschools.com" },
-  { name: "Seedling Modern International Academy", sub: "Durgapura · Cambridge", href: "https://cambridge.seedlingschools.com/smia" },
+  { name: "Seedling International Academy", sub: "Jawahar Nagar · Cambridge", href: "https://cambridge.seedlingschools.com/campuses/sia" },
+  { name: "Seedling Modern International Academy", sub: "Durgapura · Cambridge", href: "https://cambridge.seedlingschools.com/campuses/smia" },
 ];
 
 const contact = [
@@ -85,7 +85,7 @@ export default function Footer() {
             </div>
 
             <p className="text-white/50 text-[17px] lg:text-[19px] leading-[1.72] font-light max-w-sm mb-10">
-              Dedicated to academic excellence and holistic growth since 1993. We empower the next generation of leaders with curiosity, character, and competence.
+              Dedicated to academic excellence and holistic growth. We prepare students to lead with curiosity, character, and competence.
             </p>
 
             <div className="flex items-center gap-3">

@@ -35,13 +35,15 @@ interface PageSeo {
  */
 export function pageMetadata({ title, description, path, type = "website", images }: PageSeo): Metadata {
   const ogImages = images && images.length > 0 ? images : [DEFAULT_OG_IMAGE];
+  const conciseTitle = title.length <= 60 ? title : `${title.slice(0, title.lastIndexOf(" ", 57))}…`;
+  const conciseDescription = description.length <= 158 ? description : `${description.slice(0, description.lastIndexOf(" ", 157))}…`;
   return {
-    title,
-    description,
+    title: conciseTitle,
+    description: conciseDescription,
     alternates: { canonical: path },
     openGraph: {
-      title,
-      description,
+      title: conciseTitle,
+      description: conciseDescription,
       url: path,
       siteName: SITE_NAME,
       locale: "en_IN",
@@ -50,8 +52,8 @@ export function pageMetadata({ title, description, path, type = "website", image
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: conciseTitle,
+      description: conciseDescription,
       images: ogImages,
     },
   };
@@ -61,5 +63,5 @@ export function pageMetadata({ title, description, path, type = "website", image
 export const HOME_SEO = {
   title: "CBSE School Durgapura, Jaipur | Seedling Modern High School",
   description:
-    "Seedling Modern High School is a CBSE school in Durgapura, Jaipur, with 33+ years of excellence, 100% board results, English medium, Nursery to Class XII.",
+    "Seedling Modern High School is a CBSE school in Durgapura, Jaipur, offering English-medium education and a broad academic and co-curricular programme.",
 };

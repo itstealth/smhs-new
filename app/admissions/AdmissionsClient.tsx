@@ -776,7 +776,7 @@ export default function AdmissionsClient({
           </Reveal>
           <Reveal delay={220}>
             <div className="mt-16 flex flex-wrap justify-center gap-4">
-              {["🎓 CBSE Board", "🌿 Est. 1993", "📍 2 Campuses in Jaipur", "❤️ 20,000+ Students"].map((b) => (
+              {["🎓 CBSE Board", "📍 Durgapura, Jaipur", "🏫 Senior School", "❤️ Student-Focused Learning"].map((b) => (
                 <span key={b} className="bg-white/8 border border-white/15 text-white/60 text-xs px-5 py-2 rounded-full">
                   {b}
                 </span>

@@ -67,8 +67,8 @@ const MandatoryDisclosure = () => {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { label: "Year Established", val: "1993" },
-                { label: "School Code", val: "10441" },
-                { label: "Affiliation No.", val: "1730084" },
+                { label: "School Code", val: "10481" },
+                { label: "Affiliation No.", val: "1730148" },
                 { label: "Campus Area", val: "3330 m²" },
               ].map((item) => (
                 <div key={item.label} className="bg-sand/10 border border-sand/30 rounded-2xl p-6 text-center">
@@ -97,11 +97,11 @@ const MandatoryDisclosure = () => {
               </div>
               <div className="flex justify-between items-center pb-4 border-b border-sand/20">
                 <span className="text-text-light text-sm uppercase tracking-widest font-black text-[10px]">Affiliated Since</span>
-                <span className="font-bold text-navy-deeper">1993</span>
+                <span className="font-bold text-navy-deeper">2002</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-text-light text-sm uppercase tracking-widest font-black text-[10px]">Valid Upto</span>
-                <span className="font-bold text-navy-deeper">31 March 2025</span>
+                <span className="text-text-light text-sm uppercase tracking-widest font-black text-[10px]">Current validity</span>
+                <span className="font-bold text-navy-deeper">Updated certificate pending</span>
               </div>
             </div>
           </div>
@@ -120,8 +120,8 @@ const MandatoryDisclosure = () => {
                 <span className="font-bold text-navy-deeper text-right max-w-[180px]">Mahima Shiksha Samiti</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-text-light text-sm uppercase tracking-widest font-black text-[10px]">Reg. Valid Upto</span>
-                <span className="font-bold text-navy-deeper">10 May 2024</span>
+                <span className="text-text-light text-sm uppercase tracking-widest font-black text-[10px]">Current validity</span>
+                <span className="font-bold text-navy-deeper">Updated certificate pending</span>
               </div>
             </div>
           </div>
@@ -145,37 +145,35 @@ const MandatoryDisclosure = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
             {[
-              { id: '(i)', name: 'Affiliation / Upgradation Letter', url: 'https://seedlingschools.com/mandatory-discloser/Affiliation-Upgradation-Letter.pdf' },
-              { id: '(ii)', name: 'Trust Registration Certificate', url: 'https://seedlingschools.com/mandatory-discloser/Trust-Registration-Certificate.pdf' },
-              { id: '(iii)', name: 'No Objection Certificate', url: 'https://seedlingschools.com/mandatory-discloser/NOC-By-State-Govt.pdf' },
-              { id: '(iv)', name: 'RTE Recognition Certificate', url: 'https://seedlingschools.com/mandatory-discloser/RTE.pdf' },
-              { id: '(v)', name: 'Building Safety Certificate', url: 'https://seedlingschools.com/mandatory-discloser/Building-Safety-Certificate.pdf' },
-              { id: '(vi)', name: 'Fire Safety Certificate', url: 'https://seedlingschools.com/mandatory-discloser/Fire-Safety.pdf' },
-              { id: '(vii)', name: 'Health & Sanitation', url: 'https://seedlingschools.com/mandatory-discloser/Watar-Health.pdf' },
-              { id: '(viii)', name: 'Fee Structure', url: 'https://seedlingschools.com/mandatory-discloser/Fee%20structure%20PDF.pdf' },
-              { id: '(ix)', name: 'DEO Certificate', url: 'https://seedlingschools.com/deo-certificate.php' },
-              { id: '(x)', name: 'Annual Academic Calendar', url: 'https://seedlingschools.com/mandatory-discloser/Year-Planner-2024-25.pdf' },
-              { id: '(xi)', name: 'List of SMC Members', url: 'https://seedlingschools.com/smc.php' },
-              { id: '(xii)', name: 'List of PTA Members', url: 'https://seedlingschools.com/pta-members.php' },
-            ].map((doc) => (
-              <a
-                key={doc.name}
-                href={doc.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-5 transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-sand group-hover:bg-sand group-hover:text-navy-deeper transition-all duration-300">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-white/40 text-[9px] font-black uppercase tracking-widest mb-1">{doc.id}</p>
-                  <p className="text-white text-sm font-bold truncate group-hover:text-sand transition-colors">{doc.name}</p>
-                </div>
-              </a>
-            ))}
+              { id: '(i)', name: 'Affiliation / Upgradation Letter', url: '' },
+              { id: '(ii)', name: 'Trust Registration Certificate', url: '' },
+              { id: '(iii)', name: 'No Objection Certificate', url: '/assets/disclosure/NOC-Certificate.pdf' },
+              { id: '(iv)', name: 'RTE Recognition Certificate', url: '/assets/disclosure/Recognition-Certificate-RTE.pdf' },
+              { id: '(v)', name: 'Building Safety Certificate', url: '/assets/disclosure/Building-Safety-Certificate.pdf' },
+              { id: '(vi)', name: 'Fire Safety Certificate', url: '' },
+              { id: '(vii)', name: 'Health & Sanitation', url: '/assets/disclosure/Water-Health-Sanitation.pdf' },
+              { id: '(viii)', name: 'Fee Structure', url: '/assets/disclosure/Fee-Structure.pdf' },
+              { id: '(ix)', name: 'DEO Certificate', url: '/assets/disclosure/DEO-Certificate.pdf' },
+              { id: '(x)', name: 'Annual Academic Calendar', url: '/assets/disclosure/Annual-Academic-Calendar.pdf' },
+              { id: '(xi)', name: 'List of SMC Members', url: '/assets/disclosure/SMC-List.pdf' },
+              { id: '(xii)', name: 'List of PTA Members', url: '/assets/disclosure/PTA-Members-List.pdf' },
+            ].map((doc) => {
+              const card = (
+                <>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white/40 text-[9px] font-black uppercase tracking-widest mb-1">{doc.id}</p>
+                    <p className="text-white text-sm font-bold">{doc.name}</p>
+                    {!doc.url && <p className="text-sand/80 text-xs mt-2">Updated document pending — contact the school office.</p>}
+                  </div>
+                </>
+              );
+              const classes = "flex items-center gap-4 border border-white/10 rounded-2xl p-5";
+              return doc.url ? (
+                <a key={doc.name} href={doc.url} target="_blank" rel="noopener noreferrer" className={`${classes} bg-white/10 hover:bg-white/20 transition-colors`}>{card}</a>
+              ) : (
+                <div key={doc.name} className={`${classes} bg-white/5`}>{card}</div>
+              );
+            })}
           </div>
         </div>
 

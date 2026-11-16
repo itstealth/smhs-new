@@ -621,7 +621,7 @@ function ActivitiesGrid() {
                       selectedImageIndex === idx ? "border-sand scale-105" : "border-transparent opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <img src={img} alt={`${activities[selectedActivity!].title} — photo ${idx + 1}`} className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>

@@ -342,8 +342,8 @@ export default function Navbar() {
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center gap-4 group">
                   <Image
-                    src="/SPS_Logo.webp"
-                    alt="Seedling Schools Logo"
+                    src="/logo.webp"
+                    alt="Seedling Modern High School"
                     width={200}
                     height={60}
                     className="h-20 w-auto object-contain"
@@ -437,8 +437,8 @@ export default function Navbar() {
                 <div className="flex items-center justify-between p-3 border-b border-white/[0.06]">
                   <Link href="/" onClick={() => setIsOpen(false)}>
                     <Image
-                      src="/SPS_Logo.webp"
-                      alt="Seedling Schools Logo"
+                      src="/logo.webp"
+                      alt="Seedling Modern High School"
                       width={180}
                       height={54}
                       className=" w-auto object-contain"

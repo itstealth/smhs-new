@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { Download, MoveRight } from "lucide-react";
+import { MoveRight, Download } from "lucide-react";
 import { Instagram, Facebook, Twitter, Linkedin, Youtube } from "@/components/icons/BrandIcons";
 
 export default function Footer() {
-  const brochureHref = "/SMHS_Prospectus.pdf";
 
   return (
     <footer className="bg-[#060e1c] border-t border-white/10 relative overflow-hidden">
@@ -17,13 +16,13 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-10">
             <div className="flex items-center">
               <img
-                src="/SPS_Logo.webp"
-                alt="Seedling Schools Logo"
+                src="/logo.webp"
+                alt="Seedling Modern High School"
                 className="h-24 w-auto object-contain"
               />
             </div>
             <p className="text-xl leading-relaxed text-white/60 font-medium max-w-lg font-dm hidden md:block">
-              Dedicated to academic excellence and holistic growth since 1993. We empower the next generation of global leaders with curiosity, character, and competence.
+              Dedicated to academic excellence and holistic growth. We prepare students to lead with curiosity, character, and competence.
             </p>
             <div className="flex items-center gap-4">
               {[
@@ -54,12 +53,11 @@ export default function Footer() {
               ))}
               <li>
                 <a
-                  href={brochureHref}
-                  download
+                  href="/contact-us"
                   className="group flex items-center text-sm font-black text-white/60 hover:text-white transition-colors font-dm"
                 >
                   <Download className="w-5 h-5 mr-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-500 text-sand" />
-                  <span>Download Brochure</span>
+                  <span>Request Prospectus</span>
                 </a>
               </li>
             </ul>

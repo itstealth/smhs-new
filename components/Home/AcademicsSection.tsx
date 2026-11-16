@@ -24,7 +24,7 @@ export default function AcademicsSection() {
             Education Built for <span className="italic text-[#d6d1cf]">Excellence</span>
           </h2>
           <p className="text-white/60 mt-4 max-w-2xl leading-relaxed">
-            At Seedling Modern High School, we go beyond traditional education — creating a learning environment where every child is valued, inspired, and empowered to succeed.
+            At Seedling Modern High School, we go beyond traditional education — creating a learning environment where every child is valued, inspired, and prepared to succeed.
           </p>
           <Link href="/curriculum" className="inline-flex items-center gap-2 px-6 py-3 bg-[#a3123f] text-white text-sm font-bold rounded-sm hover:bg-[#8e1037] transition-colors duration-300 mt-5">
             Explore Academics

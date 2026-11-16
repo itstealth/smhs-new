@@ -138,7 +138,7 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
                 Affiliated with the Central Board of Secondary Education, our CBSE schools deliver a comprehensive, student-centric curriculum that cultivates values, ethics, and leadership qualities — creating a stress-free environment that boosts self-esteem and confidence.
               </p>
               <div className="flex flex-wrap gap-3">
-                {["CBSE Affiliated", "100% Board Results", "Personalised Learning"].map((h) => (
+                {["CBSE Affiliated", "Board Results", "Personalised Learning"].map((h) => (
                   <span key={h} className="text-[10px] text-navy border border-navy/10 px-4 py-2 rounded-full font-black tracking-widest uppercase font-dm bg-white/50">{h}</span>
                 ))}
               </div>

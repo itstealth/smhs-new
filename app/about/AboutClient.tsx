@@ -172,7 +172,7 @@ export default function AboutClient({ timeline, campusImages, stats }: AboutClie
             <div className="relative">
               <img
                 src="/smhs_images/seedling_images/school_guard.webp"
-                alt="Seedling School Guard"
+                alt="Security guard at the entrance to Seedling Modern High School Jaipur"
                 className="w-full h-[220px] md:h-[320px] lg:h-[380px] object-cover object-center rounded-2xl shadow-2xl transition-all duration-700"
               />
               <img

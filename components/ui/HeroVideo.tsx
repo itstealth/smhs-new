@@ -10,7 +10,7 @@ export default function HeroVideo(): React.JSX.Element {
         />
         <img
           src="/banner-poster-1920-3a15ee259962.webp"
-          alt=""
+          alt="Seedling Modern High School Jaipur — campus banner"
           width={1920}
           height={1080}
           fetchPriority="high"

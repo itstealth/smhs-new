@@ -83,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
+              "@type": ["EducationalOrganization", "School"],
               name: "Seedling Modern High School",
               url: "https://smhs.seedlingschools.com",
               logo: "https://smhs.seedlingschools.com/logo.webp",

@@ -94,7 +94,7 @@ export default function HomePageHero({
             </nav>
           ) : (
             <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest">
-              Empowering Future Leaders Since 1993
+              Preparing Future Leaders
             </p>
           )}
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { imageAltFor } from "@/lib/image-alt";
 import Link from "next/link";
 
 interface BreadcrumbItem {
@@ -10,6 +11,8 @@ interface BreadcrumbItem {
 
 interface HeroWrapperProps {
   backgroundImage?: string;
+  /** Override the asset description; an explicit empty string marks a decorative image. */
+  imageAlt?: string;
   backgroundVideo?: string;
   title: string;
   subtitle?: string;
@@ -24,6 +27,7 @@ interface HeroWrapperProps {
 
 export default function HeroWrapper({
   backgroundImage,
+  imageAlt,
   title,
   subtitle,
   badge,
@@ -36,7 +40,7 @@ export default function HeroWrapper({
       {backgroundImage && (
         <Image
           src={backgroundImage}
-          alt=""
+          alt={imageAlt ?? imageAltFor(backgroundImage, title)}
           fill
           className="object-cover"
           style={{ objectPosition }}

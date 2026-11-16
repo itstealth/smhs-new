@@ -3,7 +3,7 @@ import Link from "next/link";
 import EnquiryTrigger from "@/components/ui/EnquiryTrigger";
 
 const STATS = [
-  { n: "20K+", label: "Happy Students" },
+  { n: "CBSE", label: "Curriculum" },
   { n: "2", label: "Campuses in Jaipur" },
 ];
 

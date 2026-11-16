@@ -125,13 +125,13 @@ export default function ResultClient({ achievements, toppers }: { achievements: 
             <div className="absolute top-0 right-0 w-64 h-64 bg-navy-light rounded-full blur-3xl -mr-32 -mt-32 group-hover:scale-150 transition-transform duration-1000" />
             <div className="relative z-10">
               <p className="text-crimson text-xs tracking-[0.4em] uppercase mb-4 font-black">Our Pride</p>
-              <h3 className="font-playfair text-3xl md:text-5xl lg:text-6xl font-semibold mb-6 text-navy-deeper">100% Board Results</h3>
-              <p className="text-text-light mt-3 max-w-xl text-lg font-dm font-light leading-relaxed">Seedling Group of Schools has consistently achieved 100% results in both CBSE examinations — every year, across all campuses. Many students secure high scores and distinctions, with a strong track record of placements in top universities worldwide.</p>
+              <h3 className="font-playfair text-3xl md:text-5xl lg:text-6xl font-semibold mb-6 text-navy-deeper">Board Examination Results</h3>
+              <p className="text-text-light mt-3 max-w-xl text-lg font-dm font-light leading-relaxed">Explore student achievements and school results from recent CBSE examinations.</p>
             </div>
             <div className="flex-shrink-0 relative z-10">
               <div className="w-40 h-40  rounded-full flex flex-col items-center justify-center border-2 border-navy/10 bg-navy text-white transition-colors duration-500">
-                <span className="font-playfair text-5xl font-bold">100%</span>
-                <span className="text-[10px] tracking-widest uppercase mt-2 font-black">Every Year</span>
+                <span className="font-playfair text-3xl font-bold">CBSE</span>
+                <span className="text-[10px] tracking-widest uppercase mt-2 font-black">Results</span>
               </div>
             </div>
           </div>

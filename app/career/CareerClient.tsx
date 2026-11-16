@@ -585,7 +585,7 @@ export default function CareerClient({
           <div className="grid grid-cols-3 md:grid-cols-5 divide-x divide-sand/20">
             {[
               { value: "2", label: "Schools" },
-              { value: "20,000+", label: "Students" },
+              { value: "CBSE", label: "Curriculum" },
               { value: "20:1", label: "Teacher Ratio" },
               { value: "100%", label: "Board Results" },
               { value: "1993", label: "Est." },
@@ -929,7 +929,7 @@ export default function CareerClient({
               {[
                 "🏫 2 Campuses",
                 "🎓 CBSE Board",
-                "🌿 Est. 1993",
+                "📍 Durgapura, Jaipur",
               ].map((b) => (
                 <span
                   key={b}

@@ -141,7 +141,7 @@ export default function ApplyClient({ campus }: { campus: CampusConfig }) {
       <section>
         <img
           src="/assets/img/registration-banner.jpg"
-          alt=""
+          alt="Online admission registration at Seedling Modern High School Jaipur"
           className="w-full object-cover max-h-[320px]"
           onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
         />

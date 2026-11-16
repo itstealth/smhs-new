@@ -4,7 +4,9 @@ const nextConfig: NextConfig = {
   distDir: process.env.NEXT_BUILD_DIR || ".next",
   async redirects() {
     return [
+      { source: "/SMHS_Prospectus.pdf", destination: "/contact-us", permanent: false },
       { source: "/academics", destination: "/curriculum", permanent: true },
+      { source: "/mandatory-disclosures", destination: "/mandatory-disclosure", permanent: true },
     ];
   },
   async headers() {

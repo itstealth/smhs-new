@@ -37,7 +37,7 @@ export default function LegacyClient({ milestones }: { milestones: Milestone[] }
         <div className="absolute inset-0 opacity-40">
           <Image
             src="/smhs_images/seedling_images/leaders.webp"
-            alt="Heritage Background"
+            alt="School leadership team at Seedling Modern High School Jaipur"
             fill
             className="object-cover"
           />
