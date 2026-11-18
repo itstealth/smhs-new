@@ -302,7 +302,7 @@ function ApplyModal({
                 Thank You!
               </p>
               <p className="text-text-light text-sm leading-relaxed font-dm">
-                We've received your interest. Our HR team will reach out as soon as we open our recruitments.
+                We&apos;ve received your interest. Our HR team will reach out as soon as we open our recruitments.
               </p>
               <button
                 onClick={onClose}
@@ -506,7 +506,7 @@ function ApplyModal({
                 {submitting ? "Submitting…" : "Submit Interest Form →"}
               </button>
               <p className="text-[#AAA] text-xs text-center">
-                We'll reach out as soon as we open our recruitments · No spam
+                We&apos;ll reach out as soon as we open our recruitments · No spam
               </p>
             </form>
           )}
@@ -587,7 +587,7 @@ export default function CareerClient({
               { value: "2", label: "Schools" },
               { value: "CBSE", label: "Curriculum" },
               { value: "20:1", label: "Teacher Ratio" },
-              { value: "100%", label: "Board Results" },
+              { value: "CBSE", label: "Curriculum" },
               { value: "1993", label: "Est." },
             ].map((s) => (
               <div key={s.label} className="px-4 py-4 text-center">
@@ -640,7 +640,7 @@ export default function CareerClient({
       <section className="py-14 bg-crimson relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
           <svg viewBox="0 0 600 800" className="w-full h-full">
-            <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" fontSize="300" fill="#D6D1CF" fontFamily="serif" fontWeight="900">"</text>
+            <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" fontSize="300" fill="#D6D1CF" fontFamily="serif" fontWeight="900">&quot;</text>
           </svg>
         </div>
         <div className="max-w-5xl mx-auto px-6 relative z-10">
@@ -757,7 +757,7 @@ export default function CareerClient({
               <Reveal key={t.name} delay={i * 120}>
                 <div className="group bg-white/10 border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 relative overflow-hidden h-full">
                   <div className="absolute top-3 right-6 font-playfair text-[7rem] leading-none text-[#d6d1cf]/20 font-bold select-none pointer-events-none">
-                    "
+                    &quot;
                   </div>
                   <div className="flex items-center gap-4 mb-6 relative z-10">
                     <img
@@ -771,7 +771,7 @@ export default function CareerClient({
                     </div>
                   </div>
                   <blockquote className="font-playfair italic text-xl font-light text-white/80 leading-[1.7] relative z-10">
-                    "{t.quote}"
+                    &quot;{t.quote}&quot;
                   </blockquote>
                 </div>
               </Reveal>
@@ -790,11 +790,11 @@ export default function CareerClient({
             <Reveal>
               <Tag>Open Application</Tag>
               <h2 className="font-playfair text-4xl md:text-5xl font-light text-navy-deeper mb-5 leading-tight">
-                Don't See a<br />
+                Don&apos;t See a<br />
                 <em className="font-semibold text-navy">Role That Fits?</em>
               </h2>
               <p className="text-text-light leading-[1.9] mb-8 text-base font-dm font-light">
-                We're always looking for passionate educators and professionals. Drop your details and CV with us — we'll keep your profile active and reach out when the right opportunity opens.
+                We&apos;re always looking for passionate educators and professionals. Drop your details and CV with us — we&apos;ll keep your profile active and reach out when the right opportunity opens.
               </p>
               <div className="space-y-3 mb-8">
                 {[
@@ -927,7 +927,7 @@ export default function CareerClient({
           <Reveal delay={220}>
             <div className="mt-16 flex flex-wrap justify-center gap-4">
               {[
-                "🏫 2 Campuses",
+                "🏫 Two Seedling group campuses",
                 "🎓 CBSE Board",
                 "📍 Durgapura, Jaipur",
               ].map((b) => (

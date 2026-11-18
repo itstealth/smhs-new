@@ -70,8 +70,8 @@ type ViewLeader = {
 function toViewLeader(person: CmsBoardMember): ViewLeader {
   return {
     name: person.name,
-    role: person.designation ?? "",
-    sub: (person.custom?.sub as string | undefined) ?? "Seedling Group of Institutions",
+    role: (person.designation ?? "").replace(/Seedling Group of Institutions/gi, "Seedling Group of Schools"),
+    sub: ((person.custom?.sub as string | undefined) ?? "Seedling Group of Schools").replace(/Seedling Group of Institutions/gi, "Seedling Group of Schools"),
     quote: person.message ?? "",
     img: person.photo ?? "/smhs_images/seedling_images/leaders.webp",
     tag: (person.custom?.tag as string | undefined) ?? "",
@@ -119,7 +119,7 @@ export default function LeadershipClient({ leaders: cmsLeaders }: { leaders: Cms
                     <p className="text-navy text-sm font-medium mb-1 font-dm">{l.role}</p>
                     <p className="text-text-light text-xs mb-5 font-dm">{l.sub}</p>
                     <blockquote className="font-playfair italic text-text-light text-base leading-relaxed border-l-2 border-crimson-dark pl-4">
-                      "{l.quote}"
+                      &quot;{l.quote}&quot;
                     </blockquote>
                   </div>
                 </div>
@@ -149,10 +149,10 @@ export default function LeadershipClient({ leaders: cmsLeaders }: { leaders: Cms
 
           <div>
             <Reveal>
-              <p className="font-playfair text-white text-xl italic mb-4">Director's Communiqué</p>
+              <p className="font-playfair text-white text-xl italic mb-4">Director&apos;s Communiqué</p>
               <h2 className="font-playfair text-4xl md:text-5xl font-light leading-tight mb-8 text-white">
-                "Life Ready<br />
-                &amp; <em className="font-semibold text-white">Life Worthy"</em>
+                &quot;Life Ready<br />
+                &amp; <em className="font-semibold text-white">Life Worthy&quot;</em>
               </h2>
             </Reveal>
             <Reveal delay={100}>
@@ -196,7 +196,7 @@ export default function LeadershipClient({ leaders: cmsLeaders }: { leaders: Cms
 
           <div>
             <Reveal>
-              <p className="font-playfair text-navy text-xl italic mb-4">Principal's Message</p>
+              <p className="font-playfair text-navy text-xl italic mb-4">Principal&apos;s Message</p>
             </Reveal>
             <Reveal delay={100}>
               <p className="text-text-light leading-[1.9] text-base mb-4 font-dm">

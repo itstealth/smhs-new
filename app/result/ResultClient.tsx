@@ -1,5 +1,7 @@
 "use client";
 
+import { schoolAchievements } from "@/lib/result-achievements";
+
 import { useEffect, useRef, useState } from "react";
 
 function useReveal() {
@@ -35,6 +37,7 @@ export type Achievement = { value: string; label: string; sub: string; icon: str
 export type Topper = { src: string; name: string };
 
 export default function ResultClient({ achievements, toppers }: { achievements: Achievement[]; toppers: Topper[] }) {
+  const visibleAchievements = schoolAchievements(achievements, "Seedling Modern High School");
   return (
     <section className="py-12 md:py-16 bg-off-white text-text-base relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-sand/30" />
@@ -61,7 +64,7 @@ export default function ResultClient({ achievements, toppers }: { achievements: 
 
           <div className="overflow-hidden rounded-2xl border border-sand/30 bg-white shadow-editorial">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-sand/20">
-              {achievements.map((a, i) => (
+              {visibleAchievements.map((a, i) => (
                 <Reveal key={a.label} delay={i * 60}>
                   <div className="group min-h-[142px] bg-white p-5 md:p-6 transition-colors duration-300 hover:bg-navy-light">
                     <div className="mb-5 flex items-center justify-between gap-4">

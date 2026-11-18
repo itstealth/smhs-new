@@ -4,7 +4,7 @@ import EnquiryTrigger from "@/components/ui/EnquiryTrigger";
 
 const STATS = [
   { n: "CBSE", label: "Curriculum" },
-  { n: "2", label: "Campuses in Jaipur" },
+  { n: "2", label: "Seedling group campuses in Jaipur" },
 ];
 
 export default function ModernHero() {

@@ -3,6 +3,8 @@ import { getPostSlugs } from '@/lib/wordpress';
 
 const BASE_URL = 'https://smhs.seedlingschools.com';
 
+export const revalidate = 600;
+
 const staticRoutes = [
   '/',
   '/about',
@@ -17,7 +19,6 @@ const staticRoutes = [
   '/faculty',
   '/learning-support',
   '/mandatory-disclosure',
-  '/mandatory-disclosures',
   '/news-and-events',
   '/policies',
   '/result',
