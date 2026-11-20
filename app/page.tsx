@@ -15,7 +15,7 @@ export const metadata = pageMetadata({ ...HOME_SEO, path: "/" });
 
 export default function Home() {
   return (
-    <div className="bg-white overflow-x-clip">
+    <div data-ui-review className="bg-white overflow-x-clip">
       <SiteHeader />
       <Hero />
       <ModernHero />

@@ -102,60 +102,9 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
 // SECTIONS
 // ==========================================
 
-function MedalPortrait({
-  src,
-  alt,
-  size = "md",
-  active = false,
-  onClick,
-}: {
-  src: string;
-  alt: string;
-  size?: "md" | "lg";
-  active?: boolean;
-  onClick?: () => void;
-}) {
-  const dim = size === "lg" ? 190 : 148;
-  const pad = size === "lg" ? 6 : 5;
-
-  return (
-    <button
-      onClick={onClick}
-      className="flex flex-col items-center focus:outline-none group"
-      style={{ cursor: "pointer" }}
-      aria-label={`View ${alt} profile`}
-    >
-      <div
-        className="rounded-full transition-all duration-300"
-        style={{
-          padding: pad,
-          background: "conic-gradient(from 0deg, #f7df6b, #c8860a, #f7df6b, #a06a08, #f7e27a, #c8860a, #f7df6b)",
-          boxShadow: active
-            ? "0 0 0 4px #f7df6b, 0 0 32px rgba(247,223,107,0.6), 0 8px 32px rgba(180,120,0,0.6)"
-            : "0 0 0 3px #a06a08, 0 6px 24px rgba(180,120,0,0.4)",
-          transform: active ? "scale(1.08)" : "scale(1)",
-        }}
-      >
-        <div
-          className="rounded-full transition-all duration-300"
-          style={{
-            padding: 3,
-            background: "conic-gradient(from 90deg, #fdf0a0, #b8750a, #fdf0a0, #8a5a08, #fdf0a0)",
-          }}
-        >
-          <div className="rounded-full overflow-hidden" style={{ width: dim, height: dim }}>
-            <Image
-              src={src}
-              alt={alt}
-              width={dim}
-              height={dim}
-              className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-        </div>
-      </div>
-    </button>
-  );
+function MedalPortrait({ src, alt, size = "lg", active = false, onClick }: { src: string; alt: string; size?: "lg" | "md"; active?: boolean; onClick: () => void }) {
+    const dim = size === "lg" ? 240 : 112;
+    return <button type="button" onClick={onClick} aria-label={`View ${alt} profile`} aria-pressed={active} className={`max-w-full rounded-2xl border-2 bg-off-white p-3 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sand ${active ? "border-sand" : "border-white/30"}`}><Image src={src} alt={alt} width={dim} height={dim} className="aspect-square h-auto max-w-full object-contain" /></button>;
 }
 
 function FeaturedAlumniSection({ alumniList }: { alumniList: ViewAlumnus[] }) {
@@ -222,24 +171,17 @@ function FeaturedAlumniSection({ alumniList }: { alumniList: ViewAlumnus[] }) {
               style={{ opacity: visible ? 1 : 0 }}
             >
               <p className="text-sand text-[10px] font-black uppercase tracking-[0.2em] mb-4 font-dm">
-                Seedling Modern High School Alumni
+                Seedling Group Alumni
               </p>
 
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-2 leading-tight">
+              <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-2 leading-tight text-white">
                 {active.name}
               </h2>
               <p className="font-playfair text-xl text-sand font-medium mb-8 italic">
                 {active.role}
               </p>
 
-              <blockquote className="relative">
-                <div className="text-7xl text-sand/20 font-playfair absolute -top-4 -left-2 leading-none select-none">
-                  "
-                </div>
-                <p className="text-white/80 text-lg leading-relaxed pl-4 border-l-2 border-sand/50 font-dm font-light">
-                  {active.quote}
-                </p>
-              </blockquote>
+              <p className="text-white text-base leading-relaxed">Celebrating members of the Seedling alumni community and their work across enterprise, public service and design.</p>
 
               <div className="mt-10 flex items-center gap-4">
                 <div className="w-12 h-px bg-sand/30" />
@@ -501,7 +443,7 @@ export default function AlumniClient({ alumniList: cmsAlumniList, stats, achieve
   const alumniList = cmsAlumniList.map(toViewAlumnus);
 
   return (
-    <main className="min-h-screen">
+    <main data-ui-review className="min-h-screen">
       <HeroWrapper
         backgroundImage="/alumni/alumni_group.webp"
         title="Our Alumni"

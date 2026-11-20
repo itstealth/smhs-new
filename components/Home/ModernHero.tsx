@@ -10,7 +10,7 @@ const STATS = [
 export default function ModernHero() {
   return (
     <section
-      className="relative w-full min-h-[calc(100vh-88px)] flex items-center justify-center overflow-hidden bg-white"
+      className="relative w-full  flex items-center justify-center overflow-hidden bg-white"
     >
       {/* Static Background Gradients (Performance Optimized) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -29,7 +29,7 @@ export default function ModernHero() {
       </div>
 
       <div
-        className="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-4 lg:gap-8 items-center py-4 sm:py-10 md:py-16 lg:py-0"
+        className="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center "
       >
         {/* Left Content Area */}
         <div className="flex flex-col items-start pt-1 sm:pt-6 lg:pt-0">
@@ -87,52 +87,13 @@ export default function ModernHero() {
           </div>
         </div>
 
-        {/* Right Image — single static image */}
-        <div className="relative h-[240px] sm:h-[420px] lg:h-[650px] w-full flex items-center justify-center mt-1 sm:mt-2 lg:mt-0 pb-2 sm:pb-0">
-          <div
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-[105%] lg:w-[115%] aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl z-10 border-[4px] sm:border-[6px] border-white/50"
-          >
-            <Image
-              src="/smhs_images/seedling_images/group_students.webp"
-              alt="School Campus"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 98vw, 50vw"
-            />
+        <div className="w-full">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
+            <Image src="/smhs_images/seedling_images/group_students.webp" alt="Seedling Modern High School student community" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
           </div>
-
-          {/* Floating Stats Card 1 */}
-          <div
-            className="absolute -right-[2%] top-[25%] z-30 hidden sm:flex bg-white/80 backdrop-blur-xl border border-white shadow-xl rounded-2xl p-4 items-center gap-4"
-          >
-            <div className="w-12 h-12 rounded-full bg-[#a3123f]/10 flex items-center justify-center text-[#a3123f]">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-[#013975]">{STATS[0].n}</p>
-              <p className="text-xs font-semibold text-[#013975]/60 uppercase tracking-wider">{STATS[0].label}</p>
-            </div>
-          </div>
-
-          {/* Floating Stats Card 2 */}
-          <div
-            className="absolute -left-[5%] bottom-[15%] z-30 hidden sm:flex bg-white/80 backdrop-blur-xl border border-white shadow-xl rounded-2xl p-4 items-center gap-4"
-          >
-            <div className="w-12 h-12 rounded-full bg-[#a3123f]/10 flex items-center justify-center text-[#a3123f]">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-[#013975]">{STATS[1].n}</p>
-              <p className="text-xs font-semibold text-[#013975]/60 uppercase tracking-wider">{STATS[1].label}</p>
-            </div>
-          </div>
+          <dl className="mt-5 grid grid-cols-2 gap-4">{STATS.map(stat => <div key={stat.label} className="rounded-xl border border-blue-100 bg-white p-4"><dt className="text-sm text-[#013975]">{stat.label}</dt><dd className="mt-2 text-2xl font-bold text-[#034ea2]">{stat.n}</dd></div>)}</dl>
         </div>
       </div>
-
     </section>
   );
 }

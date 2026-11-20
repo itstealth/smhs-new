@@ -7,7 +7,7 @@
   --color-crimson: #a3123f;
   --color-mauve: #896B85;
   --color-sand: #D6D1CF;
-  --color-off-white: #ffffff;
+  --color-off-white: #f5f7fb;
   --color-dark: #0e0e0e;
   --color-text-base: #2c2c2c;
   --color-text-light: #5a5a5a;
@@ -225,3 +225,22 @@
     .home-deferred-footer { contain-intrinsic-size: auto 769px; }
   }
 }
+
+/* UI review: consistent rhythm, bounded headings and balanced feature cards. */
+[data-ui-review] > section:not([data-review-hero]) { padding-block: 3rem; }
+@media (min-width: 768px) { [data-ui-review] > section:not([data-review-hero]) { padding-block: 4rem; } }
+[data-ui-review] .review-feature-grid { align-items: stretch; grid-auto-rows: 1fr; }
+[data-ui-review] .review-feature-grid > div { height: 100%; }
+[data-ui-review] .review-feature-grid > div > .review-feature-card { height: 100%; }
+[data-ui-review] .review-feature-card { display: flex; flex-direction: column; height: 100%; }
+[data-ui-review] .review-feature-card p { overflow: visible; -webkit-line-clamp: unset; }
+.review-caption { background: linear-gradient(transparent, rgba(5,20,45,.95)); color: white; }
+.review-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.review-photo-grid figure { margin: 0; min-width: 0; overflow: hidden; border-radius: 1rem; background: #f5f5f4; }
+.review-photo-grid img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.review-photo-grid figcaption { padding: .85rem 1rem; color: #132743; font-size: .9rem; font-weight: 600; }
+@media (min-width: 768px) { .review-photo-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+.review-alumni-portrait { object-fit: contain; object-position: center; padding: 1rem; background: #f4f1ec; }
+
+/* Reviewed sections must not reserve their obsolete pre-redesign heights. */
+[data-ui-review] > .home-deferred, [data-ui-review] > .home-deferred-content { content-visibility: visible; contain-intrinsic-size: none; }

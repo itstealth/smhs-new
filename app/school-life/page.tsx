@@ -20,7 +20,7 @@ type CmsAlbum = {
   title: string;
   category: string | null;
   status: string;
-  custom: { items?: Array<{ sortOrder: number; category?: string; size?: string }> };
+  custom: { items?: Array<{ sortOrder: number; category?: string; size?: string; date?: string; description?: string }> };
   items: CmsMediaItem[];
 };
 
@@ -37,6 +37,8 @@ export default async function SchoolLifePage() {
       title: item.caption ?? "",
       category: m?.category ?? "Events",
       size: m?.size ?? "small",
+      date: m?.date,
+      description: m?.description,
     };
   });
 

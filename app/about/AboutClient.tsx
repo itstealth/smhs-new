@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import FeatureIcon from "@/components/ui/FeatureIcon";
 import HeroWrapper from "@/components/layout/HeroWrapper";
 
 // ─── Scroll Reveal Hook ───────────────────────────────────────────────────────
@@ -71,7 +72,7 @@ export default function AboutClient({ timeline, campusImages, stats }: AboutClie
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <main className="bg-off-white text-text-base overflow-x-clip font-dm">
+    <main data-ui-review className="bg-off-white text-text-base overflow-x-clip font-dm">
 
       {/* Image Lightbox Modal */}
       {selectedImage && (
@@ -114,7 +115,7 @@ export default function AboutClient({ timeline, campusImages, stats }: AboutClie
       <section className="bg-navy-deeper text-white py-12 border-y border-sand/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-sand/20">
-            {stats.map((s) => (
+            {stats.map(s => /student/i.test(s.label) ? { value: "CBSE", label: "School curriculum" } : /campus/i.test(s.label) ? { value: "Durgapura", label: "Jaipur campus" } : s).filter((stat,index,list)=>list.findIndex(other=>other.label===stat.label)===index).map((s) => (
               <div key={s.label} className="px-6 py-4 text-center">
                 <p className="font-playfair text-3xl md:text-5xl font-semibold text-sand">{s.value}</p>
                 <p className="text-white/60 text-xs mt-2 tracking-widest uppercase font-dm">{s.label}</p>
@@ -155,7 +156,7 @@ export default function AboutClient({ timeline, campusImages, stats }: AboutClie
                   { icon: "❤️", title: "Student Well-being First", desc: "A safe, inclusive and stimulating learning environment where every student feels confident, respected and motivated to grow." },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4 p-4 rounded-2xl hover:bg-navy-light transition-colors duration-300">
-                    <span className="text-2xl mt-1">{item.icon}</span>
+                    <span className="text-2xl mt-1"><FeatureIcon name={item.title} /></span>
                     <div>
                       <h4 className="font-playfair font-semibold text-xl mb-1">{item.title}</h4>
                       <p className="text-text-light text-sm leading-relaxed font-dm">{item.desc}</p>
@@ -356,7 +357,7 @@ export default function AboutClient({ timeline, campusImages, stats }: AboutClie
           <Reveal>
             <p className="font-playfair text-sand text-3xl italic mb-6 tracking-wide">Our Philosophy</p>
             <blockquote className="font-playfair text-4xl md:text-5xl font-light leading-[1.1] mb-10 text-white">
-              "हस्ये नयतु नः ब्रह्मज्ञानं"
+              &quot;हस्ये नयतु नः ब्रह्मज्ञानं&quot;
             </blockquote>
             <p className="font-playfair text-2xl font-light italic text-sand mb-12">
               We aim at wisdom and the ability to comprehend.
@@ -368,7 +369,7 @@ export default function AboutClient({ timeline, campusImages, stats }: AboutClie
             </p>
             <div className="h-px w-24 bg-crimson mx-auto mb-10" />
             <p className="font-playfair text-2xl italic text-sand">
-              "उप नो सश्रा कृतवो यन्तु विश्रमः"
+              &quot;उप नो सश्रा कृतवो यन्तु विश्रमः&quot;
             </p>
             <p className="text-white/50 text-sm mt-2 tracking-wider uppercase" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Open the doors from all sides so that noble thoughts come in unhindered.
@@ -454,22 +455,15 @@ export default function AboutClient({ timeline, campusImages, stats }: AboutClie
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {campusImages.map((img, i) => (
-              <Reveal key={i} delay={i * 60}>
-                <div
-                  className="relative overflow-hidden rounded-3xl aspect-square h-full group cursor-pointer border border-white/5"
-                  onClick={() => setSelectedImage(img.src)}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.label}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deeper/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              </Reveal>
-            ))}
+          <div className="review-photo-grid">
+            {[
+              {src:"/events/ATL LAB/1P3A4229.webp",label:"Student exploring an ATL lab project"},
+              {src:"/events/grow-glow/IMG-20260421-WA0040.webp",label:"Young learners at the school market"},
+              {src:"/events/ANNUAL DAY/P1230774.webp",label:"Annual day student performance"},
+              {src:"/smhs_images/seedling_images/community.webp",label:"Student drill practice"},
+              {src:"/events/ATL LAB/1P3A4255.webp",label:"Students collaborating on a lab project"},
+              {src:"/events/INVESTITURE CEREMONY/P1510050.webp",label:"Student leaders at investiture"},
+            ].map(img => <figure key={img.src}><button type="button" onClick={()=>setSelectedImage(img.src)} aria-label={`Enlarge ${img.label}`} className="block w-full"><img src={img.src} alt={img.label} loading="lazy" /></button><figcaption>{img.label}</figcaption></figure>)}
           </div>
         </div>
 

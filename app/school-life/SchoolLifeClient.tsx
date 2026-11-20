@@ -1,6 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
+import SchoolPhotoGallery from "@/components/ui/SchoolPhotoGallery";
+import HighlightStrip from "@/components/ui/HighlightStrip";
 import HeroWrapper from "@/components/layout/HeroWrapper";
 
 // --- Custom Styles for Portability ---
@@ -47,6 +49,8 @@ export type GalleryItem = {
   title: string;
   category: string;
   size: string;
+  date?: string;
+  description?: string;
 };
 
 const sportBlocks = [
@@ -165,30 +169,30 @@ const experiences = [
 ];
 
 const stripImages = [
-  { src: "/events/ANNUAL DAY/P1230432.webp", label: "Annual Day" },
-  { src: "/events/ANNUAL DAY/P1230462.webp", label: "Cultural Performance" },
-  { src: "/events/ANNUAL DAY/P1230473.webp", label: "Annual Day Highlights" },
-  { src: "/events/ANNUAL DAY/P1230477.webp", label: "Stage Show" },
-  { src: "/events/ANNUAL DAY/P1230711.webp", label: "Grand Celebration" },
+  { src: "/events/ANNUAL DAY/P1230432.webp", label: "Guests arriving at the annual day" },
+  { src: "/events/ANNUAL DAY/P1230462.webp", label: "Ceremonial lamp lighting" },
+  { src: "/events/ANNUAL DAY/P1230473.webp", label: "Guest felicitation" },
+  { src: "/events/ANNUAL DAY/P1230477.webp", label: "Presentation to a guest" },
+  { src: "/events/ANNUAL DAY/P1230711.webp", label: "Student receiving an award" },
   { src: "/events/ANNUAL DAY/P1230774.webp", label: "Student Performances" },
   { src: "/events/ANNUAL DAY/P1230778.webp", label: "Annual Day Finale" },
   { src: "/events/ATL LAB/1P3A4229.webp", label: "ATL Lab Innovation" },
   { src: "/events/ATL LAB/1P3A4237.webp", label: "Tinkering & Making" },
   { src: "/events/ATL LAB/1P3A4255.webp", label: "STEM Excellence" },
   { src: "/events/ATL LAB/1P3A4261.webp", label: "Robotics & Tech" },
-  { src: "/events/ATL LAB/P1517259.webp", label: "Innovation Day" },
+  { src: "/events/ATL LAB/P1517259.webp", label: "Classroom demonstration" },
   { src: "/events/INVESTITURE CEREMONY/P1500918.webp", label: "Investiture Ceremony" },
   { src: "/events/INVESTITURE CEREMONY/P1510001.webp", label: "Student Leaders" },
   { src: "/events/INVESTITURE CEREMONY/P1510050.webp", label: "Leadership Induction" },
-  { src: "/events/INVESTITURE CEREMONY/P1510071.webp", label: "Investiture March" },
-  { src: "/events/INVESTITURE CEREMONY/P1510083.webp", label: "Prefects & Captains" },
-  { src: "/events/INVESTITURE CEREMONY/P1510131.webp", label: "Oath Taking" },
+  { src: "/events/INVESTITURE CEREMONY/P1510071.webp", label: "Floral tribute at investiture" },
+  { src: "/events/INVESTITURE CEREMONY/P1510083.webp", label: "School guests at investiture" },
+  { src: "/events/INVESTITURE CEREMONY/P1510131.webp", label: "Student badge presentation" },
   { src: "/events/honoring-achievers/IMG20260420100328.webp", label: "Honouring Achievers" },
-  { src: "/events/honoring-achievers/IMG20260420100238.webp", label: "Career Growth" },
+  { src: "/events/honoring-achievers/IMG20260420100238.webp", label: "School achievement ceremony" },
   { src: "/events/grow-glow/IMG-20260421-WA0040.webp", label: "Grow & Glow" },
   { src: "/events/grow-glow/IMG-20260421-WA0054.webp", label: "Healthy Habits" },
   { src: "/smhs_images/seedling_images/christmas_celebrations.webp", label: "Festive Celebrations" },
-  { src: "/smhs_images/seedling_images/community.webp", label: "School Community" },
+  { src: "/smhs_images/seedling_images/community.webp", label: "Student drill practice" },
 ];
 
 const features = [
@@ -235,130 +239,7 @@ const features = [
 // ==========================================
 
 function MasonryGallery({ galleryItems }: { galleryItems: GalleryItem[] }) {
-  const [activeItem, setActiveItem] = useState<string | null>(null);
-  const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
-
-  if (galleryItems.length === 0) {
-    return (
-      <section id="gallery" className="py-16 pb-8 bg-navy-deeper relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center py-16">
-          <p className="text-white/60 text-lg">No photos in the gallery yet.</p>
-        </div>
-      </section>
-    );
-  }
-
-  return (
-    <section id="gallery" className="py-16 pb-8 bg-navy-deeper relative overflow-hidden">
-      {/* Subtle background texture */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, #D6D1CF 0, #D6D1CF 1px, transparent 0, transparent 50%)",
-          backgroundSize: "20px 20px",
-        }}
-      />
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Section header */}
-        <div className="flex items-end justify-between mb-16">
-          <div>
-            <span className="text-sand text-sm uppercase tracking-[0.3em] font-light">
-              Visual Journal
-            </span>
-            <h2 className="font-playfair text-4xl md:text-5xl font-black text-white mt-2">
-              Snippets of
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sand to-white/60">
-                Seedling
-              </span>
-            </h2>
-          </div>
-          <p className="hidden md:block text-white/40 text-sm max-w-xs text-right leading-relaxed font-dm">
-            Every frame tells the story of a vibrant, thriving community
-          </p>
-        </div>
-
-        {/* Masonry Grid */}
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-1">
-          {galleryItems.map((item) => {
-            const heightClass =
-              item.size === "large"
-                ? "h-72 md:h-80"
-                : item.size === "wide"
-                  ? "h-48 md:h-52"
-                  : "h-40 md:h-44";
-
-            return (
-              <div
-                key={item.id}
-                className={`relative break-inside-avoid overflow-hidden rounded-xl cursor-pointer group mb-1 ${heightClass}`}
-                onClick={() => setLightbox(item)}
-                onMouseEnter={() => setActiveItem(item.id)}
-                onMouseLeave={() => setActiveItem(null)}
-              >
-                <img
-                  src={item.src}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-deeper/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                {/* Category badge */}
-                <div
-                  className={`absolute top-3 left-3 bg-sand text-navy-deeper text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider transition-all duration-300 ${activeItem === item.id ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
-                    }`}
-                >
-                  {item.category}
-                </div>
-                {/* Title */}
-                <div
-                  className={`absolute bottom-0 left-0 right-0 p-4 transition-all duration-300 ${activeItem === item.id ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                    }`}
-                >
-                  <p className="text-white font-semibold text-sm font-dm">{item.title}</p>
-                  <div className="flex items-center gap-1 mt-1">
-                    <div className="w-4 h-px bg-sand" />
-                    <span className="text-sand text-xs font-dm">View</span>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Lightbox */}
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-[300] bg-navy-deeper/95 backdrop-blur-md flex items-center justify-center p-6"
-          onClick={() => setLightbox(null)}
-        >
-          <div
-            className="relative max-w-4xl w-full rounded-2xl overflow-hidden shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={lightbox.src}
-              alt={lightbox.title}
-              className="w-full max-h-[80vh] object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy-deeper/80 p-6">
-              <span className="text-sand text-xs uppercase tracking-widest">{lightbox.category}</span>
-              <h3 className="text-white text-2xl font-bold mt-1 font-playfair">{lightbox.title}</h3>
-            </div>
-            <button
-              className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
-              onClick={() => setLightbox(null)}
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
-    </section>
-  );
+  return <SchoolPhotoGallery photos={galleryItems} />;
 }
 
 function SportsSection() {
@@ -645,7 +526,7 @@ function ExperienceSection() {
         <svg viewBox="0 0 600 800" className="w-full h-full">
           <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle"
             fontSize="300" fill="#D6D1CF" fontFamily="serif" fontWeight="900">
-            "
+            &quot;
           </text>
         </svg>
       </div>
@@ -687,7 +568,7 @@ function ExperienceSection() {
 
           {/* Quote */}
           <div className="text-white">
-            <div className="text-sand text-5xl md:text-8xl font-playfair leading-none mb-4 opacity-40">"</div>
+            <div className="text-sand text-5xl md:text-8xl font-playfair leading-none mb-4 opacity-40">&quot;</div>
             <blockquote
               key={`quote-${active}`}
               className="text-white/80 text-xl md:text-2xl leading-relaxed mb-8 font-dm font-light animate-fade-in"
@@ -726,80 +607,7 @@ function ExperienceSection() {
   );
 }
 
-function GalleryStrip() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (dir: "left" | "right") => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: dir === "left" ? -400 : 400, behavior: "smooth" });
-    }
-  };
-
-  return (
-    <section className="py-16 pb-8 bg-off-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="flex items-end justify-between mb-8">
-          <div>
-            <span className="text-sand text-sm uppercase tracking-[0.3em] font-medium">
-              Highlight Reel
-            </span>
-            <h2 className="font-playfair text-3xl md:text-5xl font-black text-navy-deeper mt-2">
-              Highlight
-              <span className="text-crimson"> Moments</span>
-            </h2>
-          </div>
-          {/* Nav arrows */}
-          <div className="flex gap-3">
-            <button
-              onClick={() => scroll("left")}
-              className="w-12 h-12 rounded-full border-2 border-navy-deeper/20 hover:border-crimson hover:bg-crimson hover:text-white text-navy-deeper transition-all duration-300 flex items-center justify-center font-black"
-            >
-              ←
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              className="w-12 h-12 rounded-full border-2 border-navy-deeper/20 hover:border-crimson hover:bg-crimson hover:text-white text-navy-deeper transition-all duration-300 flex items-center justify-center font-black"
-            >
-              →
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Edge-to-edge scroll strip */}
-      <div
-        ref={scrollRef}
-        className="flex gap-3 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6 pb-4 scrollbar-hide"
-      >
-        {stripImages.map((img, i) => (
-          <div
-            key={i}
-            className="flex-none w-[260px] md:w-[300px] h-[200px] md:h-[240px] snap-start relative group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"
-          >
-            <img
-              src={img.src}
-              alt={img.label}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-deeper/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="absolute bottom-0 left-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-              <span className="text-white font-black text-lg font-playfair">{img.label}</span>
-            </div>
-            {/* Corner number */}
-            <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white text-xs font-bold">
-              {String(i + 1).padStart(2, "0")}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-off-white to-transparent pointer-events-none z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-off-white to-transparent pointer-events-none z-10" />
-    </section>
-  );
-}
+function GalleryStrip() { return <HighlightStrip photos={stripImages} />; }
 
 function FeaturesSection() {
   return (
@@ -879,7 +687,7 @@ function CTASection() {
 
         <p className="text-white/60 text-lg max-w-xl mx-auto mb-12 leading-relaxed font-dm font-light">
           Enrol your child today and give them the gift of a world-class education
-          at one of Jaipur's most celebrated schools — prioritising well-being and
+          at one of Jaipur&rsquo;s most celebrated schools — prioritising well-being and
           community since 1993.
         </p>
 
@@ -925,7 +733,7 @@ function CTASection() {
 
 export default function SchoolLifeClient({ galleryItems }: { galleryItems: GalleryItem[] }) {
   return (
-    <main className="bg-white">
+    <main data-ui-review className="bg-white">
       {/*
         This style block contains all the custom keyframes and font classes
         that were originally in tailwind.config.ts, ensuring the file remains

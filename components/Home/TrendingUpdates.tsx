@@ -65,106 +65,14 @@ const events: Event[] = [
   },
 ];
 
-type EventCardProps = {
-  index: number;
-  targetScale: number;
-  event: Event;
-};
-
-function EventCard({ index, targetScale, event }: EventCardProps) {
-  return (
-    <div className="sticky top-[12vh] flex h-[70vh] items-center justify-center">
-      <article
-        style={{ transform: `scale(${targetScale})`, top: `calc(-2.5vh + ${index * 20}px)` }}
-        className="relative -top-[12%] flex w-[90%] max-w-5xl origin-top flex-col overflow-hidden rounded-lg border border-[#013975]/8 bg-white shadow-[0_24px_80px_rgba(1,57,117,0.10)] lg:h-[430px] lg:w-[74%] lg:flex-row"
-      >
-        <div className="absolute inset-x-0 top-0 h-1.5" style={{ backgroundColor: event.accent }} />
-
-        <div className="flex w-full flex-col justify-between p-5 sm:p-6 lg:w-[44%] lg:p-8">
-          <div>
-            <div className="mb-4 flex items-center gap-3">
-              <span
-                className="rounded-sm px-3 py-1 text-[10px] font-bold uppercase tracking-[0.28em] text-white"
-                style={{ backgroundColor: event.accent }}
-              >
-                {event.tag}
-              </span>
-              <span className="text-xs font-medium uppercase tracking-[0.18em] text-[#034ea2]/80">
-                {event.date}
-              </span>
-            </div>
-
-            <h3 className="max-w-md text-[1.7rem] font-bold leading-tight text-[#034ea2] sm:text-[2rem]">
-              {event.title}
-            </h3>
-            <p className="mt-3 max-w-lg text-sm leading-6 text-[#034ea2]/90 sm:text-[15px]">
-              {event.description}
-            </p>
-          </div>
-
-          <Link
-            href={event.href}
-            className="mt-6 inline-flex w-fit items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#a3123f]"
-          >
-            View Event
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#a3123f]/20 bg-white text-[#a3123f]">
-              <ArrowUpRight className="h-4 w-4" />
-            </span>
-          </Link>
-        </div>
-
-        <div className="relative h-52 sm:h-64 flex-shrink-0 overflow-hidden bg-[#034ea2]/5 lg:min-h-0 lg:h-auto lg:flex-1">
-          <div className="group relative h-full w-full overflow-hidden">
-            <Image
-              fill
-              src={event.image}
-              alt={event.title}
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-              sizes="(max-width: 1024px) 100vw, 56vw"
-            />
-          </div>
-        </div>
-      </article>
-    </div>
-  );
-}
-
 export default function TrendingUpdates() {
-  return (
-    <section className="home-deferred-content home-deferred-events bg-[#f0f4ff] py-10 lg:py-14">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex items-end justify-between gap-6 pb-6">
-          <div className="max-w-2xl">
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.5em] text-[#a3123f]">
-              School Events
-            </p>
-            <h2 className="text-3xl font-bold leading-tight text-[#034ea2] lg:text-4xl">
-              Events
-            </h2>
-          </div>
-
-          <Link
-            href="/news-and-events"
-            className="hidden text-sm font-semibold text-[#a3123f] hover:underline md:block"
-          >
-            View All Events
-          </Link>
-        </div>
-      </div>
-
-      <div className="relative">
-        {events.map((event, index) => {
-          const targetScale = 1 - (events.length - index) * 0.05;
-          return (
-            <EventCard
-              key={event.title}
-              index={index}
-              event={event}
-              targetScale={targetScale}
-            />
-          );
-        })}
-      </div>
-    </section>
-  );
+  return <section className="home-deferred-content home-deferred-events bg-[#f0f4ff]" aria-labelledby="smhs-events-heading">
+    <div className="mx-auto max-w-7xl px-6">
+      <div className="mb-10 flex flex-wrap items-end justify-between gap-5"><div><p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#a3123f]">School events</p><h2 id="smhs-events-heading" className="font-serif text-4xl font-bold text-[#034ea2]">Events at Seedling</h2></div><Link href="/news-and-events" className="font-semibold text-[#a3123f]">View all events</Link></div>
+      <div className="grid auto-rows-fr gap-6 md:grid-cols-2 lg:grid-cols-3">{events.map(event => <article key={event.title} className="flex h-full flex-col overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-sm">
+        <div className="relative aspect-[4/3]"><Image src={event.image} alt={event.title} fill sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 33vw" className="object-cover object-top" /></div>
+        <div className="flex flex-1 flex-col p-6"><p className="mb-3 text-sm font-semibold text-[#a3123f]">{event.date} · {event.tag}</p><h3 className="mb-3 font-serif text-2xl font-bold text-[#013975]">{event.title}</h3><p className="mb-6 text-sm leading-relaxed text-[#013975]">{event.description}</p><Link href={event.href} className="mt-auto inline-flex items-center gap-2 font-semibold text-[#a3123f]">View event <ArrowUpRight size={18} /></Link></div>
+      </article>)}</div>
+    </div>
+  </section>;
 }

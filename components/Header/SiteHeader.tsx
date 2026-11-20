@@ -60,7 +60,7 @@ export default function SiteHeader({ pathname = "/" }: { pathname?: string }) {
       <div className="sticky top-0 left-0 right-0 z-[200] bg-[#013975]">
         <header className="bg-[#013975]">
           <nav className="max-w-[1400px] mx-auto px-6 lg:px-10">
-            <div className="flex items-center justify-between h-[68px] gap-6">
+            <div className="flex items-center justify-between h-[68px] gap-2">
               <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
                 <Image src="/logo.webp" alt="Seedling Modern High School" width={52} height={52} className="rounded-full object-cover" />
                 <div className="leading-tight">
@@ -69,12 +69,12 @@ export default function SiteHeader({ pathname = "/" }: { pathname?: string }) {
                 </div>
               </Link>
 
-              <div className="hidden lg:flex items-center gap-0">
+              <div className="hidden xl:flex flex-1 items-center justify-center gap-0 whitespace-nowrap">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
                   return (
                   <div key={item.name} className="home-desktop-nav-item relative">
-                    <Link href={item.href} className={`flex items-center gap-1 px-3.5 py-2 text-[11.5px] font-semibold tracking-[0.1em] uppercase transition-colors duration-150 ${isActive ? "text-white" : "text-white/45 hover:text-white"}`}>
+                    <Link href={item.href} className={`flex items-center gap-1 whitespace-nowrap px-2 py-2 text-[11.5px] font-semibold tracking-[0.04em] uppercase transition-colors duration-150 ${isActive ? "text-white" : "text-white/45 hover:text-white"}`}>
                       {item.name}
                       {item.children && <span className="home-desktop-chevron transition-transform duration-200"><Chevron /></span>}
                     </Link>
@@ -92,14 +92,14 @@ export default function SiteHeader({ pathname = "/" }: { pathname?: string }) {
                 );})}
               </div>
 
-              <div className="hidden lg:block flex-shrink-0">
+              <div className="hidden xl:block flex-shrink-0">
                 <Link href="/admissions/apply" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#013975] hover:bg-[#034ea2] text-white text-[11px] font-bold tracking-[0.15em] uppercase rounded-full transition-colors duration-200 whitespace-nowrap">Apply &amp; Pay</Link>
               </div>
-              <div className="hidden lg:block flex-shrink-0">
+              <div className="hidden xl:block flex-shrink-0">
                 <EnquiryTrigger className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#a3123f] hover:bg-[#8a0f34] text-white text-[11px] font-bold tracking-[0.15em] uppercase rounded-full transition-colors duration-200 whitespace-nowrap">Enquire Now</EnquiryTrigger>
               </div>
 
-              <details className="home-mobile-menu lg:hidden">
+              <details className="home-mobile-menu xl:hidden">
                 <summary aria-label="Open menu" className="p-2 text-white/60 hover:text-white cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
                 </summary>

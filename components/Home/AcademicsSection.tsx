@@ -40,9 +40,9 @@ export default function AcademicsSection() {
         </div>
 
         {/* Cards — 4 columns desktop, 2 columns mobile */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
           {curriculum.map((s) => (
-            <div key={s.stage} className="group relative rounded-xl overflow-hidden aspect-[3/4] cursor-pointer border border-white/10 hover:border-[#d6d1cf]/50 transition-colors duration-300">
+            <div key={s.stage} className="group relative rounded-xl overflow-hidden min-h-[380px] cursor-pointer border border-white/10 hover:border-[#d6d1cf]/50 transition-colors duration-300">
               <Image
                 src={s.image}
                 alt={s.stage}
@@ -50,15 +50,15 @@ export default function AcademicsSection() {
                 sizes="(max-width: 1024px) 50vw, 25vw"
                 className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#013975]/90 via-[#013975]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#013975] via-[#013975]/65 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-5">
-                <p className="text-[#d6d1cf] text-[10px] uppercase tracking-wider font-semibold mb-1">
+                <p className="text-white text-sm uppercase tracking-wider font-semibold mb-1">
                   {s.years}
                 </p>
-                <p className="font-serif text-white font-bold text-base lg:text-lg leading-snug mb-1">
+                <p className="font-serif text-white font-bold text-xl leading-snug mb-1">
                   {s.stage}
                 </p>
-                <p className="text-white/70 text-xs leading-relaxed hidden sm:block">
+                <p className="text-white text-sm leading-relaxed">
                   {s.desc}
                 </p>
               </div>

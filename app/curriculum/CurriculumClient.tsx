@@ -2,6 +2,7 @@
 import Image from "next/image";
 
 import { useEffect, useRef, useState } from "react";
+import FeatureIcon from "@/components/ui/FeatureIcon";
 import HeroWrapper from "@/components/layout/HeroWrapper";
 
 // ─── Scroll Reveal ────────────────────────────────────────────────────────────
@@ -93,7 +94,7 @@ type CurriculumClientProps = {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function CurriculumClient({ highlights, learningApproaches, learnerProfile }: CurriculumClientProps) {
   return (
-    <main className="bg-off-white text-text-base overflow-x-hidden font-dm">
+    <main data-ui-review className="bg-off-white text-text-base overflow-x-hidden font-dm">
 
       {/* ══════════════════════════════════════════════════════
           1. HERO
@@ -171,10 +172,10 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="review-feature-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {highlights.map((item, i) => (
               <Reveal key={item.id} delay={i * 100}>
-                <div className="group relative rounded-2xl overflow-hidden bg-stone-800 hover:bg-stone-700 transition-colors duration-300 cursor-pointer">
+                <div className="review-feature-card group relative rounded-2xl overflow-hidden bg-white/5 hover:bg-white/10 transition-colors duration-300 cursor-pointer">
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw"
                       src={item.image}
@@ -184,11 +185,11 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-deeper/90 via-navy-deeper/40 to-transparent" />
                   </div>
                   <div className="p-5">
-                    <div className="text-2xl mb-3">{item.icon}</div>
+                    <div className="text-2xl mb-3"><FeatureIcon name={item.title} /></div>
                     <h3 className="font-playfair text-base font-bold text-white leading-tight group-hover:text-sand transition-colors duration-200 mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-white/50 text-sm leading-relaxed line-clamp-3 font-dm font-light">{item.excerpt}</p>
+                    <p className="text-white/50 text-sm leading-relaxed  font-dm font-light">{item.excerpt}</p>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-sand transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 </div>
@@ -199,8 +200,8 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
           <Reveal delay={500}>
             <div className="mt-8 md:mt-16 border-t border-white/10 pt-12 text-center">
               <blockquote className="font-playfair text-xl md:text-2xl text-white italic max-w-3xl mx-auto leading-relaxed">
-                "Part of the art of teaching is the ability to rearrange the world for students to guide them to see
-                things in a new way."
+                &quot;Part of the art of teaching is the ability to rearrange the world for students to guide them to see
+                things in a new way.&quot;
               </blockquote>
               <cite className="text-sand text-[10px] font-black uppercase tracking-widest mt-4 block not-italic font-dm">
                 — Sunny Decker
@@ -259,14 +260,14 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
               Cambridge Learner Profile
             </span> */}
             <h2 className="font-playfair text-4xl md:text-5xl font-light text-white">
-              We train <em className="font-semibold text-sand">Seedlites</em> <span className="ml-2">to be.....</span>
+              We train <em className="font-semibold text-sand">Seedlites</em> <span className="ml-2">to be…</span>
             </h2>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
+          <div className="review-feature-grid grid sm:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
             {learnerProfile.map((lp, i) => (
               <Reveal key={lp.trait} delay={i * 80} className="h-full">
-                <div className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 hover:border-sand/40 transition-all duration-500 hover:-translate-y-2 text-center flex flex-col h-full">
+                <div className="review-feature-card group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 hover:border-sand/40 transition-all duration-500 hover:-translate-y-2 text-center flex flex-col h-full">
                   <div className="h-44 flex-shrink-0 overflow-hidden relative">
                     <Image fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw"
                       src={lp.img}
@@ -278,7 +279,7 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
                   </div>
                   <div className="p-6 px-4 flex flex-col flex-1 justify-between pb-8">
                     <div>
-                      <span className="text-4xl mb-4 block group-hover:scale-125 transition-transform duration-500">{lp.emoji}</span>
+                      <span className="text-4xl mb-4 block group-hover:scale-125 transition-transform duration-500"><FeatureIcon name={lp.trait} className="h-8 w-8 mx-auto" /></span>
                       <h4 className="font-playfair text-2xl font-semibold text-sand mb-3">{lp.trait}</h4>
                     </div>
                     <p className="text-white/60 text-xs leading-relaxed font-dm font-light">{lp.desc}</p>

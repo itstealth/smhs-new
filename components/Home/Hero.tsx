@@ -1,15 +1,15 @@
 import HeroVideo from "@/components/ui/HeroVideo";
 
 const STATS = [
-  { n: "Durgapura", label: "Jaipur" },
+  { n: "Durgapura", label: "Jaipur campus" },
   { n: "CBSE", label: "Curriculum" },
-  { n: "33+", label: "Years of Trust" },
-  { n: "Jaipur", label: "Durgapura" },
+  { n: "SMHS", label: "Seedling Modern High School" },
+  { n: "Learning", label: "In the classroom and beyond" },
 ];
 
 export default function Hero() {
   return (
-    <section className="relative h-[70vh] min-h-[420px] md:h-[calc(100vh-68px)] overflow-hidden flex items-end md:items-center">
+    <section data-review-hero className="relative min-h-[560px] md:min-h-[min(760px,calc(100svh-88px))] overflow-hidden flex flex-col justify-between">
       {/* ── Hero Video ── */}
       <HeroVideo />
 
@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="absolute inset-0 hidden md:block bg-black/40" />
 
       {/* ── Content ── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pb-16 md:pb-0 md:pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-14 md:py-20">
         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[0.75rem] font-black tracking-[0.2em] uppercase px-5 py-2 rounded-full mb-5 md:mb-8">
           <span className="w-2 h-2 bg-[#f7941e] rounded-full animate-pulse" />
           CBSE Affiliated · Jaipur
@@ -40,11 +40,11 @@ export default function Hero() {
       </div>
 
       {/* ── Desktop stats bar ── */}
-      <div className="absolute bottom-0 right-0 z-10 hidden lg:flex">
+      <div className="relative z-10 mx-auto grid w-[calc(100%-3rem)] max-w-[1232px] grid-cols-2 md:grid-cols-4 gap-px overflow-hidden rounded-2xl border border-white/20 bg-white/20 mb-8">
         {STATS.map(({ n, label }) => (
-          <div key={label} className="bg-[#010e3a]/40 backdrop-blur-2xl border-l border-white/10 p-10 text-center text-white min-w-[180px]">
-            <strong className="block text-4xl font-semibold text-[#f7941e] mb-2">{n}</strong>
-            <span className="text-[10px] font-bold tracking-widest uppercase opacity-60">{label}</span>
+          <div key={label} className="flex min-h-24 flex-col justify-center bg-[#010e3a]/80 px-4 py-5 text-white">
+            <strong className="block text-2xl font-semibold text-[#f7941e] mb-2">{n}</strong>
+            <span className="mt-2 text-xs font-semibold">{label}</span>
           </div>
         ))}
       </div>

@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 
 const testimonials = [
@@ -76,7 +78,8 @@ function Chevron({ direction }: { direction: "left" | "right" }) {
 }
 
 export default function TestimonialsSection() {
-  const first = testimonials[0];
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const first = testimonials[selectedIndex];
 
   return (
     <section
@@ -127,76 +130,22 @@ export default function TestimonialsSection() {
           <div className="flex items-center justify-between mt-10 md:mt-14">
             <div data-testimonial-indicators className="flex gap-2">
               {testimonials.map((item, index) => (
-                <button key={item.name} type="button" data-testimonial-index={index} aria-label={`Go to testimonial ${index + 1}`} aria-current={index === 0 ? "true" : undefined} className={`group relative h-2 rounded-full overflow-hidden transition-all duration-500 ${index === 0 ? "w-12" : "w-4"}`}>
-                  <span className={`absolute inset-0 rounded-full ${index === 0 ? "bg-[#d6d1cf]" : "bg-white/20"}`} />
+                <button key={item.name} type="button" data-testimonial-index={index} onClick={() => setSelectedIndex(index)} aria-label={`Go to testimonial ${index + 1}`} aria-current={index === selectedIndex ? "true" : undefined} className={`group relative h-2 rounded-full overflow-hidden transition-all duration-500 ${index === selectedIndex ? "w-12" : "w-4"}`}>
+                  <span className={`absolute inset-0 rounded-full ${index === selectedIndex ? "bg-[#d6d1cf]" : "bg-white/20"}`} />
                 </button>
               ))}
             </div>
             <div className="flex gap-3">
-              <button type="button" data-testimonial-previous aria-label="Previous testimonial" className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 shadow-sm flex items-center justify-center text-white hover:border-[#a3123f] hover:text-[#a3123f] transition-colors group"><Chevron direction="left" /></button>
-              <button type="button" data-testimonial-next aria-label="Next testimonial" className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#a3123f] shadow-lg shadow-[#a3123f]/25 flex items-center justify-center text-white hover:bg-[#8e1037] transition-colors group"><Chevron direction="right" /></button>
+              <button type="button" data-testimonial-previous onClick={() => setSelectedIndex(index => (index - 1 + testimonials.length) % testimonials.length)} aria-label="Previous testimonial" className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 shadow-sm flex items-center justify-center text-white hover:border-[#a3123f] hover:text-[#a3123f] transition-colors group"><Chevron direction="left" /></button>
+              <button type="button" data-testimonial-next onClick={() => setSelectedIndex(index => (index + 1) % testimonials.length)} aria-label="Next testimonial" className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#a3123f] shadow-lg shadow-[#a3123f]/25 flex items-center justify-center text-white hover:bg-[#8e1037] transition-colors group"><Chevron direction="right" /></button>
             </div>
           </div>
 
-          <div className="absolute -bottom-8 right-0 text-white/30 font-mono text-sm"><span data-testimonial-current className="text-white font-bold">01</span><span className="mx-2">/</span><span>08</span></div>
+          <div className="absolute -bottom-8 right-0 text-white/30 font-mono text-sm"><span data-testimonial-current className="text-white font-bold">{String(selectedIndex + 1).padStart(2, "0")}</span><span className="mx-2">/</span><span>08</span></div>
         </div>
       </div>
 
-      <script type="module">
-        {`(function(){
-          var section=document.querySelector('[data-testimonials]');
-          if(!section)return;
-          var items=${JSON.stringify(testimonials)};
-          var active=false;
-          function activate(){
-            if(active)return;
-            active=true;
-            var index=0;
-            var direction=1;
-            var card=section.querySelector('[data-testimonial-card]');
-            var avatar=section.querySelector('[data-testimonial-avatar]');
-            var name=section.querySelector('[data-testimonial-name]');
-            var role=section.querySelector('[data-testimonial-role]');
-            var content=section.querySelector('[data-testimonial-content]');
-            var rating=section.querySelector('[data-testimonial-rating]');
-            var current=section.querySelector('[data-testimonial-current]');
-            var dots=Array.from(section.querySelectorAll('[data-testimonial-index]'));
-            function show(next){
-              index=(next+items.length)%items.length;
-              var item=items[index];
-              avatar.src=item.avatar;
-              avatar.alt=item.name;
-              name.textContent=item.name;
-              role.textContent=item.role;
-              content.textContent='“'+item.content+'”';
-              rating.setAttribute('aria-label',item.rating+' out of 5 stars');
-              current.textContent=String(index+1).padStart(2,'0');
-              dots.forEach(function(dot,i){
-                var selected=i===index;
-                dot.setAttribute('aria-current',selected?'true':'false');
-                dot.classList.toggle('w-12',selected);
-                dot.classList.toggle('w-4',!selected);
-                var fill=dot.firstElementChild;
-                fill.classList.toggle('bg-[#d6d1cf]',selected);
-                fill.classList.toggle('bg-white/20',!selected);
-              });
-              card.classList.remove('animate-testimonial-next','animate-testimonial-previous');
-              void card.offsetWidth;
-              card.classList.add(direction>0?'animate-testimonial-next':'animate-testimonial-previous');
-            }
-            section.querySelector('[data-testimonial-previous]').addEventListener('click',function(){direction=-1;show(index-1);});
-            section.querySelector('[data-testimonial-next]').addEventListener('click',function(){direction=1;show(index+1);});
-            dots.forEach(function(dot){dot.addEventListener('click',function(){var next=Number(dot.dataset.testimonialIndex);direction=next>index?1:-1;show(next);});});
-            var timer=window.setInterval(function(){if(!section.matches(':hover')){direction=1;show(index+1);}},6000);
-            section.addEventListener('mouseenter',function(){window.clearInterval(timer);});
-            section.addEventListener('mouseleave',function(){window.clearInterval(timer);timer=window.setInterval(function(){direction=1;show(index+1);},6000);});
-          }
-          if('IntersectionObserver' in window){
-            var observer=new IntersectionObserver(function(entries){if(entries.some(function(entry){return entry.isIntersecting})){activate();observer.disconnect();}},{rootMargin:'1400px 0px'});
-            observer.observe(section);
-          }else{activate();}
-        })();`}
-      </script>
+
     </section>
   );
 }

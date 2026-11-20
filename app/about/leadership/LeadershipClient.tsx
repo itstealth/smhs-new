@@ -81,7 +81,7 @@ function toViewLeader(person: CmsBoardMember): ViewLeader {
 export default function LeadershipClient({ leaders: cmsLeaders }: { leaders: CmsBoardMember[] }) {
   const leaders = cmsLeaders.map(toViewLeader);
   return (
-    <main className="bg-off-white text-text-base overflow-x-clip font-dm">
+    <main data-ui-review className="bg-off-white text-text-base overflow-x-clip font-dm">
       <HeroWrapper
         backgroundImage="/smhs_images/seedling_images/leaders.webp"
         objectPosition="center 20%"
