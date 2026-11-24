@@ -242,5 +242,131 @@
 @media (min-width: 768px) { .review-photo-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
 .review-alumni-portrait { object-fit: contain; object-position: center; padding: 1rem; background: #f4f1ec; }
 
+/* WordPress article content: readable editorial blocks and responsive data tables. */
+.blog-article-content {
+  overflow-wrap: anywhere;
+}
+
+.blog-article-content > :first-child {
+  margin-top: 0;
+}
+
+.blog-article-content .wp-block-table {
+  width: 100%;
+  max-width: 48rem;
+  margin: 2.75rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid #d9e2ef;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 16px 40px -28px rgba(1, 57, 117, 0.45);
+  scrollbar-color: #a3123f #eef4fc;
+  scrollbar-width: thin;
+}
+
+.blog-article-content table {
+  width: 100%;
+  min-width: 58rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: auto;
+  color: #013975;
+  font-size: 0.925rem;
+  line-height: 1.55;
+}
+
+.blog-article-content th,
+.blog-article-content td {
+  min-width: 9rem;
+  padding: 1rem 1.125rem;
+  vertical-align: top;
+  text-align: left;
+  border-right: 1px solid #d9e2ef;
+  border-bottom: 1px solid #d9e2ef;
+}
+
+.blog-article-content th:last-child,
+.blog-article-content td:last-child {
+  border-right: 0;
+}
+
+.blog-article-content tr:last-child > * {
+  border-bottom: 0;
+}
+
+.blog-article-content thead th,
+.blog-article-content table:not(:has(thead)) tbody > tr:first-child > td {
+  background: #013975;
+  color: #ffffff;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.blog-article-content table:not(:has(thead)) tbody > tr:first-child > td strong {
+  color: inherit;
+}
+
+.blog-article-content tbody > tr:nth-child(even) > td {
+  background: #f5f8fc;
+}
+
+.blog-article-content tbody > tr:not(:first-child) {
+  transition: background-color 160ms ease;
+}
+
+.blog-article-content tbody > tr:not(:first-child):hover > td {
+  background: #eef4fc;
+}
+
+.blog-article-content tbody > tr:not(:first-child) > td:first-child {
+  font-weight: 700;
+}
+
+.blog-article-content iframe,
+.blog-article-content video {
+  width: 100%;
+  max-width: 100%;
+  margin-block: 2rem;
+  border: 0;
+  border-radius: 1rem;
+}
+
+.blog-article-content pre {
+  max-width: 100%;
+  margin-block: 2rem;
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  background: #013975;
+  padding: 1.25rem;
+  color: #ffffff;
+}
+
+.blog-article-content :not(pre) > code {
+  border-radius: 0.3rem;
+  background: #eef4fc;
+  padding: 0.15rem 0.35rem;
+  font-size: 0.9em;
+}
+
+@media (max-width: 639px) {
+  .blog-article-content .wp-block-table {
+    width: 100%;
+    border-radius: 0.75rem;
+  }
+
+  .blog-article-content table {
+    min-width: 48rem;
+    table-layout: auto;
+    font-size: 0.875rem;
+  }
+
+  .blog-article-content th,
+  .blog-article-content td {
+    min-width: 8.5rem;
+    padding: 0.875rem;
+  }
+}
+
 /* Reviewed sections must not reserve their obsolete pre-redesign heights. */
 [data-ui-review] > .home-deferred, [data-ui-review] > .home-deferred-content { content-visibility: visible; contain-intrinsic-size: none; }
