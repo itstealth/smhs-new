@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import HeroWrapper from "@/components/layout/HeroWrapper";
 import { pageMetadata } from "@/lib/seo";
 import {
   getMediaUrl,
@@ -185,14 +184,6 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
 
   return (
     <div className="min-h-screen bg-off-white font-dm">
-      <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.webp"
-        title="Blog"
-        titleAs="p"
-        badge="Stories & Updates"
-        breadcrumbs={[{ label: "Blog" }]}
-      />
-
       <div className="pt-32 px-6 max-w-7xl mx-auto">
         <Link
           href="/blog"
@@ -306,13 +297,6 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
 function ArticleUnavailable({ slug }: { slug: string }) {
   return (
     <div className="min-h-screen bg-off-white font-dm">
-      <HeroWrapper
-        backgroundImage="/assets/img/sps-banner.webp"
-        title="Blog"
-        titleAs="p"
-        badge="Stories & Updates"
-        breadcrumbs={[{ label: "Blog" }]}
-      />
       <section className="pt-32 pb-24 px-6 max-w-3xl mx-auto text-center">
         <h1 className="font-playfair text-4xl md:text-5xl font-bold text-navy-deeper leading-tight mb-6">
           {titleFromSlug(slug)}

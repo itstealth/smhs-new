@@ -103,7 +103,7 @@ export default function BlogClient({ posts, categories }: Props) {
   return (
     <div className="min-h-screen bg-off-white font-dm">
       <HeroWrapper
-        backgroundImage="/smhs_images/seedling_images/blog_image.webp"
+        backgroundImage="/assets/img/sps-banner.webp"
         title="Blog"
         badge="Stories & Updates"
         breadcrumbs={[{ label: "Blog" }]}
