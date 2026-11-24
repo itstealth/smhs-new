@@ -185,7 +185,7 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-deeper/90 via-navy-deeper/40 to-transparent" />
                   </div>
                   <div className="p-5">
-                    <div className="text-2xl mb-3"><FeatureIcon name={item.title} /></div>
+                    <div className="text-2xl mb-3"><FeatureIcon name={item.title} className="h-7 w-7 text-white" /></div>
                     <h3 className="font-playfair text-base font-bold text-white leading-tight group-hover:text-sand transition-colors duration-200 mb-2">
                       {item.title}
                     </h3>
@@ -279,7 +279,7 @@ export default function CurriculumClient({ highlights, learningApproaches, learn
                   </div>
                   <div className="p-6 px-4 flex flex-col flex-1 justify-between pb-8">
                     <div>
-                      <span className="text-4xl mb-4 block group-hover:scale-125 transition-transform duration-500"><FeatureIcon name={lp.trait} className="h-8 w-8 mx-auto" /></span>
+                      <span className="text-4xl mb-4 block group-hover:scale-125 transition-transform duration-500"><FeatureIcon name={lp.trait} className="mx-auto h-8 w-8 text-white" /></span>
                       <h4 className="font-playfair text-2xl font-semibold text-sand mb-3">{lp.trait}</h4>
                     </div>
                     <p className="text-white/60 text-xs leading-relaxed font-dm font-light">{lp.desc}</p>

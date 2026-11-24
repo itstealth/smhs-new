@@ -114,7 +114,7 @@ export default function AboutClient({ timeline, campusImages, stats }: AboutClie
       ══════════════════════════════════════════════════════════════ */}
       <section className="bg-navy-deeper text-white py-12 border-y border-sand/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-sand/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-sand/20">
             {stats.map(s => /student/i.test(s.label) ? { value: "CBSE", label: "School curriculum" } : /campus/i.test(s.label) ? { value: "Durgapura", label: "Jaipur campus" } : s).filter((stat,index,list)=>list.findIndex(other=>other.label===stat.label)===index).map((s) => (
               <div key={s.label} className="px-6 py-4 text-center">
                 <p className="font-playfair text-3xl md:text-5xl font-semibold text-sand">{s.value}</p>

@@ -48,7 +48,7 @@ export default function InfrastructureSection() {
               </div>
               <div className="p-5">
                 <p className="text-sm text-[#013975] group-hover:text-white leading-relaxed transition-colors duration-500">{item.desc}</p>
-                <Link href={item.href} className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-[#034ea2] group-hover:text-[#a3123f] transition-colors duration-500">
+                <Link href={item.href} className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-[#034ea2] group-hover:text-white transition-colors duration-500">
                   Explore <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>

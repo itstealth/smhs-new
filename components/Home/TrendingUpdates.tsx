@@ -30,7 +30,7 @@ const events: Event[] = [
     description:
       "Students explored robotics, coding, and design thinking in our state-of-the-art Atal Tinkering Lab, fostering creativity and problem-solving skills for tomorrow's innovators.",
     href: "/news-and-events",
-    image: "/events/ATL LAB/1P3A4229.webp",
+    image: "/events/ATL LAB/1P3A4237.webp",
     accent: "#013975",
   },
   {
@@ -70,7 +70,7 @@ export default function TrendingUpdates() {
     <div className="mx-auto max-w-7xl px-6">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-5"><div><p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#a3123f]">School events</p><h2 id="smhs-events-heading" className="font-serif text-4xl font-bold text-[#034ea2]">Events at Seedling</h2></div><Link href="/news-and-events" className="font-semibold text-[#a3123f]">View all events</Link></div>
       <div className="grid auto-rows-fr gap-6 md:grid-cols-2 lg:grid-cols-3">{events.map(event => <article key={event.title} className="flex h-full flex-col overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-sm">
-        <div className="relative aspect-[4/3]"><Image src={event.image} alt={event.title} fill sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 33vw" className="object-cover object-top" /></div>
+        <div className="relative aspect-[4/3]"><Image src={event.image} alt={event.title} fill sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 33vw" className={`object-cover ${event.title === "ATL Lab — Atal Innovation Mission" ? "object-center" : "object-top"}`} /></div>
         <div className="flex flex-1 flex-col p-6"><p className="mb-3 text-sm font-semibold text-[#a3123f]">{event.date} · {event.tag}</p><h3 className="mb-3 font-serif text-2xl font-bold text-[#013975]">{event.title}</h3><p className="mb-6 text-sm leading-relaxed text-[#013975]">{event.description}</p><Link href={event.href} className="mt-auto inline-flex items-center gap-2 font-semibold text-[#a3123f]">View event <ArrowUpRight size={18} /></Link></div>
       </article>)}</div>
     </div>

@@ -1,10 +1,11 @@
 import HeroVideo from "@/components/ui/HeroVideo";
+import { Award, BookOpen, MapPin, School } from "lucide-react";
 
 const STATS = [
-  { n: "Durgapura", label: "Jaipur campus" },
-  { n: "CBSE", label: "Curriculum" },
-  { n: "SMHS", label: "Seedling Modern High School" },
-  { n: "Learning", label: "In the classroom and beyond" },
+  { n: "Durgapura", label: "Jaipur", Icon: School },
+  { n: "CBSE", label: "Curriculum", Icon: BookOpen },
+  { n: "33+", label: "Years of Trust", Icon: Award },
+  { n: "Jaipur", label: "Durgapura", Icon: MapPin },
 ];
 
 export default function Hero() {
@@ -39,12 +40,16 @@ export default function Hero() {
 
       </div>
 
-      {/* ── Desktop stats bar ── */}
-      <div className="relative z-10 mx-auto grid w-[calc(100%-3rem)] max-w-[1232px] grid-cols-2 md:grid-cols-4 gap-px overflow-hidden rounded-2xl border border-white/20 bg-white/20 mb-8">
-        {STATS.map(({ n, label }) => (
-          <div key={label} className="flex min-h-24 flex-col justify-center bg-[#010e3a]/80 px-4 py-5 text-white">
-            <strong className="block text-2xl font-semibold text-[#f7941e] mb-2">{n}</strong>
-            <span className="mt-2 text-xs font-semibold">{label}</span>
+      {/* ── Glass information cards ── */}
+      <div className="relative z-10 mx-auto mb-7 grid w-[calc(100%-3rem)] max-w-[1248px] grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+        {STATS.map(({ n, label, Icon }) => (
+          <div
+            key={label}
+            className="group flex min-h-[150px] flex-col items-center justify-center rounded-[1.6rem] border border-white/35 bg-[linear-gradient(145deg,rgba(255,255,255,0.27),rgba(255,255,255,0.12))] px-4 py-5 text-center text-white shadow-[0_14px_35px_rgba(0,14,58,0.2)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/55 hover:bg-white/25 sm:min-h-[165px] sm:px-6 sm:py-6"
+          >
+            <Icon aria-hidden="true" className="mb-4 h-8 w-8 stroke-[1.8] text-white sm:h-9 sm:w-9" />
+            <strong className="block font-serif text-xl font-bold leading-none text-white sm:text-2xl">{n}</strong>
+            <span className="mt-3 text-[11px] font-semibold leading-snug text-white/75 sm:text-xs">{label}</span>
           </div>
         ))}
       </div>

@@ -21,7 +21,7 @@ export default function SchoolPhotoGallery({ photos }: { photos: SchoolPhoto[] }
   const photo = selected !== null ? photos[selected] : undefined;
   return <section id="gallery" className="bg-navy-deeper text-white">
     <div className="mx-auto max-w-7xl px-6">
-      <div className="mb-10"><p className="mb-4 text-xs uppercase tracking-widest text-sand">Visual journal</p><h2 className="font-playfair text-4xl font-semibold">Snippets of Seedling</h2></div>
+      <div className="mb-10"><p className="mb-4 text-xs uppercase tracking-widest text-sand">Visual journal</p><h2 className="font-playfair text-4xl font-semibold text-white">Snippets of Seedling</h2></div>
       {photos.length ? <div className="grid auto-rows-fr grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">{photos.map((item,index) => <button type="button" key={item.id} onClick={() => setSelected(index)} className="overflow-hidden rounded-xl border border-white/20 bg-white/5 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sand" aria-label={`View ${item.title}`}>
         <img src={item.src} alt={item.title} loading="lazy" className="aspect-[4/3] w-full object-cover" /><span className="block p-4"><span className="mb-2 block text-xs text-sand">{item.category}</span><span className="block text-sm font-semibold leading-relaxed">{item.title}</span></span>
       </button>)}</div> : <p>School gallery photographs will appear here when published.</p>}

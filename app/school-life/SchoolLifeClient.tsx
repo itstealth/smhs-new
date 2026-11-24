@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import SchoolPhotoGallery from "@/components/ui/SchoolPhotoGallery";
 import HighlightStrip from "@/components/ui/HighlightStrip";
+import FeatureIcon from "@/components/ui/FeatureIcon";
 import HeroWrapper from "@/components/layout/HeroWrapper";
 
 // --- Custom Styles for Portability ---
@@ -82,42 +83,36 @@ const sportBlocks = [
 
 const activities = [
   {
-    icon: "🎭",
     title: "Annual Day",
     desc: "A grand celebration of student talent with performances spanning music, dance, drama and spoken word.",
     image: "/events/ANNUAL DAY/P1230432.webp",
     color: "from-navy/80 to-navy-deeper/80",
   },
   {
-    icon: "🧘",
     title: "Yoga & Wellness",
     desc: "Integrated wellness programmes that nurture mental clarity, physical balance, and emotional resilience.",
     image: "/smhs_images/seedling_images/yoga.webp",
     color: "from-mauve/80 to-navy-deeper/80",
   },
   {
-    icon: "🎄",
     title: "Festivals & Celebrations",
     desc: "From Christmas to Founders Day, our calendar is rich with cultural celebrations that build community.",
     image: "/smhs_images/seedling_images/christmas_celebrations.webp",
     color: "from-crimson/80 to-crimson-dark/80",
   },
   {
-    icon: "🔬",
     title: "ATL Lab & Innovation",
     desc: "Our Atal Tinkering Lab empowers students with hands-on STEM exploration, robotics, and creative problem-solving.",
     image: "/events/ATL LAB/1P3A4229.webp",
     color: "from-navy-dark/80 to-navy-deeper/80",
   },
   {
-    icon: "🌺",
     title: "Community & Care",
     desc: "Heartfelt events that celebrate togetherness, honour families, and build a strong school community.",
     image: "/smhs_images/seedling_images/community.webp",
     color: "from-crimson-dark/80 to-crimson-deeper/80",
   },
   {
-    icon: "🏆",
     title: "Celebrating Talent",
     desc: "We celebrate academic excellence with our toppers, honouring their hard work and dedication.",
     image: "/smhs_images/seedling_images/winner_at_cbse.webp",
@@ -418,8 +413,8 @@ function ActivitiesGrid() {
 
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                <div className="text-4xl mb-3 transform transition-transform duration-300 group-hover:-translate-y-1">
-                  {activity.icon}
+                <div className="mb-3 transform transition-transform duration-300 group-hover:-translate-y-1">
+                  <FeatureIcon name={activity.title} className="h-9 w-9 text-white" />
                 </div>
                 <h3 className="font-playfair text-2xl font-black text-white mb-2">
                   {activity.title}

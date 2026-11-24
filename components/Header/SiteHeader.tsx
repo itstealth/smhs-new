@@ -92,13 +92,6 @@ export default function SiteHeader({ pathname = "/" }: { pathname?: string }) {
                 );})}
               </div>
 
-              <div className="hidden xl:block flex-shrink-0">
-                <Link href="/admissions/apply" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#013975] hover:bg-[#034ea2] text-white text-[11px] font-bold tracking-[0.15em] uppercase rounded-full transition-colors duration-200 whitespace-nowrap">Apply &amp; Pay</Link>
-              </div>
-              <div className="hidden xl:block flex-shrink-0">
-                <EnquiryTrigger className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#a3123f] hover:bg-[#8a0f34] text-white text-[11px] font-bold tracking-[0.15em] uppercase rounded-full transition-colors duration-200 whitespace-nowrap">Enquire Now</EnquiryTrigger>
-              </div>
-
               <details className="home-mobile-menu xl:hidden">
                 <summary aria-label="Open menu" className="p-2 text-white/60 hover:text-white cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
