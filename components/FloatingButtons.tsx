@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone } from "lucide-react";
+import { PencilLine, Phone } from "lucide-react";
 
 export default function FloatingButtons() {
   return (
@@ -27,6 +27,17 @@ export default function FloatingButtons() {
         </svg>
         <span className="whitespace-nowrap text-xs font-black uppercase tracking-widest opacity-0 transition-opacity duration-200 group-hover:opacity-100">WhatsApp</span>
       </a>
+    </div>
+    <div className="fixed right-0 top-1/2 z-[110] hidden -translate-y-1/2 md:block">
+      <button
+        type="button"
+        data-open-enquiry
+        className="group flex min-h-40 w-11 flex-col items-center justify-center gap-3 rounded-l-xl border border-r-0 border-white/20 bg-crimson px-2 py-4 text-white shadow-[-8px_10px_24px_rgba(1,57,117,0.22)] transition-colors duration-300 hover:bg-crimson-dark focus-visible:bg-crimson-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson"
+        aria-label="Enquire now"
+      >
+        <PencilLine className="h-4 w-4 flex-shrink-0" />
+        <span className="whitespace-nowrap text-[10px] font-black uppercase tracking-[0.2em] [writing-mode:vertical-rl] rotate-180">Enquire Now</span>
+      </button>
     </div>
     </>
   );
